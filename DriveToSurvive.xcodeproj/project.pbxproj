@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
+		3D512E2425D4547200B21FF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2325D4547200B21FF6 /* SceneDelegate.swift */; };
+		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
+		3D512E2925D4547200B21FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2725D4547200B21FF6 /* Main.storyboard */; };
+		3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2A25D4547400B21FF6 /* Assets.xcassets */; };
+		3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */; };
+		3D512E3925D4547400B21FF6 /* DriveToSurviveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E3825D4547400B21FF6 /* DriveToSurviveTests.swift */; };
+		3D512E4425D4547400B21FF6 /* DriveToSurviveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E4325D4547400B21FF6 /* DriveToSurviveUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D512E3525D4547400B21FF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D512E1625D4547200B21FF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D512E1D25D4547200B21FF6;
+			remoteInfo = DriveToSurvive;
+		};
+		3D512E4025D4547400B21FF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D512E1625D4547200B21FF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D512E1D25D4547200B21FF6;
+			remoteInfo = DriveToSurvive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D512E2325D4547200B21FF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D512E2525D4547200B21FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D512E2825D4547200B21FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D512E2A25D4547400B21FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D512E2D25D4547400B21FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D512E2F25D4547400B21FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D512E3425D4547400B21FF6 /* DriveToSurviveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveToSurviveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D512E3825D4547400B21FF6 /* DriveToSurviveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveToSurviveTests.swift; sourceTree = "<group>"; };
+		3D512E3A25D4547400B21FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D512E3F25D4547400B21FF6 /* DriveToSurviveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveToSurviveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D512E4325D4547400B21FF6 /* DriveToSurviveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveToSurviveUITests.swift; sourceTree = "<group>"; };
+		3D512E4525D4547400B21FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D512E1B25D4547200B21FF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3125D4547400B21FF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3C25D4547400B21FF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D512E1525D4547200B21FF6 = {
+			isa = PBXGroup;
+			children = (
+				3D512E2025D4547200B21FF6 /* DriveToSurvive */,
+				3D512E3725D4547400B21FF6 /* DriveToSurviveTests */,
+				3D512E4225D4547400B21FF6 /* DriveToSurviveUITests */,
+				3D512E1F25D4547200B21FF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D512E1F25D4547200B21FF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */,
+				3D512E3425D4547400B21FF6 /* DriveToSurviveTests.xctest */,
+				3D512E3F25D4547400B21FF6 /* DriveToSurviveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D512E2025D4547200B21FF6 /* DriveToSurvive */ = {
+			isa = PBXGroup;
+			children = (
+				3D512E2125D4547200B21FF6 /* AppDelegate.swift */,
+				3D512E2325D4547200B21FF6 /* SceneDelegate.swift */,
+				3D512E2525D4547200B21FF6 /* ViewController.swift */,
+				3D512E2725D4547200B21FF6 /* Main.storyboard */,
+				3D512E2A25D4547400B21FF6 /* Assets.xcassets */,
+				3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */,
+				3D512E2F25D4547400B21FF6 /* Info.plist */,
+			);
+			path = DriveToSurvive;
+			sourceTree = "<group>";
+		};
+		3D512E3725D4547400B21FF6 /* DriveToSurviveTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D512E3825D4547400B21FF6 /* DriveToSurviveTests.swift */,
+				3D512E3A25D4547400B21FF6 /* Info.plist */,
+			);
+			path = DriveToSurviveTests;
+			sourceTree = "<group>";
+		};
+		3D512E4225D4547400B21FF6 /* DriveToSurviveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D512E4325D4547400B21FF6 /* DriveToSurviveUITests.swift */,
+				3D512E4525D4547400B21FF6 /* Info.plist */,
+			);
+			path = DriveToSurviveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D512E1D25D4547200B21FF6 /* DriveToSurvive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D512E4825D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurvive" */;
+			buildPhases = (
+				3D512E1A25D4547200B21FF6 /* Sources */,
+				3D512E1B25D4547200B21FF6 /* Frameworks */,
+				3D512E1C25D4547200B21FF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveToSurvive;
+			productName = DriveToSurvive;
+			productReference = 3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D512E3325D4547400B21FF6 /* DriveToSurviveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D512E4B25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveTests" */;
+			buildPhases = (
+				3D512E3025D4547400B21FF6 /* Sources */,
+				3D512E3125D4547400B21FF6 /* Frameworks */,
+				3D512E3225D4547400B21FF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D512E3625D4547400B21FF6 /* PBXTargetDependency */,
+			);
+			name = DriveToSurviveTests;
+			productName = DriveToSurviveTests;
+			productReference = 3D512E3425D4547400B21FF6 /* DriveToSurviveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D512E3E25D4547400B21FF6 /* DriveToSurviveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D512E4E25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveUITests" */;
+			buildPhases = (
+				3D512E3B25D4547400B21FF6 /* Sources */,
+				3D512E3C25D4547400B21FF6 /* Frameworks */,
+				3D512E3D25D4547400B21FF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D512E4125D4547400B21FF6 /* PBXTargetDependency */,
+			);
+			name = DriveToSurviveUITests;
+			productName = DriveToSurviveUITests;
+			productReference = 3D512E3F25D4547400B21FF6 /* DriveToSurviveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D512E1625D4547200B21FF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					3D512E1D25D4547200B21FF6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					3D512E3325D4547400B21FF6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3D512E1D25D4547200B21FF6;
+					};
+					3D512E3E25D4547400B21FF6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3D512E1D25D4547200B21FF6;
+					};
+				};
+			};
+			buildConfigurationList = 3D512E1925D4547200B21FF6 /* Build configuration list for PBXProject "DriveToSurvive" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D512E1525D4547200B21FF6;
+			productRefGroup = 3D512E1F25D4547200B21FF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D512E1D25D4547200B21FF6 /* DriveToSurvive */,
+				3D512E3325D4547400B21FF6 /* DriveToSurviveTests */,
+				3D512E3E25D4547400B21FF6 /* DriveToSurviveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D512E1C25D4547200B21FF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */,
+				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
+				3D512E2925D4547200B21FF6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3225D4547400B21FF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3D25D4547400B21FF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D512E1A25D4547200B21FF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */,
+				3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */,
+				3D512E2425D4547200B21FF6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3025D4547400B21FF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D512E3925D4547400B21FF6 /* DriveToSurviveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D512E3B25D4547400B21FF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D512E4425D4547400B21FF6 /* DriveToSurviveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D512E3625D4547400B21FF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D512E1D25D4547200B21FF6 /* DriveToSurvive */;
+			targetProxy = 3D512E3525D4547400B21FF6 /* PBXContainerItemProxy */;
+		};
+		3D512E4125D4547400B21FF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D512E1D25D4547200B21FF6 /* DriveToSurvive */;
+			targetProxy = 3D512E4025D4547400B21FF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D512E2725D4547200B21FF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D512E2825D4547200B21FF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D512E2D25D4547400B21FF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D512E4625D4547400B21FF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D512E4725D4547400B21FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D512E4925D4547400B21FF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurvive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurvive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D512E4A25D4547400B21FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurvive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurvive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D512E4C25D4547400B21FF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurviveTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurviveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveToSurvive.app/DriveToSurvive";
+			};
+			name = Debug;
+		};
+		3D512E4D25D4547400B21FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurviveTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurviveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveToSurvive.app/DriveToSurvive";
+			};
+			name = Release;
+		};
+		3D512E4F25D4547400B21FF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurviveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurviveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DriveToSurvive;
+			};
+			name = Debug;
+		};
+		3D512E5025D4547400B21FF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M5GYP2R28G;
+				INFOPLIST_FILE = DriveToSurviveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.f1.app.DriveToSurviveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DriveToSurvive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D512E1925D4547200B21FF6 /* Build configuration list for PBXProject "DriveToSurvive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D512E4625D4547400B21FF6 /* Debug */,
+				3D512E4725D4547400B21FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D512E4825D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurvive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D512E4925D4547400B21FF6 /* Debug */,
+				3D512E4A25D4547400B21FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D512E4B25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D512E4C25D4547400B21FF6 /* Debug */,
+				3D512E4D25D4547400B21FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D512E4E25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D512E4F25D4547400B21FF6 /* Debug */,
+				3D512E5025D4547400B21FF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D512E1625D4547200B21FF6 /* Project object */;
+}
