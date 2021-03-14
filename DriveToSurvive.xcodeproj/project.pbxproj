@@ -7,14 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D15413325E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */; };
+		3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */; };
+		3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7E925FD544D0036FFE2 /* DataStore.swift */; };
+		3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */; };
+		3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */; };
+		3D30F80B25FD5EE00036FFE2 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7FD25FD5EDF0036FFE2 /* OpenSans-Light.ttf */; };
+		3D30F80C25FD5EE00036FFE2 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7FE25FD5EDF0036FFE2 /* OpenSans-ExtraBold.ttf */; };
+		3D30F80D25FD5EE00036FFE2 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7FF25FD5EDF0036FFE2 /* OpenSans-BoldItalic.ttf */; };
+		3D30F80E25FD5EE00036FFE2 /* SFProText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80025FD5EDF0036FFE2 /* SFProText-Heavy.otf */; };
+		3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80125FD5EDF0036FFE2 /* SFProText-Regular.otf */; };
+		3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80225FD5EDF0036FFE2 /* OpenSans-Italic.ttf */; };
+		3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80325FD5EE00036FFE2 /* OpenSans-LightItalic.ttf */; };
+		3D30F81225FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80425FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf */; };
+		3D30F81325FD5EE00036FFE2 /* SFProText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80525FD5EE00036FFE2 /* SFProText-Bold.otf */; };
+		3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80625FD5EE00036FFE2 /* SFProText-Semibold.otf */; };
+		3D30F81525FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80725FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf */; };
+		3D30F81625FD5EE00036FFE2 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80825FD5EE00036FFE2 /* OpenSans-Regular.ttf */; };
+		3D30F81725FD5EE00036FFE2 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80925FD5EE00036FFE2 /* OpenSans-SemiBold.ttf */; };
+		3D30F81825FD5EE00036FFE2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */; };
+		3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */; };
+		3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */; };
 		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
-		3D512E2425D4547200B21FF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2325D4547200B21FF6 /* SceneDelegate.swift */; };
 		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
-		3D512E2925D4547200B21FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2725D4547200B21FF6 /* Main.storyboard */; };
 		3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2A25D4547400B21FF6 /* Assets.xcassets */; };
 		3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */; };
 		3D512E3925D4547400B21FF6 /* DriveToSurviveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E3825D4547400B21FF6 /* DriveToSurviveTests.swift */; };
 		3D512E4425D4547400B21FF6 /* DriveToSurviveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E4325D4547400B21FF6 /* DriveToSurviveUITests.swift */; };
+		3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */; };
+		3D512E5925D45D8100B21FF6 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */; };
+		3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EA025D8197700B21FF6 /* SplashScreenCarouselItem.swift */; };
+		3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */; };
+		3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */; };
+		3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */; };
+		3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40CE25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift */; };
+		3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */; };
+		3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */; };
+		3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */; };
+		3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */; };
+		3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +66,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCarouselItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenCarouselItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		3D30F7E925FD544D0036FFE2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
+		3D30F7FD25FD5EDF0036FFE2 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		3D30F7FE25FD5EDF0036FFE2 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3D30F7FF25FD5EDF0036FFE2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3D30F80025FD5EDF0036FFE2 /* SFProText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Heavy.otf"; sourceTree = "<group>"; };
+		3D30F80125FD5EDF0036FFE2 /* SFProText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.otf"; sourceTree = "<group>"; };
+		3D30F80225FD5EDF0036FFE2 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		3D30F80325FD5EE00036FFE2 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		3D30F80425FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		3D30F80525FD5EE00036FFE2 /* SFProText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.otf"; sourceTree = "<group>"; };
+		3D30F80625FD5EE00036FFE2 /* SFProText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.otf"; sourceTree = "<group>"; };
+		3D30F80725FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		3D30F80825FD5EE00036FFE2 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3D30F80925FD5EE00036FFE2 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D512E2325D4547200B21FF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D512E2525D4547200B21FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D512E2825D4547200B21FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D512E2A25D4547400B21FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D512E2D25D4547400B21FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D512E2F25D4547400B21FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +99,18 @@
 		3D512E3F25D4547400B21FF6 /* DriveToSurviveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveToSurviveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E4325D4547400B21FF6 /* DriveToSurviveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveToSurviveUITests.swift; sourceTree = "<group>"; };
 		3D512E4525D4547400B21FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		3D512EA025D8197700B21FF6 /* SplashScreenCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCarouselItem.swift; sourceTree = "<group>"; };
+		3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewManager.swift; sourceTree = "<group>"; };
+		3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
+		3D6F40CE25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayout.swift; sourceTree = "<group>"; };
+		3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCardView.swift; sourceTree = "<group>"; };
+		3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewControllerTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +138,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D15413025E41F5800F62CF4 /* SplashScreenCarouselItemCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */,
+				3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */,
+			);
+			path = SplashScreenCarouselItemCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3D30F7EF25FD5C9E0036FFE2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7F025FD5CA30036FFE2 /* DriverThumbnailCollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3D30F7F025FD5CA30036FFE2 /* DriverThumbnailCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */,
+				3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */,
+			);
+			path = DriverThumbnailCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3D30F7F825FD5E5B0036FFE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7F925FD5E640036FFE2 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D30F7F925FD5E640036FFE2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */,
+				3D30F7FF25FD5EDF0036FFE2 /* OpenSans-BoldItalic.ttf */,
+				3D30F7FE25FD5EDF0036FFE2 /* OpenSans-ExtraBold.ttf */,
+				3D30F80725FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf */,
+				3D30F80225FD5EDF0036FFE2 /* OpenSans-Italic.ttf */,
+				3D30F7FD25FD5EDF0036FFE2 /* OpenSans-Light.ttf */,
+				3D30F80325FD5EE00036FFE2 /* OpenSans-LightItalic.ttf */,
+				3D30F80825FD5EE00036FFE2 /* OpenSans-Regular.ttf */,
+				3D30F80925FD5EE00036FFE2 /* OpenSans-SemiBold.ttf */,
+				3D30F80425FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf */,
+				3D30F80525FD5EE00036FFE2 /* SFProText-Bold.otf */,
+				3D30F80025FD5EDF0036FFE2 /* SFProText-Heavy.otf */,
+				3D30F80125FD5EDF0036FFE2 /* SFProText-Regular.otf */,
+				3D30F80625FD5EE00036FFE2 /* SFProText-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3D46F81925F6961D00C2A6A8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D30F7EF25FD5C9E0036FFE2 /* Cells */,
+				3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */,
+				3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		3D512E1525D4547200B21FF6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +226,12 @@
 		3D512E2025D4547200B21FF6 /* DriveToSurvive */ = {
 			isa = PBXGroup;
 			children = (
+				3D30F7F825FD5E5B0036FFE2 /* Resources */,
+				3D512EA625D81CEE00B21FF6 /* CustomUIComponents */,
+				3D512E5525D458EB00B21FF6 /* Views */,
+				3D512E5425D458D900B21FF6 /* Models */,
 				3D512E2125D4547200B21FF6 /* AppDelegate.swift */,
-				3D512E2325D4547200B21FF6 /* SceneDelegate.swift */,
 				3D512E2525D4547200B21FF6 /* ViewController.swift */,
-				3D512E2725D4547200B21FF6 /* Main.storyboard */,
 				3D512E2A25D4547400B21FF6 /* Assets.xcassets */,
 				3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */,
 				3D512E2F25D4547400B21FF6 /* Info.plist */,
@@ -126,6 +255,82 @@
 				3D512E4525D4547400B21FF6 /* Info.plist */,
 			);
 			path = DriveToSurviveUITests;
+			sourceTree = "<group>";
+		};
+		3D512E5425D458D900B21FF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D512EA025D8197700B21FF6 /* SplashScreenCarouselItem.swift */,
+				3D30F7E925FD544D0036FFE2 /* DataStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D512E5525D458EB00B21FF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DC42CDE25F7D34800E0E22F /* NewsDetail */,
+				3D46F81925F6961D00C2A6A8 /* Home */,
+				3D512EA525D81A2300B21FF6 /* SplashScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D512EA525D81A2300B21FF6 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3D15413025E41F5800F62CF4 /* SplashScreenCarouselItemCollectionViewCell */,
+				3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */,
+				3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		3D512EA625D81CEE00B21FF6 /* CustomUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F40CC25F51B0C0090CA45 /* CollectionView */,
+				3D512EA725D81CFB00B21FF6 /* CarouselView */,
+			);
+			path = CustomUIComponents;
+			sourceTree = "<group>";
+		};
+		3D512EA725D81CFB00B21FF6 /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */,
+				3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */,
+				3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		3D6F40CC25F51B0C0090CA45 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F40CD25F51B170090CA45 /* ParallaxCollectionView */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		3D6F40CD25F51B170090CA45 /* ParallaxCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3D6F40CE25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift */,
+				3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */,
+				3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */,
+				3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */,
+				3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */,
+			);
+			path = ParallaxCollectionView;
+			sourceTree = "<group>";
+		};
+		3DC42CDE25F7D34800E0E22F /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */,
+			);
+			path = NewsDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +437,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */,
+				3D30F81525FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */,
+				3D30F80B25FD5EE00036FFE2 /* OpenSans-Light.ttf in Resources */,
+				3D30F80C25FD5EE00036FFE2 /* OpenSans-ExtraBold.ttf in Resources */,
+				3D512E5925D45D8100B21FF6 /* SplashScreenViewController.xib in Resources */,
+				3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */,
+				3D30F80D25FD5EE00036FFE2 /* OpenSans-BoldItalic.ttf in Resources */,
+				3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */,
+				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
+				3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */,
+				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
-				3D512E2925D4547200B21FF6 /* Main.storyboard in Resources */,
+				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,
+				3D30F81325FD5EE00036FFE2 /* SFProText-Bold.otf in Resources */,
+				3D30F81225FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				3D30F81725FD5EE00036FFE2 /* OpenSans-SemiBold.ttf in Resources */,
+				3D30F81625FD5EE00036FFE2 /* OpenSans-Regular.ttf in Resources */,
+				3D30F81825FD5EE00036FFE2 /* OpenSans-Bold.ttf in Resources */,
+				3D30F80E25FD5EE00036FFE2 /* SFProText-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +481,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */,
+				3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */,
+				3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */,
+				3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */,
+				3D15413325E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift in Sources */,
+				3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */,
+				3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */,
+				3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */,
+				3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */,
+				3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */,
 				3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */,
-				3D512E2425D4547200B21FF6 /* SceneDelegate.swift in Sources */,
+				3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */,
+				3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */,
+				3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */,
+				3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */,
+				3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */,
+				3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +532,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D512E2725D4547200B21FF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D512E2825D4547200B21FF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D512E2C25D4547400B21FF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

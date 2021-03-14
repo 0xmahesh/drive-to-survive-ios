@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+class SplashScreenCarouselItem {
+    let title: String
+    let subtitle: String
+    let image: String
+    
+    init(title: String, subtitle: String, image: String) {
+        self.title = title
+        self.subtitle = subtitle
+        self.image = image
+    }
+    
+    static func loadSplashScreenItems() -> [SplashScreenCarouselItem] {
+        let items = [ SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url"),
+                      SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url"),
+                      SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url")
+                      
+        ]
+        return items
+    }
+}
+

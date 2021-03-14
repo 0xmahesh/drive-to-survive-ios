@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreenViewController" customModule="DriveToSurvive" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="mHA-qk-kzb" id="fre-OM-zFp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,16 +26,53 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-MH-cw7">
+                    <rect key="frame" x="40" y="200" width="334" height="47"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="PR4-JF-5GT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                    <state key="normal" title="Launch">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="launchButtonTapped:" destination="-1" eventType="touchUpInside" id="Plz-cy-Pc6"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mHA-qk-kzb">
+                    <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="YXM-J9-MPL"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HK7-xH-H3C">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="daf-CS-2KF"/>
+                        <outlet property="delegate" destination="-1" id="LkG-vO-YIJ"/>
+                    </connections>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="etf-uL-NnX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3Xi-gT-mK7"/>
+                <constraint firstItem="mHA-qk-kzb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ATV-1j-74o"/>
                 <constraint firstItem="lFs-c9-hwC" firstAttribute="top" secondItem="etf-uL-NnX" secondAttribute="top" id="Kjn-MV-GKy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="etf-uL-NnX" secondAttribute="trailing" id="Oni-xb-jLy"/>
+                <constraint firstItem="mHA-qk-kzb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pyj-8p-KOn"/>
+                <constraint firstItem="Nen-MH-cw7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="QHE-3M-Eoi"/>
                 <constraint firstAttribute="bottom" secondItem="etf-uL-NnX" secondAttribute="bottom" id="Qfe-7E-oiH"/>
                 <constraint firstItem="lFs-c9-hwC" firstAttribute="trailing" secondItem="etf-uL-NnX" secondAttribute="trailing" id="W3d-3H-K6J"/>
                 <constraint firstItem="etf-uL-NnX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aO8-8A-euM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mHA-qk-kzb" secondAttribute="trailing" id="daP-fo-l9S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nen-MH-cw7" secondAttribute="trailing" constant="40" id="eHe-le-iNl"/>
+                <constraint firstItem="Nen-MH-cw7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="156" id="lhZ-np-dLg"/>
                 <constraint firstItem="lFs-c9-hwC" firstAttribute="leading" secondItem="etf-uL-NnX" secondAttribute="leading" id="pAn-3Z-f3I"/>
                 <constraint firstItem="lFs-c9-hwC" firstAttribute="bottom" secondItem="etf-uL-NnX" secondAttribute="bottom" id="zeF-Se-BXL"/>
             </constraints>
@@ -45,6 +83,9 @@
         <image name="splash" width="418" height="626"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
