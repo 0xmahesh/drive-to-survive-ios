@@ -58,7 +58,7 @@ class CustomViewControllerTransition: NSObject, UIViewControllerAnimatedTransiti
         let finalFrame = transitionContext.finalFrame(for: toVC)
         toVC.view.frame = finalFrame
         
-        let clonedCells =  copyVisibleCells(visibleCells: fromVC.newsCollectionView.visibleCells, currSelected: fromVC.selectedCell)
+        let clonedCells =  copyVisibleCells(visibleCells: fromVC.newsCollectionView.visibleCells, currSelected: fromVC.selectedNewsItemCell)
         
         for cell in clonedCells.cells {
             let convertedFrame = fromVC.newsCollectionView.convert(cell.frame, to: nil)
@@ -116,7 +116,7 @@ class CustomViewControllerTransition: NSObject, UIViewControllerAnimatedTransiti
         let finalFrame = transitionContext.finalFrame(for: toVC)
         toVC.view.frame = finalFrame
         
-        let clonedCells = copyVisibleCells(visibleCells: toVC.newsCollectionView.visibleCells, currSelected: toVC.selectedCell)
+        let clonedCells = copyVisibleCells(visibleCells: toVC.newsCollectionView.visibleCells, currSelected: toVC.selectedNewsItemCell)
         
         var selectedCellOriginalFrame: CGRect = .zero
         

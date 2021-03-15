@@ -28,6 +28,7 @@
 		3D30F81825FD5EE00036FFE2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */; };
 		3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */; };
 		3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */; };
+		3D4F75DD25FFCB2E001A19D3 /* DriverDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */; };
 		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
 		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
 		3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2A25D4547400B21FF6 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */; };
 		3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */; };
 		3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */; };
+		3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */; };
+		3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */; };
 		3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */; };
 		3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +90,7 @@
 		3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverDetailViewController.xib; sourceTree = "<group>"; };
 		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D512E2525D4547200B21FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayout.swift; sourceTree = "<group>"; };
 		3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCardView.swift; sourceTree = "<group>"; };
+		3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
+		3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewControllerTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +275,7 @@
 		3D512E5525D458EB00B21FF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3DAC3C8525FE38E20070F623 /* DriverDetailView */,
 				3DC42CDE25F7D34800E0E22F /* NewsDetail */,
 				3D46F81925F6961D00C2A6A8 /* Home */,
 				3D512EA525D81A2300B21FF6 /* SplashScreen */,
@@ -323,6 +330,16 @@
 				3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */,
 			);
 			path = ParallaxCollectionView;
+			sourceTree = "<group>";
+		};
+		3DAC3C8525FE38E20070F623 /* DriverDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */,
+				3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */,
+				3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */,
+			);
+			path = DriverDetailView;
 			sourceTree = "<group>";
 		};
 		3DC42CDE25F7D34800E0E22F /* NewsDetail */ = {
@@ -447,6 +464,7 @@
 				3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */,
 				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
 				3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */,
+				3D4F75DD25FFCB2E001A19D3 /* DriverDetailViewController.xib in Resources */,
 				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
 				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,
@@ -482,6 +500,7 @@
 			files = (
 				3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */,
 				3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */,
+				3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */,
 				3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */,
 				3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */,
 				3D15413325E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift in Sources */,
@@ -490,6 +509,7 @@
 				3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */,
 				3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */,
 				3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */,
+				3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */,
 				3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */,
 				3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */,
 				3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */,

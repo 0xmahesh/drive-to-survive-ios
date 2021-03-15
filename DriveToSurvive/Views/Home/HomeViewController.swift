@@ -25,7 +25,8 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     
     var listCellsize = CGSize.zero
     var detailCellSize = CGSize.zero
-    var selectedCell: ParallaxCollectionViewCell?
+    var selectedNewsItemCell: ParallaxCollectionViewCell?
+    var selectedDriverCell: DriverThumbnailCollectionViewCell?
     var collectionViewLayout: UICollectionViewLayout = ParallaxCollectionViewLayout()
     var newsItems: [NewsItem] = DataStore.shared.getNewsItems()
     var drivers: [Driver] = DataStore.shared.getDriversData()
@@ -44,7 +45,7 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     
     var selectedCardView: ParallaxCardViewPresentable? {
         get {
-            if let selectedCell = self.selectedCell as? ParallaxCardViewPresentable {
+            if let selectedCell = self.selectedNewsItemCell as? ParallaxCardViewPresentable {
                 return selectedCell
             }
             return nil
@@ -175,13 +176,20 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case newsCollectionView:
             let newsItem = newsItems[indexPath.row]
             let newsDetailVC = NewsDetailViewController(with: newsItem)
-            selectedCell = collectionView.cellForItem(at: indexPath) as! ParallaxCollectionViewCell?
+            selectedNewsItemCell = collectionView.cellForItem(at: indexPath) as! ParallaxCollectionViewCell?
             
             newsDetailVC.transitioningDelegate = self
             newsDetailVC.modalPresentationStyle = .custom
             present(newsDetailVC, animated: true, completion: nil)
           //  navigationController?.present(newsDetailVC, animated: true, completion: nil)
            // self.navigationController?.pushViewController(newsDetailVC, animated: true)
+        case driverLineupCollectionView:
+            let driver = drivers[indexPath.row]
+            let driverDetailVC = DriverDetailViewController(with: driver)
+            driverDetailVC.transitioningDelegate = self
+            driverDetailVC.modalPresentationStyle = .custom
+            selectedDriverCell = collectionView.cellForItem(at: indexPath) as! DriverThumbnailCollectionViewCell?
+            present(driverDetailVC, animated: true, completion: nil)
         default:
             break
         }
@@ -222,6 +230,11 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if presented is DriverDetailViewController {
+            return DriverDetailViewControllerTransitionAnimator(isDismissed: false)
+        }
+        
         return CustomViewControllerTransition(isDismissed: false)
     }
     
