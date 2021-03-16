@@ -28,7 +28,6 @@
 		3D30F81825FD5EE00036FFE2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */; };
 		3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */; };
 		3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */; };
-		3D4F75DD25FFCB2E001A19D3 /* DriverDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */; };
 		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
 		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
 		3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E2A25D4547400B21FF6 /* Assets.xcassets */; };
@@ -90,7 +89,6 @@
 		3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		3D46F81A25F6964B00C2A6A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverDetailViewController.xib; sourceTree = "<group>"; };
 		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D512E2525D4547200B21FF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 		3DAC3C8525FE38E20070F623 /* DriverDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				3D4F75DC25FFCB2E001A19D3 /* DriverDetailViewController.xib */,
 				3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */,
 				3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */,
 			);
@@ -464,7 +461,6 @@
 				3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */,
 				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
 				3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */,
-				3D4F75DD25FFCB2E001A19D3 /* DriverDetailViewController.xib in Resources */,
 				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
 				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,

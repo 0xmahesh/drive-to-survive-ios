@@ -19,6 +19,8 @@ struct Driver {
     let lastName: String
     let team: Team
     let imageUrl: String?
+    let description: String? =  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+    let rank: Int = 0
 }
 
 struct Team {
@@ -53,6 +55,7 @@ class DataStore {
     }
     
     func getDriversData() -> [Driver] {
+        
         let drivers = [
             Driver(firstName: "Lando", lastName: "Norris", team: getTeamData(for: .mclaren), imageUrl: "norris"),
             Driver(firstName: "Daniel", lastName: "Ricciardo", team: getTeamData(for: .mclaren), imageUrl: "ricciardo"),

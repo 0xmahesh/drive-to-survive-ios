@@ -98,28 +98,25 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
         
         
         let finalFrame = transitionContext.finalFrame(for: toVC)
-        toView.frame = fromVC.view.frame
-        containerView.addSubview(toView)
+        toVC.view.frame = finalFrame
+        containerView.addSubview(toVC.view)
+
         
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0.0, options: [.curveEaseOut, .layoutSubviews], animations: {
-//            if let selectedCell = selectedDriverCell {
-//                selectedCell.frame = toVC.driverImageView.frame
-//            }
             selectedDriverCellImageSnapshot.frame = self.isDismissed ? self.cellImageViewRect : detailViewImageViewRect
             detailViewImageSnapshot.frame = self.isDismissed ? self.cellImageViewRect : detailViewImageViewRect
-            fadeView.alpha = self.isDismissed ? 0 : 1
+            fadeView.alpha = 1
             
         }, completion: { position in
-//            fromVC.view.isHidden = false
-//            containerView.addSubview(toVC.view)
+            toVC.view.alpha = 1
+            
             backgroundView.removeFromSuperview()
             selectedDriverCellImageSnapshot.removeFromSuperview()
             detailViewImageSnapshot.removeFromSuperview()
-            toView.layoutIfNeeded()
-            toView.alpha = 1
             
             transitionContext
                 .completeTransition(!transitionContext.transitionWasCancelled)
+            
             
         })
     }
@@ -143,3 +140,26 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
         return (cells, selectedCell)
     }
 }
+
+
+
+//        UIView.animateKeyframes(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .calculationModeLinear, animations: {
+//
+//            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
+//                selectedDriverCellImageSnapshot.frame = detailViewImageViewRect
+//                detailViewImageSnapshot.frame = detailViewImageViewRect
+//                fadeView.alpha = 1
+//            })
+//
+//            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.6, animations: {
+//                self.selectedImageViewSnapshot?.alpha = 0
+//                detailViewImageSnapshot.alpha = 1
+//            })
+//        }, completion: { _ in
+//            backgroundView.removeFromSuperview()
+//            selectedDriverCellImageSnapshot.removeFromSuperview()
+//            detailViewImageSnapshot.removeFromSuperview()
+//            toVC.view.alpha = 1
+//            transitionContext
+//                .completeTransition(true)
+//        })

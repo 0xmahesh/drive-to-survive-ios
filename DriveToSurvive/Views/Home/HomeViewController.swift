@@ -239,6 +239,9 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if(dismissed is DriverDetailViewController) {
+            return nil
+        }
         return CustomViewControllerTransition(isDismissed: true)
     }
 }
