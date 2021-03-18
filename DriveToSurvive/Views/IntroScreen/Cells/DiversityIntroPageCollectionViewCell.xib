@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Formula1-Bold.ttf">
+            <string>Formula1-Display-Bold</string>
+        </array>
+        <array key="LucidaGrandeBold.ttf">
+            <string>LucidaGrande-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiversityIntroPageCollectionViewCell" id="gTV-IL-0wX" customClass="DiversityIntroPageCollectionViewCell" customModule="DriveToSurvive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1N-sY-dGI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro-1" translatesAutoresizingMaskIntoConstraints="NO" id="fEt-cd-K2T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIVERSITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfS-Nh-8DK">
+                                <rect key="frame" x="28" y="92" width="162" height="28"/>
+                                <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-bE-aAf">
+                                <rect key="frame" x="28" y="128" width="69" height="28"/>
+                                <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INCLUSION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-HX-IKE">
+                                <rect key="frame" x="28" y="164" width="169" height="28"/>
+                                <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our goal is to have a meritocracy that promotes the most talented drivers into F1, regardless of gender or ethnicity." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-kk-gwX">
+                                <rect key="frame" x="28" y="252" width="319" height="104"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAi-zi-AJD" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="223" y="92" width="124" height="72"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="XyK-3i-29G"/>
+                                    <constraint firstAttribute="height" constant="72" id="muf-wy-Hdy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="diversity"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#WERACEASONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAd-Yq-DwU">
+                                <rect key="frame" x="224.5" y="164" width="121.5" height="12.5"/>
+                                <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WAi-zi-AJD" secondAttribute="trailing" constant="28" id="68d-0O-iF1"/>
+                            <constraint firstAttribute="trailing" secondItem="fEt-cd-K2T" secondAttribute="trailing" id="7d3-lb-Doj"/>
+                            <constraint firstItem="fEt-cd-K2T" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" id="ACa-9N-cQw"/>
+                            <constraint firstItem="JfS-Nh-8DK" firstAttribute="top" secondItem="D1N-sY-dGI" secondAttribute="top" constant="92" id="GAl-0v-b1W"/>
+                            <constraint firstItem="2am-bE-aAf" firstAttribute="top" secondItem="JfS-Nh-8DK" secondAttribute="bottom" constant="8" id="KEM-CH-eru"/>
+                            <constraint firstItem="BIU-HX-IKE" firstAttribute="top" secondItem="2am-bE-aAf" secondAttribute="bottom" constant="8" id="TGU-fk-sot"/>
+                            <constraint firstAttribute="trailing" secondItem="0Rb-kk-gwX" secondAttribute="trailing" constant="28" id="UyQ-T2-nXZ"/>
+                            <constraint firstItem="JfS-Nh-8DK" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" constant="28" id="XMk-s6-XCY"/>
+                            <constraint firstItem="nAd-Yq-DwU" firstAttribute="top" secondItem="WAi-zi-AJD" secondAttribute="bottom" id="Yux-wG-Soh"/>
+                            <constraint firstAttribute="bottom" secondItem="fEt-cd-K2T" secondAttribute="bottom" id="Zhc-Ax-d4V"/>
+                            <constraint firstItem="WAi-zi-AJD" firstAttribute="top" secondItem="D1N-sY-dGI" secondAttribute="top" constant="92" id="c9T-WY-Qpr"/>
+                            <constraint firstItem="0Rb-kk-gwX" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" constant="28" id="ccw-Xn-A8f"/>
+                            <constraint firstItem="0Rb-kk-gwX" firstAttribute="top" secondItem="BIU-HX-IKE" secondAttribute="bottom" constant="60" id="fbh-3B-QrN"/>
+                            <constraint firstItem="2am-bE-aAf" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" constant="28" id="gJ5-St-mDO"/>
+                            <constraint firstItem="nAd-Yq-DwU" firstAttribute="centerX" secondItem="WAi-zi-AJD" secondAttribute="centerX" id="gyd-ei-rPB"/>
+                            <constraint firstItem="fEt-cd-K2T" firstAttribute="top" secondItem="D1N-sY-dGI" secondAttribute="top" id="m2Y-Ts-uJ1"/>
+                            <constraint firstItem="BIU-HX-IKE" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" constant="28" id="rPb-HH-a2h"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="D1N-sY-dGI" secondAttribute="trailing" id="H5B-Mg-uH5"/>
+                <constraint firstItem="D1N-sY-dGI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H87-82-R1J"/>
+                <constraint firstItem="D1N-sY-dGI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aQW-8n-zDj"/>
+                <constraint firstAttribute="bottom" secondItem="D1N-sY-dGI" secondAttribute="bottom" id="h6L-2H-gG7"/>
+            </constraints>
+            <size key="customSize" width="284" height="451"/>
+            <connections>
+                <outlet property="andLabel" destination="2am-bE-aAf" id="yTB-vn-aGF"/>
+                <outlet property="andLabelLeadingConstraint" destination="gJ5-St-mDO" id="OZC-H0-gHy"/>
+                <outlet property="animationView" destination="WAi-zi-AJD" id="O2P-nU-7vS"/>
+                <outlet property="containerView" destination="D1N-sY-dGI" id="yqH-cP-qRf"/>
+                <outlet property="descriptionLabel" destination="0Rb-kk-gwX" id="MyC-bb-PV1"/>
+                <outlet property="descriptionLabelTopConstraint" destination="fbh-3B-QrN" id="KeF-yp-hbw"/>
+                <outlet property="diversityLabel" destination="JfS-Nh-8DK" id="2TZ-Lq-0Wh"/>
+                <outlet property="diversityLabelLeadingConstraint" destination="XMk-s6-XCY" id="Pbh-55-trc"/>
+                <outlet property="inclusionLabel" destination="BIU-HX-IKE" id="siQ-Sw-g2g"/>
+                <outlet property="inclusionLabelLeadingConstraint" destination="rPb-HH-a2h" id="KwY-Cb-jVn"/>
+                <outlet property="weRaceAsOneLabel" destination="nAd-Yq-DwU" id="cjW-Fb-Vo3"/>
+                <outlet property="weRaceAsOneTopLabelConstraint" destination="Yux-wG-Soh" id="5Lx-7I-vnQ"/>
+            </connections>
+            <point key="canvasLocation" x="225.36231884057972" y="217.63392857142856"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="WAi-zi-AJD"/>
+    </designables>
+    <resources>
+        <image name="intro-1" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

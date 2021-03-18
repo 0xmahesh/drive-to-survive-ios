@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D15413325E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */; };
-		3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */; };
 		3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7E925FD544D0036FFE2 /* DataStore.swift */; };
 		3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */; };
 		3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */; };
@@ -48,6 +46,23 @@
 		3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */; };
 		3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */; };
 		3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */; };
+		3DE9A56D2603B0A5007D2090 /* diversity.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5692603B0A5007D2090 /* diversity.json */; };
+		3DE9A56E2603B0A5007D2090 /* f1_car.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A56A2603B0A5007D2090 /* f1_car.json */; };
+		3DE9A56F2603B0A5007D2090 /* sustainability.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A56B2603B0A5007D2090 /* sustainability.json */; };
+		3DE9A5702603B0A5007D2090 /* community.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A56C2603B0A5007D2090 /* community.json */; };
+		3DE9A5822603B9A8007D2090 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9A5802603B9A8007D2090 /* IntroScreenViewController.swift */; };
+		3DE9A5832603B9A8007D2090 /* IntroScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5812603B9A8007D2090 /* IntroScreenViewController.xib */; };
+		3DE9A5892603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9A5872603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift */; };
+		3DE9A58A2603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5882603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib */; };
+		3DE9A5902603CA1E007D2090 /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A58E2603CA1E007D2090 /* LucidaGrande.ttf */; };
+		3DE9A5912603CA1E007D2090 /* LucidaGrandeBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A58F2603CA1E007D2090 /* LucidaGrandeBold.ttf */; };
+		3DE9A59C2603D018007D2090 /* Formula1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5972603CC18007D2090 /* Formula1-Regular.ttf */; };
+		3DE9A59D2603D018007D2090 /* Formula1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5952603CC17007D2090 /* Formula1-Black.ttf */; };
+		3DE9A59E2603D018007D2090 /* Formula1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5962603CC18007D2090 /* Formula1-Bold.ttf */; };
+		3DE9A59F2603D018007D2090 /* Formula1-Wide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5982603CC18007D2090 /* Formula1-Wide.ttf */; };
+		47671B7366A6CC96AF53FF78 /* Pods_DriveToSurvive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBCB78F33229BA5AA97402A /* Pods_DriveToSurvive.framework */; };
+		84300D711D34DAFDA8BA237C /* Pods_DriveToSurviveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82628DF48660CD1F1E5C742 /* Pods_DriveToSurviveTests.framework */; };
+		A5F8757EF157DDEA2811559B /* Pods_DriveToSurvive_DriveToSurviveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410A6D7B4F88E8A104BEF8CA /* Pods_DriveToSurvive_DriveToSurviveUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCarouselItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenCarouselItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		00C767CDC63A21B4BB98B462 /* Pods-DriveToSurvive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive.debug.xcconfig"; sourceTree = "<group>"; };
+		02A78585B35526F4CFCCBE1F /* Pods-DriveToSurviveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurviveTests.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurviveTests/Pods-DriveToSurviveTests.release.xcconfig"; sourceTree = "<group>"; };
 		3D30F7E925FD544D0036FFE2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -115,6 +130,27 @@
 		3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewControllerTransition.swift; sourceTree = "<group>"; };
+		3DE9A5692603B0A5007D2090 /* diversity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diversity.json; sourceTree = "<group>"; };
+		3DE9A56A2603B0A5007D2090 /* f1_car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f1_car.json; sourceTree = "<group>"; };
+		3DE9A56B2603B0A5007D2090 /* sustainability.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sustainability.json; sourceTree = "<group>"; };
+		3DE9A56C2603B0A5007D2090 /* community.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = community.json; sourceTree = "<group>"; };
+		3DE9A5802603B9A8007D2090 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		3DE9A5812603B9A8007D2090 /* IntroScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroScreenViewController.xib; sourceTree = "<group>"; };
+		3DE9A5872603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiversityIntroPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3DE9A5882603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiversityIntroPageCollectionViewCell.xib; sourceTree = "<group>"; };
+		3DE9A58E2603CA1E007D2090 /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
+		3DE9A58F2603CA1E007D2090 /* LucidaGrandeBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrandeBold.ttf; sourceTree = "<group>"; };
+		3DE9A5952603CC17007D2090 /* Formula1-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Black.ttf"; sourceTree = "<group>"; };
+		3DE9A5962603CC18007D2090 /* Formula1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold.ttf"; sourceTree = "<group>"; };
+		3DE9A5972603CC18007D2090 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
+		3DE9A5982603CC18007D2090 /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
+		410A6D7B4F88E8A104BEF8CA /* Pods_DriveToSurvive_DriveToSurviveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveToSurvive_DriveToSurviveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B85F1221D16D95D66E7D74E /* Pods-DriveToSurvive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive.release.xcconfig"; sourceTree = "<group>"; };
+		84EDDD9ECDDF49FD69B8506E /* Pods-DriveToSurviveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurviveTests.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurviveTests/Pods-DriveToSurviveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		85D4A685C8A989F601240DD4 /* Pods-DriveToSurvive-DriveToSurviveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive-DriveToSurviveUITests.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive-DriveToSurviveUITests/Pods-DriveToSurvive-DriveToSurviveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1A674A095F793DB283B9E0A /* Pods-DriveToSurvive-DriveToSurviveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive-DriveToSurviveUITests.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive-DriveToSurviveUITests/Pods-DriveToSurvive-DriveToSurviveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E82628DF48660CD1F1E5C742 /* Pods_DriveToSurviveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveToSurviveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBCB78F33229BA5AA97402A /* Pods_DriveToSurvive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveToSurvive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47671B7366A6CC96AF53FF78 /* Pods_DriveToSurvive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84300D711D34DAFDA8BA237C /* Pods_DriveToSurviveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,19 +174,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F8757EF157DDEA2811559B /* Pods_DriveToSurvive_DriveToSurviveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D15413025E41F5800F62CF4 /* SplashScreenCarouselItemCollectionViewCell */ = {
+		27735E9384B908EE5A77F177 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D15413125E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift */,
-				3D15413225E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib */,
+				00C767CDC63A21B4BB98B462 /* Pods-DriveToSurvive.debug.xcconfig */,
+				6B85F1221D16D95D66E7D74E /* Pods-DriveToSurvive.release.xcconfig */,
+				85D4A685C8A989F601240DD4 /* Pods-DriveToSurvive-DriveToSurviveUITests.debug.xcconfig */,
+				E1A674A095F793DB283B9E0A /* Pods-DriveToSurvive-DriveToSurviveUITests.release.xcconfig */,
+				84EDDD9ECDDF49FD69B8506E /* Pods-DriveToSurviveTests.debug.xcconfig */,
+				02A78585B35526F4CFCCBE1F /* Pods-DriveToSurviveTests.release.xcconfig */,
 			);
-			path = SplashScreenCarouselItemCollectionViewCell;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		3D30F7EF25FD5C9E0036FFE2 /* Cells */ = {
@@ -171,6 +214,7 @@
 		3D30F7F825FD5E5B0036FFE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DE9A5682603B094007D2090 /* LottieFiles */,
 				3D30F7F925FD5E640036FFE2 /* Fonts */,
 			);
 			path = Resources;
@@ -179,6 +223,12 @@
 		3D30F7F925FD5E640036FFE2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3DE9A5952603CC17007D2090 /* Formula1-Black.ttf */,
+				3DE9A5962603CC18007D2090 /* Formula1-Bold.ttf */,
+				3DE9A5972603CC18007D2090 /* Formula1-Regular.ttf */,
+				3DE9A5982603CC18007D2090 /* Formula1-Wide.ttf */,
+				3DE9A58E2603CA1E007D2090 /* LucidaGrande.ttf */,
+				3DE9A58F2603CA1E007D2090 /* LucidaGrandeBold.ttf */,
 				3D30F80A25FD5EE00036FFE2 /* OpenSans-Bold.ttf */,
 				3D30F7FF25FD5EDF0036FFE2 /* OpenSans-BoldItalic.ttf */,
 				3D30F7FE25FD5EDF0036FFE2 /* OpenSans-ExtraBold.ttf */,
@@ -214,6 +264,8 @@
 				3D512E3725D4547400B21FF6 /* DriveToSurviveTests */,
 				3D512E4225D4547400B21FF6 /* DriveToSurviveUITests */,
 				3D512E1F25D4547200B21FF6 /* Products */,
+				27735E9384B908EE5A77F177 /* Pods */,
+				B43C1E819A2C12E2126C221A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,6 +325,7 @@
 		3D512E5525D458EB00B21FF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3DE9A57E2603B7E7007D2090 /* IntroScreen */,
 				3DAC3C8525FE38E20070F623 /* DriverDetailView */,
 				3DC42CDE25F7D34800E0E22F /* NewsDetail */,
 				3D46F81925F6961D00C2A6A8 /* Home */,
@@ -284,7 +337,6 @@
 		3D512EA525D81A2300B21FF6 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3D15413025E41F5800F62CF4 /* SplashScreenCarouselItemCollectionViewCell */,
 				3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */,
 				3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */,
 			);
@@ -347,6 +399,46 @@
 			path = NewsDetail;
 			sourceTree = "<group>";
 		};
+		3DE9A5682603B094007D2090 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9A56C2603B0A5007D2090 /* community.json */,
+				3DE9A5692603B0A5007D2090 /* diversity.json */,
+				3DE9A56A2603B0A5007D2090 /* f1_car.json */,
+				3DE9A56B2603B0A5007D2090 /* sustainability.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
+		3DE9A57E2603B7E7007D2090 /* IntroScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9A57F2603B994007D2090 /* Cells */,
+				3DE9A5802603B9A8007D2090 /* IntroScreenViewController.swift */,
+				3DE9A5812603B9A8007D2090 /* IntroScreenViewController.xib */,
+			);
+			path = IntroScreen;
+			sourceTree = "<group>";
+		};
+		3DE9A57F2603B994007D2090 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9A5872603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift */,
+				3DE9A5882603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B43C1E819A2C12E2126C221A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCBCB78F33229BA5AA97402A /* Pods_DriveToSurvive.framework */,
+				410A6D7B4F88E8A104BEF8CA /* Pods_DriveToSurvive_DriveToSurviveUITests.framework */,
+				E82628DF48660CD1F1E5C742 /* Pods_DriveToSurviveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,9 +446,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D512E4825D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurvive" */;
 			buildPhases = (
+				A2543A3C50F44FFB5A3DEBDA /* [CP] Check Pods Manifest.lock */,
 				3D512E1A25D4547200B21FF6 /* Sources */,
 				3D512E1B25D4547200B21FF6 /* Frameworks */,
 				3D512E1C25D4547200B21FF6 /* Resources */,
+				FF6F15EE302CB910C2D24904 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -371,6 +465,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D512E4B25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveTests" */;
 			buildPhases = (
+				12ED23CF0566D0C049963AE7 /* [CP] Check Pods Manifest.lock */,
 				3D512E3025D4547400B21FF6 /* Sources */,
 				3D512E3125D4547400B21FF6 /* Frameworks */,
 				3D512E3225D4547400B21FF6 /* Resources */,
@@ -389,9 +484,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D512E4E25D4547400B21FF6 /* Build configuration list for PBXNativeTarget "DriveToSurviveUITests" */;
 			buildPhases = (
+				97803F1C8334E35C4BD05F7A /* [CP] Check Pods Manifest.lock */,
 				3D512E3B25D4547400B21FF6 /* Sources */,
 				3D512E3C25D4547400B21FF6 /* Frameworks */,
 				3D512E3D25D4547400B21FF6 /* Resources */,
+				087A6D05CE0A3660C03C031A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,25 +548,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */,
+				3DE9A5832603B9A8007D2090 /* IntroScreenViewController.xib in Resources */,
 				3D30F81525FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */,
 				3D30F80B25FD5EE00036FFE2 /* OpenSans-Light.ttf in Resources */,
+				3DE9A5702603B0A5007D2090 /* community.json in Resources */,
+				3DE9A56F2603B0A5007D2090 /* sustainability.json in Resources */,
+				3DE9A5912603CA1E007D2090 /* LucidaGrandeBold.ttf in Resources */,
 				3D30F80C25FD5EE00036FFE2 /* OpenSans-ExtraBold.ttf in Resources */,
 				3D512E5925D45D8100B21FF6 /* SplashScreenViewController.xib in Resources */,
 				3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */,
 				3D30F80D25FD5EE00036FFE2 /* OpenSans-BoldItalic.ttf in Resources */,
-				3D15413425E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.xib in Resources */,
 				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
 				3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */,
 				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
+				3DE9A59D2603D018007D2090 /* Formula1-Black.ttf in Resources */,
+				3DE9A56E2603B0A5007D2090 /* f1_car.json in Resources */,
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
 				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,
+				3DE9A56D2603B0A5007D2090 /* diversity.json in Resources */,
 				3D30F81325FD5EE00036FFE2 /* SFProText-Bold.otf in Resources */,
 				3D30F81225FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				3DE9A59E2603D018007D2090 /* Formula1-Bold.ttf in Resources */,
 				3D30F81725FD5EE00036FFE2 /* OpenSans-SemiBold.ttf in Resources */,
+				3DE9A59C2603D018007D2090 /* Formula1-Regular.ttf in Resources */,
+				3DE9A58A2603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib in Resources */,
 				3D30F81625FD5EE00036FFE2 /* OpenSans-Regular.ttf in Resources */,
+				3DE9A5902603CA1E007D2090 /* LucidaGrande.ttf in Resources */,
 				3D30F81825FD5EE00036FFE2 /* OpenSans-Bold.ttf in Resources */,
 				3D30F80E25FD5EE00036FFE2 /* SFProText-Heavy.otf in Resources */,
+				3DE9A59F2603D018007D2090 /* Formula1-Wide.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,17 +597,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		087A6D05CE0A3660C03C031A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive-DriveToSurviveUITests/Pods-DriveToSurvive-DriveToSurviveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive-DriveToSurviveUITests/Pods-DriveToSurvive-DriveToSurviveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive-DriveToSurviveUITests/Pods-DriveToSurvive-DriveToSurviveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12ED23CF0566D0C049963AE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DriveToSurviveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97803F1C8334E35C4BD05F7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DriveToSurvive-DriveToSurviveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2543A3C50F44FFB5A3DEBDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DriveToSurvive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6F15EE302CB910C2D24904 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D512E1A25D4547200B21FF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE9A5892603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift in Sources */,
 				3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */,
 				3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */,
+				3DE9A5822603B9A8007D2090 /* IntroScreenViewController.swift in Sources */,
 				3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */,
 				3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */,
 				3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */,
-				3D15413325E41FA300F62CF4 /* SplashScreenCarouselItemCollectionViewCell.swift in Sources */,
 				3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */,
 				3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */,
 				3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */,
@@ -677,6 +889,7 @@
 		};
 		3D512E4925D4547400B21FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C767CDC63A21B4BB98B462 /* Pods-DriveToSurvive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -696,6 +909,7 @@
 		};
 		3D512E4A25D4547400B21FF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B85F1221D16D95D66E7D74E /* Pods-DriveToSurvive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -715,6 +929,7 @@
 		};
 		3D512E4C25D4547400B21FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84EDDD9ECDDF49FD69B8506E /* Pods-DriveToSurviveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -737,6 +952,7 @@
 		};
 		3D512E4D25D4547400B21FF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A78585B35526F4CFCCBE1F /* Pods-DriveToSurviveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -759,6 +975,7 @@
 		};
 		3D512E4F25D4547400B21FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85D4A685C8A989F601240DD4 /* Pods-DriveToSurvive-DriveToSurviveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +996,7 @@
 		};
 		3D512E5025D4547400B21FF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A674A095F793DB283B9E0A /* Pods-DriveToSurvive-DriveToSurviveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
