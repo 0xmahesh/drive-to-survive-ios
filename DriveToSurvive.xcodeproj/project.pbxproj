@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2B897826051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B897626051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift */; };
+		3D2B897926051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2B897726051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib */; };
 		3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7E925FD544D0036FFE2 /* DataStore.swift */; };
 		3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */; };
 		3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */; };
@@ -42,6 +44,13 @@
 		3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */; };
 		3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */; };
 		3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */; };
+		3D97D2C926062245007D1328 /* community2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D97D2C826062245007D1328 /* community2.json */; };
+		3D97D2CF26068020007D1328 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2CE26068020007D1328 /* UIView+Extensions.swift */; };
+		3D97D2F326077811007D1328 /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2ED26077811007D1328 /* CustomTransitionViewController.swift */; };
+		3D97D2F426077811007D1328 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2EE26077811007D1328 /* SpinerLayer.swift */; };
+		3D97D2F526077811007D1328 /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2EF26077811007D1328 /* TransitionButton.swift */; };
+		3D97D2F626077811007D1328 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2F026077811007D1328 /* FadeTransition.swift */; };
+		3D97D2F726077811007D1328 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2F126077811007D1328 /* CGRectExtension.swift */; };
 		3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */; };
 		3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */; };
 		3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */; };
@@ -60,6 +69,8 @@
 		3DE9A59D2603D018007D2090 /* Formula1-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5952603CC17007D2090 /* Formula1-Black.ttf */; };
 		3DE9A59E2603D018007D2090 /* Formula1-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5962603CC18007D2090 /* Formula1-Bold.ttf */; };
 		3DE9A59F2603D018007D2090 /* Formula1-Wide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5982603CC18007D2090 /* Formula1-Wide.ttf */; };
+		3DEB849726052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB849526052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift */; };
+		3DEB849826052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DEB849626052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.xib */; };
 		47671B7366A6CC96AF53FF78 /* Pods_DriveToSurvive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBCB78F33229BA5AA97402A /* Pods_DriveToSurvive.framework */; };
 		84300D711D34DAFDA8BA237C /* Pods_DriveToSurviveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82628DF48660CD1F1E5C742 /* Pods_DriveToSurviveTests.framework */; };
 		A5F8757EF157DDEA2811559B /* Pods_DriveToSurvive_DriveToSurviveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410A6D7B4F88E8A104BEF8CA /* Pods_DriveToSurvive_DriveToSurviveUITests.framework */; };
@@ -85,6 +96,8 @@
 /* Begin PBXFileReference section */
 		00C767CDC63A21B4BB98B462 /* Pods-DriveToSurvive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive.debug.xcconfig"; sourceTree = "<group>"; };
 		02A78585B35526F4CFCCBE1F /* Pods-DriveToSurviveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurviveTests.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurviveTests/Pods-DriveToSurviveTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D2B897626051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainabilityIntroPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D2B897726051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SustainabilityIntroPageCollectionViewCell.xib; sourceTree = "<group>"; };
 		3D30F7E925FD544D0036FFE2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		3D30F7F125FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D30F7F225FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +139,13 @@
 		3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayout.swift; sourceTree = "<group>"; };
 		3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCardView.swift; sourceTree = "<group>"; };
+		3D97D2C826062245007D1328 /* community2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = community2.json; sourceTree = "<group>"; };
+		3D97D2CE26068020007D1328 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3D97D2ED26077811007D1328 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
+		3D97D2EE26077811007D1328 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		3D97D2EF26077811007D1328 /* TransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionButton.swift; sourceTree = "<group>"; };
+		3D97D2F026077811007D1328 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		3D97D2F126077811007D1328 /* CGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
 		3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +164,8 @@
 		3DE9A5962603CC18007D2090 /* Formula1-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Bold.ttf"; sourceTree = "<group>"; };
 		3DE9A5972603CC18007D2090 /* Formula1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Regular.ttf"; sourceTree = "<group>"; };
 		3DE9A5982603CC18007D2090 /* Formula1-Wide.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Formula1-Wide.ttf"; sourceTree = "<group>"; };
+		3DEB849526052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityIntroPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		3DEB849626052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityIntroPageCollectionViewCell.xib; sourceTree = "<group>"; };
 		410A6D7B4F88E8A104BEF8CA /* Pods_DriveToSurvive_DriveToSurviveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DriveToSurvive_DriveToSurviveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B85F1221D16D95D66E7D74E /* Pods-DriveToSurvive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive.release.xcconfig"; sourceTree = "<group>"; };
 		84EDDD9ECDDF49FD69B8506E /* Pods-DriveToSurviveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurviveTests.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurviveTests/Pods-DriveToSurviveTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +236,7 @@
 		3D30F7F825FD5E5B0036FFE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D97D2EB260777F4007D1328 /* CustomUI */,
 				3DE9A5682603B094007D2090 /* LottieFiles */,
 				3D30F7F925FD5E640036FFE2 /* Fonts */,
 			);
@@ -282,6 +305,7 @@
 		3D512E2025D4547200B21FF6 /* DriveToSurvive */ = {
 			isa = PBXGroup;
 			children = (
+				3D97D2CD2606800D007D1328 /* Util */,
 				3D30F7F825FD5E5B0036FFE2 /* Resources */,
 				3D512EA625D81CEE00B21FF6 /* CustomUIComponents */,
 				3D512E5525D458EB00B21FF6 /* Views */,
@@ -382,6 +406,34 @@
 			path = ParallaxCollectionView;
 			sourceTree = "<group>";
 		};
+		3D97D2CD2606800D007D1328 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3D97D2CE26068020007D1328 /* UIView+Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3D97D2EB260777F4007D1328 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				3D97D2EC26077811007D1328 /* TransitionButton */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		3D97D2EC26077811007D1328 /* TransitionButton */ = {
+			isa = PBXGroup;
+			children = (
+				3D97D2ED26077811007D1328 /* CustomTransitionViewController.swift */,
+				3D97D2EE26077811007D1328 /* SpinerLayer.swift */,
+				3D97D2EF26077811007D1328 /* TransitionButton.swift */,
+				3D97D2F026077811007D1328 /* FadeTransition.swift */,
+				3D97D2F126077811007D1328 /* CGRectExtension.swift */,
+			);
+			path = TransitionButton;
+			sourceTree = "<group>";
+		};
 		3DAC3C8525FE38E20070F623 /* DriverDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +454,7 @@
 		3DE9A5682603B094007D2090 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3D97D2C826062245007D1328 /* community2.json */,
 				3DE9A56C2603B0A5007D2090 /* community.json */,
 				3DE9A5692603B0A5007D2090 /* diversity.json */,
 				3DE9A56A2603B0A5007D2090 /* f1_car.json */,
@@ -425,6 +478,10 @@
 			children = (
 				3DE9A5872603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift */,
 				3DE9A5882603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib */,
+				3D2B897626051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift */,
+				3D2B897726051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib */,
+				3DEB849526052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift */,
+				3DEB849626052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -550,6 +607,7 @@
 				3D512E2E25D4547400B21FF6 /* LaunchScreen.storyboard in Resources */,
 				3DE9A5832603B9A8007D2090 /* IntroScreenViewController.xib in Resources */,
 				3D30F81525FD5EE00036FFE2 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				3D2B897926051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib in Resources */,
 				3D30F7F425FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.xib in Resources */,
 				3D30F80B25FD5EE00036FFE2 /* OpenSans-Light.ttf in Resources */,
 				3DE9A5702603B0A5007D2090 /* community.json in Resources */,
@@ -557,6 +615,7 @@
 				3DE9A5912603CA1E007D2090 /* LucidaGrandeBold.ttf in Resources */,
 				3D30F80C25FD5EE00036FFE2 /* OpenSans-ExtraBold.ttf in Resources */,
 				3D512E5925D45D8100B21FF6 /* SplashScreenViewController.xib in Resources */,
+				3DEB849826052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.xib in Resources */,
 				3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */,
 				3D30F80D25FD5EE00036FFE2 /* OpenSans-BoldItalic.ttf in Resources */,
 				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
@@ -567,6 +626,7 @@
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
 				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,
 				3DE9A56D2603B0A5007D2090 /* diversity.json in Resources */,
+				3D97D2C926062245007D1328 /* community2.json in Resources */,
 				3D30F81325FD5EE00036FFE2 /* SFProText-Bold.otf in Resources */,
 				3D30F81225FD5EE00036FFE2 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3DE9A59E2603D018007D2090 /* Formula1-Bold.ttf in Resources */,
@@ -713,13 +773,21 @@
 				3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */,
 				3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */,
 				3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */,
+				3DEB849726052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift in Sources */,
 				3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */,
+				3D97D2F626077811007D1328 /* FadeTransition.swift in Sources */,
 				3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */,
 				3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */,
+				3D97D2F526077811007D1328 /* TransitionButton.swift in Sources */,
+				3D97D2F326077811007D1328 /* CustomTransitionViewController.swift in Sources */,
+				3D97D2F426077811007D1328 /* SpinerLayer.swift in Sources */,
 				3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */,
+				3D97D2F726077811007D1328 /* CGRectExtension.swift in Sources */,
+				3D97D2CF26068020007D1328 /* UIView+Extensions.swift in Sources */,
 				3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */,
 				3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */,
 				3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */,
+				3D2B897826051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift in Sources */,
 				3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */,
 				3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */,
 				3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */,

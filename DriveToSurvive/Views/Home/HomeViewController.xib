@@ -8,8 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SFProText-Bold.otf">
-            <string>SFProText-Bold</string>
+        <array key="Formula1-Bold.ttf">
+            <string>Formula1-Display-Bold</string>
+        </array>
+        <array key="Formula1-Regular.ttf">
+            <string>Formula1-Display-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -26,8 +29,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQR-aG-zBt" userLabel="Nav Header">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drive To Survive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSh-2e-yhs">
+                            <rect key="frame" x="145.5" y="25.5" width="123" height="13"/>
+                            <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bSh-2e-yhs" firstAttribute="centerY" secondItem="fQR-aG-zBt" secondAttribute="centerY" id="BA6-PO-6f3"/>
+                        <constraint firstItem="bSh-2e-yhs" firstAttribute="centerX" secondItem="fQR-aG-zBt" secondAttribute="centerX" id="qUp-cr-p6p"/>
+                        <constraint firstItem="bSh-2e-yhs" firstAttribute="centerX" secondItem="fQR-aG-zBt" secondAttribute="centerX" id="rBo-cl-5lB"/>
+                        <constraint firstAttribute="height" constant="64" id="zaG-Iq-mjE"/>
+                    </constraints>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDQ-Px-OmX">
-                    <rect key="frame" x="0.0" y="44" width="414" height="956"/>
+                    <rect key="frame" x="0.0" y="108" width="414" height="892"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4QT-Zr-PPu">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
@@ -36,13 +57,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LATEST NEWS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzS-A8-r3d">
-                                            <rect key="frame" x="20" y="13" width="144" height="24"/>
-                                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="20" y="16.5" width="139" height="17"/>
+                                            <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.094117647058823528" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="0YT-ne-vDV"/>
                                         <constraint firstItem="IzS-A8-r3d" firstAttribute="centerY" secondItem="kz1-lD-CU1" secondAttribute="centerY" id="QWi-ht-PlD"/>
@@ -60,14 +81,14 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpF-fM-elO">
                                     <rect key="frame" x="0.0" y="490" width="414" height="50"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 DRIVER LINE-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjX-FY-qtF">
-                                            <rect key="frame" x="20" y="13" width="220.5" height="24"/>
-                                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2021 DRIVER LINE-UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjX-FY-qtF">
+                                            <rect key="frame" x="20" y="17" width="248" height="17"/>
+                                            <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.094117647058823528" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="YjX-FY-qtF" firstAttribute="leading" secondItem="YpF-fM-elO" secondAttribute="leading" constant="20" id="CvQ-5y-nD5"/>
                                         <constraint firstItem="YjX-FY-qtF" firstAttribute="centerY" secondItem="YpF-fM-elO" secondAttribute="centerY" id="d2a-6u-Bno"/>
@@ -88,7 +109,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="pGV-3F-GuA" firstAttribute="leading" secondItem="4QT-Zr-PPu" secondAttribute="leading" id="6gP-aw-x8p"/>
                                 <constraint firstAttribute="bottom" secondItem="UVe-z2-7CD" secondAttribute="bottom" constant="160" id="HBU-yC-zDX"/>
@@ -108,26 +129,29 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="4QT-Zr-PPu" firstAttribute="leading" secondItem="GDQ-Px-OmX" secondAttribute="leading" id="3f2-5e-3oX"/>
+                        <constraint firstItem="4QT-Zr-PPu" firstAttribute="top" secondItem="p3e-EA-O5D" secondAttribute="top" id="VFh-xc-oAv"/>
                         <constraint firstAttribute="trailing" secondItem="4QT-Zr-PPu" secondAttribute="trailing" id="l2k-hQ-gfk"/>
                         <constraint firstAttribute="bottom" secondItem="4QT-Zr-PPu" secondAttribute="bottom" id="moS-7W-a6J"/>
                         <constraint firstItem="IZf-ja-jOB" firstAttribute="trailing" secondItem="4QT-Zr-PPu" secondAttribute="trailing" id="x2P-68-Kc1"/>
-                        <constraint firstItem="4QT-Zr-PPu" firstAttribute="top" secondItem="GDQ-Px-OmX" secondAttribute="top" id="xHb-pY-EDE"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="p3e-EA-O5D"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="IZf-ja-jOB"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fQR-aG-zBt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9hM-p1-nNK"/>
                 <constraint firstItem="4QT-Zr-PPu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="B9z-1k-uiu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GDQ-Px-OmX" secondAttribute="trailing" id="KN1-91-Pc1"/>
-                <constraint firstItem="GDQ-Px-OmX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kd0-sx-dCN"/>
+                <constraint firstItem="fQR-aG-zBt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SEu-Ai-G0m"/>
                 <constraint firstAttribute="bottom" secondItem="GDQ-Px-OmX" secondAttribute="bottom" id="Scg-Lx-Y8Q"/>
+                <constraint firstItem="fQR-aG-zBt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sJn-jD-ipD"/>
+                <constraint firstItem="GDQ-Px-OmX" firstAttribute="top" secondItem="fQR-aG-zBt" secondAttribute="bottom" id="uTN-SA-9jc"/>
                 <constraint firstItem="GDQ-Px-OmX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vQS-I2-oOS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="138" y="104"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
     </objects>
     <resources>

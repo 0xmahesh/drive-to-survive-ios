@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,25 +31,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIVERSITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfS-Nh-8DK">
-                                <rect key="frame" x="28" y="92" width="162" height="28"/>
+                                <rect key="frame" x="28" y="100" width="162" height="28"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2am-bE-aAf">
-                                <rect key="frame" x="28" y="128" width="69" height="28"/>
+                                <rect key="frame" x="28" y="136" width="69" height="28"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INCLUSION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-HX-IKE">
-                                <rect key="frame" x="28" y="164" width="169" height="28"/>
+                                <rect key="frame" x="28" y="172" width="169" height="28"/>
                                 <fontDescription key="fontDescription" name="LucidaGrande-Bold" family="Lucida Grande" pointSize="30"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our goal is to have a meritocracy that promotes the most talented drivers into F1, regardless of gender or ethnicity." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-kk-gwX">
-                                <rect key="frame" x="28" y="252" width="319" height="104"/>
+                                <rect key="frame" x="28" y="260" width="319" height="104"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -73,12 +72,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WAi-zi-AJD" secondAttribute="trailing" constant="28" id="68d-0O-iF1"/>
                             <constraint firstAttribute="trailing" secondItem="fEt-cd-K2T" secondAttribute="trailing" id="7d3-lb-Doj"/>
                             <constraint firstItem="fEt-cd-K2T" firstAttribute="leading" secondItem="D1N-sY-dGI" secondAttribute="leading" id="ACa-9N-cQw"/>
-                            <constraint firstItem="JfS-Nh-8DK" firstAttribute="top" secondItem="D1N-sY-dGI" secondAttribute="top" constant="92" id="GAl-0v-b1W"/>
+                            <constraint firstItem="JfS-Nh-8DK" firstAttribute="top" secondItem="D1N-sY-dGI" secondAttribute="top" constant="100" id="GAl-0v-b1W"/>
                             <constraint firstItem="2am-bE-aAf" firstAttribute="top" secondItem="JfS-Nh-8DK" secondAttribute="bottom" constant="8" id="KEM-CH-eru"/>
                             <constraint firstItem="BIU-HX-IKE" firstAttribute="top" secondItem="2am-bE-aAf" secondAttribute="bottom" constant="8" id="TGU-fk-sot"/>
                             <constraint firstAttribute="trailing" secondItem="0Rb-kk-gwX" secondAttribute="trailing" constant="28" id="UyQ-T2-nXZ"/>
@@ -126,8 +125,5 @@
     </designables>
     <resources>
         <image name="intro-1" width="375" height="812"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

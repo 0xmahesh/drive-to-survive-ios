@@ -13,6 +13,8 @@ class NewsDetailViewController: UIViewController {
     
     var cardView = ParallaxCardView(frame: .zero)
     
+    var scrollView = UIScrollView()
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -28,6 +30,10 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+        scrollView.frame = view.frame
+        scrollView.delegate = self
+        view.addSubview(scrollView)
         
         cardView.frame.size = view.bounds.size
         cardView.isFullScreen = true
@@ -35,9 +41,23 @@ class NewsDetailViewController: UIViewController {
         cardView.imageHeightRatio = 0.5
         cardView.offset = 0
         cardView.imageView.image = newsItem.image
-        
-        view.addSubview(cardView)
         cardView.layoutSubviews()
+        scrollView.addSubview(cardView)
+        
+        
+        let secondView = UIView()
+        secondView.frame = CGRect(origin: CGPoint(x: 0, y: cardView.frame.height), size: CGSize(width: scrollView.frame.width, height: 1000))
+        secondView.backgroundColor = .red
+       // scrollView.addSubview(secondView)
+        
+        let contentWidth = scrollView.frame.width
+        let contentHeight = cardView.frame.size.height + 100
+            //+ secondView.frame.size.height
+        
+        scrollView.contentSize = CGSize(width: contentWidth, height: contentHeight)
+        scrollView.setContentOffset(CGPoint(x: 0, y: 47), animated: false)
+        
+       
 
     }
     
@@ -47,4 +67,12 @@ class NewsDetailViewController: UIViewController {
       dismiss(animated: true, completion: nil)
     }
 
+}
+
+
+extension NewsDetailViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("content offset: \(scrollView.contentOffset)")
+    }
 }

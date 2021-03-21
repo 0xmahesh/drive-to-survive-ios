@@ -38,11 +38,9 @@ class DiversityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
-      //  animateLabels()
     }
     
     private func setupUI() {
-        animationView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         animationView.animationSpeed = 0.6
         animationView.loopMode = .loop
         
@@ -63,7 +61,7 @@ class DiversityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
         
     }
     
-    func animateLabels(withDelay delay: TimeInterval = 0) {
+    override func animateLabels(withDelay delay: TimeInterval = 0) {
         
         let animationDuration: Double = 1.0
         let animation = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut)
@@ -93,7 +91,7 @@ class DiversityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
                 self.animationView.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
                 self.animationView.alpha = 1
                 
-                UIView.animate(withDuration: 0.2, delay: 0.4, options: [.curveEaseInOut], animations: {
+                UIView.animate(withDuration: 0.2, delay: 0.2, options: [.curveEaseInOut], animations: {
                     self.weRaceAsOneLabel.alpha = 1
                     self.weRaceAsOneTopLabelConstraint.constant = self.weRaceAsOneLabelTopPadding
                 }, completion: nil)
@@ -105,6 +103,10 @@ class DiversityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
         }
         animation.startAnimation(afterDelay: delay)
         
+    }
+    
+    override func stopAnimations() {
+        animationView.stop()
     }
 
 }

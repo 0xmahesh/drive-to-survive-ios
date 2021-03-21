@@ -146,7 +146,7 @@ class CustomViewControllerTransition: NSObject, UIViewControllerAnimatedTransiti
         }
         
         fromVC.view.removeFromSuperview()
-        toVC.view.isHidden = true
+        toVC.view.isHidden = false
         
         //layout selected cell in full screen mode.
         clonedCells.selectedCell?.layoutSubviews()

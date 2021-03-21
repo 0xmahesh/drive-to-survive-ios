@@ -45,7 +45,7 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     
     var selectedCardView: ParallaxCardViewPresentable? {
         get {
-            if let selectedCell = self.selectedNewsItemCell as? ParallaxCardViewPresentable {
+            if let selectedCell = self.selectedNewsItemCell {
                 return selectedCell
             }
             return nil
@@ -81,7 +81,7 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     }
     
     private func setupUI() {
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
+        //view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
         
         
         if let layout = self.collectionViewLayout as? ParallaxCollectionViewLayout {
@@ -124,7 +124,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case driverLineupCollectionView:
-            return CGSize(width: UIScreen.main.bounds.width * 0.3, height: 0.2 * UIScreen.main.bounds.size.height)
+            let size = CGSize(width: 120, height: 180)
+            return size
         default:
             return .zero
         }
@@ -179,17 +180,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             selectedNewsItemCell = collectionView.cellForItem(at: indexPath) as! ParallaxCollectionViewCell?
             
             newsDetailVC.transitioningDelegate = self
-            newsDetailVC.modalPresentationStyle = .custom
-            present(newsDetailVC, animated: true, completion: nil)
-          //  navigationController?.present(newsDetailVC, animated: true, completion: nil)
-           // self.navigationController?.pushViewController(newsDetailVC, animated: true)
+            self.presentInFullScreen(newsDetailVC, animated: true, completion: nil)
         case driverLineupCollectionView:
             let driver = drivers[indexPath.row]
             let driverDetailVC = DriverDetailViewController(with: driver)
             driverDetailVC.transitioningDelegate = self
-            driverDetailVC.modalPresentationStyle = .custom
             selectedDriverCell = collectionView.cellForItem(at: indexPath) as! DriverThumbnailCollectionViewCell?
-            present(driverDetailVC, animated: true, completion: nil)
+            self.presentInFullScreen(driverDetailVC, animated: true, completion: nil)
         default:
             break
         }
@@ -240,7 +237,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if(dismissed is DriverDetailViewController) {
-            return nil
+            return DriverDetailViewControllerTransitionAnimator(isDismissed: true)
         }
         return CustomViewControllerTransition(isDismissed: true)
     }
@@ -250,12 +247,30 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
 extension HomeViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        if operation == .pop && fromVC is NewsDetailViewController {
-            return CustomViewControllerTransition(isDismissed:  true)
-        } else if operation == .pop {
-            return nil
+        
+        if operation == .push {
+            switch toVC {
+            case is DriverDetailViewController:
+                return DriverDetailViewControllerTransitionAnimator(isDismissed: false)
+            case is NewsDetailViewController:
+                return CustomViewControllerTransition(isDismissed:  false)
+            default:
+                return nil
+            }
         }
-        return CustomViewControllerTransition(isDismissed: false)
+        
+        if operation == .pop {
+            switch fromVC {
+            case is DriverDetailViewController:
+                return DriverDetailViewControllerTransitionAnimator(isDismissed: true)
+            case is NewsDetailViewController:
+                return CustomViewControllerTransition(isDismissed: true)
+            default:
+                return nil
+            }
+        }
+    
+        return nil
     }
 }
 

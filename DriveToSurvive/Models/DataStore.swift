@@ -20,7 +20,7 @@ struct Driver {
     let team: Team
     let imageUrl: String?
     let description: String? =  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
-    let rank: Int = 0
+    let rank: Int
 }
 
 struct Team {
@@ -57,35 +57,35 @@ class DataStore {
     func getDriversData() -> [Driver] {
         
         let drivers = [
-            Driver(firstName: "Lando", lastName: "Norris", team: getTeamData(for: .mclaren), imageUrl: "norris"),
-            Driver(firstName: "Daniel", lastName: "Ricciardo", team: getTeamData(for: .mclaren), imageUrl: "ricciardo"),
+            Driver(firstName: "Lando", lastName: "Norris", team: getTeamData(for: .mclaren), imageUrl: "norris", rank: 8),
+            Driver(firstName: "Daniel", lastName: "Ricciardo", team: getTeamData(for: .mclaren), imageUrl: "ricciardo", rank: 5),
             
-            Driver(firstName: "Lewis", lastName: "Hamilton", team: getTeamData(for: .mercedes), imageUrl: "hamilton"),
-            Driver(firstName: "Valtteri", lastName: "Bottas", team: getTeamData(for: .mercedes), imageUrl: "bottas"),
+            Driver(firstName: "Lewis", lastName: "Hamilton", team: getTeamData(for: .mercedes), imageUrl: "hamilton", rank: 1),
+            Driver(firstName: "Valtteri", lastName: "Bottas", team: getTeamData(for: .mercedes), imageUrl: "bottas", rank: 2),
             
-            Driver(firstName: "Charles", lastName: "Leclerc", team: getTeamData(for: .ferrari), imageUrl: "leclerc"),
-            Driver(firstName: "Carlos", lastName: "Sainz", team: getTeamData(for: .ferrari), imageUrl: "sainz"),
+            Driver(firstName: "Charles", lastName: "Leclerc", team: getTeamData(for: .ferrari), imageUrl: "leclerc", rank: 7),
+            Driver(firstName: "Carlos", lastName: "Sainz", team: getTeamData(for: .ferrari), imageUrl: "sainz", rank: 6),
             
-            Driver(firstName: "Fernando", lastName: "Alonso", team: getTeamData(for: .alpine), imageUrl: "alonso"),
-            Driver(firstName: "Esteban", lastName: "Ocon", team: getTeamData(for: .alpine), imageUrl: "ocon"),
+            Driver(firstName: "Fernando", lastName: "Alonso", team: getTeamData(for: .alpine), imageUrl: "alonso", rank: 0),
+            Driver(firstName: "Esteban", lastName: "Ocon", team: getTeamData(for: .alpine), imageUrl: "ocon", rank: 12),
             
-            Driver(firstName: "Nikita", lastName: "Mazepin", team: getTeamData(for: .haas), imageUrl: "mazepin"),
-            Driver(firstName: "Mick", lastName: "Schumacher", team: getTeamData(for: .haas), imageUrl: "schumacher"),
+            Driver(firstName: "Nikita", lastName: "Mazepin", team: getTeamData(for: .haas), imageUrl: "mazepin", rank: 0),
+            Driver(firstName: "Mick", lastName: "Schumacher", team: getTeamData(for: .haas), imageUrl: "schumacher", rank: 0),
             
-            Driver(firstName: "Kimi", lastName: "Raikkonen", team: getTeamData(for: .alpharomeo), imageUrl: "raikkonen"),
-            Driver(firstName: "Antonio", lastName: "Giovinazzi", team: getTeamData(for: .alpharomeo), imageUrl: "giovinazzi"),
+            Driver(firstName: "Kimi", lastName: "Raikkonen", team: getTeamData(for: .alpharomeo), imageUrl: "raikkonen", rank: 16),
+            Driver(firstName: "Antonio", lastName: "Giovinazzi", team: getTeamData(for: .alpharomeo), imageUrl: "giovinazzi", rank: 17),
             
-            Driver(firstName: "Max", lastName: "Verstappen", team: getTeamData(for: .redbull), imageUrl: "verstappen"),
-            Driver(firstName: "Sergio", lastName: "Perez", team: getTeamData(for: .redbull), imageUrl: "perez"),
+            Driver(firstName: "Max", lastName: "Verstappen", team: getTeamData(for: .redbull), imageUrl: "verstappen", rank: 3),
+            Driver(firstName: "Sergio", lastName: "Perez", team: getTeamData(for: .redbull), imageUrl: "perez", rank: 4),
             
-            Driver(firstName: "Sebastian", lastName: "Vettel", team: getTeamData(for: .astonmartin), imageUrl: "vettel"),
-            Driver(firstName: "Lance", lastName: "Stroll", team: getTeamData(for: .astonmartin), imageUrl: "stroll"),
+            Driver(firstName: "Sebastian", lastName: "Vettel", team: getTeamData(for: .astonmartin), imageUrl: "vettel", rank: 13),
+            Driver(firstName: "Lance", lastName: "Stroll", team: getTeamData(for: .astonmartin), imageUrl: "stroll", rank: 11),
             
-            Driver(firstName: "Pierre", lastName: "Gasly", team: getTeamData(for: .alphatauri), imageUrl: "gasly"),
-            Driver(firstName: "Yuki", lastName: "Tsunoda", team: getTeamData(for: .alphatauri), imageUrl: "tsunoda"),
+            Driver(firstName: "Pierre", lastName: "Gasly", team: getTeamData(for: .alphatauri), imageUrl: "gasly", rank: 10),
+            Driver(firstName: "Yuki", lastName: "Tsunoda", team: getTeamData(for: .alphatauri), imageUrl: "tsunoda", rank: 0),
             
-            Driver(firstName: "George", lastName: "Russell", team: getTeamData(for: .williams), imageUrl: "russell"),
-            Driver(firstName: "Nicholas", lastName: "Latifi", team: getTeamData(for: .williams), imageUrl: "latifi")
+            Driver(firstName: "George", lastName: "Russell", team: getTeamData(for: .williams), imageUrl: "russell", rank: 18),
+            Driver(firstName: "Nicholas", lastName: "Latifi", team: getTeamData(for: .williams), imageUrl: "latifi", rank: 21)
         ]
         
         return drivers
@@ -94,25 +94,25 @@ class DataStore {
     private func getTeamData(for team: Teams) -> Team {
         switch team {
         case .mercedes:
-            return Team(name: "Mercedes", color: "", logoImageUrl: "")
+            return Team(name: "Mercedes", color: "00D2BE", logoImageUrl: "")
         case .ferrari:
-            return Team(name: "Ferrari", color: "", logoImageUrl: "")
+            return Team(name: "Ferrari", color: "DC0000", logoImageUrl: "")
         case .alpine:
-            return Team(name: "Alpine", color: "", logoImageUrl: "")
+            return Team(name: "Alpine", color: "0090FF", logoImageUrl: "")
         case .haas:
-            return Team(name: "Haas F1", color: "", logoImageUrl: "")
+            return Team(name: "Haas F1", color: "787878", logoImageUrl: "")
         case .mclaren:
-            return Team(name: "McLaren", color: "", logoImageUrl: "")
+            return Team(name: "McLaren", color: "FF8700", logoImageUrl: "")
         case .alpharomeo:
-            return Team(name: "Alpha Romeo", color: "", logoImageUrl: "")
+            return Team(name: "Alpha Romeo", color: "900000", logoImageUrl: "")
         case .redbull:
-            return Team(name: "Redbull Racing", color: "", logoImageUrl: "")
+            return Team(name: "Redbull Racing", color: "0600EF", logoImageUrl: "")
         case .astonmartin:
-            return Team(name: "Aston Martin", color: "", logoImageUrl: "")
+            return Team(name: "Aston Martin", color: "006F62", logoImageUrl: "")
         case .alphatauri:
-            return Team(name: "Alpha Tauri", color: "", logoImageUrl: "")
+            return Team(name: "Alpha Tauri", color: "2B4562", logoImageUrl: "")
         case .williams:
-            return Team(name: "Williams", color: "", logoImageUrl: "")
+            return Team(name: "Williams", color: "005AFF", logoImageUrl: "")
         }
         
     }

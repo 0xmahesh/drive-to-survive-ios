@@ -7,10 +7,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Formula1-Regular.ttf">
+            <string>Formula1-Display-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroScreenViewController" customModule="DriveToSurvive" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="1Uh-0i-FEw" id="47l-sb-r8n"/>
+                <outlet property="launchButton" destination="dbj-uT-ddd" id="fjk-0F-9CT"/>
+                <outlet property="pageControl" destination="u21-Y2-h8R" id="fGS-jR-vJO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,18 +36,44 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="u21-Y2-h8R">
+                    <rect key="frame" x="145.5" y="729" width="123" height="28"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-uT-ddd" customClass="TransitionButton" customModule="DriveToSurvive" customModuleProvider="target">
+                    <rect key="frame" x="132" y="807" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Rcb-vb-ZlB"/>
+                        <constraint firstAttribute="height" constant="50" id="TLj-bE-J6B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Formula1-Display-Regular" family="Formula1" pointSize="17"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="launchButtonTapped:" destination="-1" eventType="touchUpInside" id="8fi-CP-OKY"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="dbj-uT-ddd" firstAttribute="top" secondItem="u21-Y2-h8R" secondAttribute="bottom" constant="50" id="2rW-IA-Lc4"/>
+                <constraint firstItem="dbj-uT-ddd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7IL-WM-JMG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Uh-0i-FEw" secondAttribute="trailing" id="PDi-IL-1el"/>
                 <constraint firstAttribute="bottom" secondItem="1Uh-0i-FEw" secondAttribute="bottom" id="QUw-fr-mpa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dbj-uT-ddd" secondAttribute="bottom" constant="5" id="e5g-Zv-WsS"/>
                 <constraint firstItem="1Uh-0i-FEw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fZR-at-xUQ"/>
+                <constraint firstItem="u21-Y2-h8R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gNH-ML-1ai"/>
                 <constraint firstItem="1Uh-0i-FEw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w4p-6F-0Wg"/>
             </constraints>
             <point key="canvasLocation" x="91" y="84"/>
         </view>
     </objects>
+    <designables>
+        <designable name="dbj-uT-ddd">
+            <size key="intrinsicContentSize" width="30" height="29"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
