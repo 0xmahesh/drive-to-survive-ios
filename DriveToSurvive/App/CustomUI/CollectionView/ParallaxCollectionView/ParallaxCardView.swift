@@ -63,7 +63,9 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
     
     var parallaxVal: CGFloat = 0 {
         didSet {
-            layoutSubviews()
+            DispatchQueue.main.async { [weak self] in
+                self?.layoutSubviews()
+            }
         }
     }
     
@@ -90,16 +92,23 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
         imageView.layer.masksToBounds = true
         
         bottomContainerView.layer.masksToBounds = true
-        titleLabel.textColor = .gray
-        titleLabel.font = UIFont(name: "Helvetica-Bold", size: 18)
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont(name: "Formula1-Display-Bold", size: 18)
+        titleLabel.numberOfLines = 0
         subtitleLabel.textColor = .gray
         subtitleLabel.font = UIFont(name: "Helvetica", size: 14)
+        subtitleLabel.numberOfLines = 0
         contentView.addSubview(imageView)
         contentView.addSubview(bottomContainerView)
         bottomContainerView.addSubview(titleLabel)
         bottomContainerView.addSubview(subtitleLabel)
         
         addSubview(contentView)
+        
+        titleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 - (titleLabel.frame.height + verticalPadding))
+        titleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
+        subtitleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 + 10.0)
+        subtitleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
     }
     
     required init?(coder: NSCoder) {
@@ -134,7 +143,9 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
         }
         
         titleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 - (titleLabel.frame.height + verticalPadding))
-        subtitleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 + leftPadding)
+        titleLabel.frame.width = self.frame.width - 2*leftPadding
+        subtitleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 + 10.0)
+        subtitleLabel.frame.width = self.frame.width - 2*leftPadding
     }
     
     func copy(with zone: NSZone? = nil) -> Any {

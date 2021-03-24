@@ -28,6 +28,16 @@ class NewsDetailViewController: UIViewController {
         return scrollView
     }()
     
+    lazy var closeButton: UIButton = {
+        let closeButton = UIButton(type: .custom)
+        closeButton.frame = CGRect(origin: CGPoint(x: self.view.frame.width-50, y: 20), size: CGSize(width: 30, height: 30))
+        closeButton.setImage(UIImage(named:"close"), for: .normal)
+        closeButton.setImage(UIImage(named:"close"), for: .highlighted)
+        closeButton.addTarget(self, action:#selector(closeButtonTapped(sender:)), for: .touchUpInside)
+        return closeButton
+    }()
+    
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -48,13 +58,7 @@ class NewsDetailViewController: UIViewController {
         cardView.frame.size = view.frame.size
         view.addSubview(scrollView)
         scrollView.addSubview(cardView)
-        
-        
-        /* test view */
-        let secondView = UIView()
-        secondView.frame = CGRect(origin: CGPoint(x: 0, y: cardView.frame.height), size: CGSize(width: scrollView.frame.width, height: 1000))
-        secondView.backgroundColor = .red
-       // scrollView.addSubview(secondView)
+        self.view.addSubview(closeButton)
         
         let contentWidth = scrollView.frame.width
         let contentHeight = cardView.frame.size.height + 100
@@ -69,6 +73,10 @@ class NewsDetailViewController: UIViewController {
       super.touchesBegan(touches, with: event)
       
       dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func closeButtonTapped(sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
