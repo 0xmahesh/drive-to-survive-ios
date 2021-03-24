@@ -19,12 +19,8 @@ class SplashScreenCarouselItem {
     }
     
     static func loadSplashScreenItems() -> [SplashScreenCarouselItem] {
-        let items = [ SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url"),
-                      SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url"),
-                      SplashScreenCarouselItem(title: "Diversity and Inclusion", subtitle: "insert some bs about the title", image: "some url")
-                      
-        ]
-        return items
+
+        return []
     }
 }
 
