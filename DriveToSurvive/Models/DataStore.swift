@@ -47,9 +47,13 @@ class DataStore {
     
     func getNewsItems() -> [NewsItem] {
         let newsItems =  [
-            NewsItem(image: UIImage(named: "car-1") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
+            NewsItem(image: UIImage(named: "car-1") ?? UIImage(), title: "FIRST LOOK: Mercedes retain black livery", subtitle: "Mercedes look forward to retain championship in 2021.", description: "Mercedes have unveiled the car they hope will power them to an eighth consecutive World Championship double in 2021"),
             NewsItem(image: UIImage(named: "car-2") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
-            NewsItem(image: UIImage(named: "car-3") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description")
+            NewsItem(image: UIImage(named: "car-3") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
+            NewsItem(image: UIImage(named: "news-4") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
+            NewsItem(image: UIImage(named: "news-5") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
+            NewsItem(image: UIImage(named: "news-6") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description")
+            
         ]
         return newsItems
     }
@@ -66,11 +70,11 @@ class DataStore {
             Driver(firstName: "Charles", lastName: "Leclerc", team: getTeamData(for: .ferrari), imageUrl: "leclerc", rank: 7),
             Driver(firstName: "Carlos", lastName: "Sainz", team: getTeamData(for: .ferrari), imageUrl: "sainz", rank: 6),
             
-            Driver(firstName: "Fernando", lastName: "Alonso", team: getTeamData(for: .alpine), imageUrl: "alonso", rank: 0),
+            Driver(firstName: "Fernando", lastName: "Alonso", team: getTeamData(for: .alpine), imageUrl: "alonso", rank: 21),
             Driver(firstName: "Esteban", lastName: "Ocon", team: getTeamData(for: .alpine), imageUrl: "ocon", rank: 12),
             
-            Driver(firstName: "Nikita", lastName: "Mazepin", team: getTeamData(for: .haas), imageUrl: "mazepin", rank: 0),
-            Driver(firstName: "Mick", lastName: "Schumacher", team: getTeamData(for: .haas), imageUrl: "schumacher", rank: 0),
+            Driver(firstName: "Nikita", lastName: "Mazepin", team: getTeamData(for: .haas), imageUrl: "mazepin", rank: 21),
+            Driver(firstName: "Mick", lastName: "Schumacher", team: getTeamData(for: .haas), imageUrl: "schumacher", rank: 21),
             
             Driver(firstName: "Kimi", lastName: "Raikkonen", team: getTeamData(for: .alpharomeo), imageUrl: "raikkonen", rank: 16),
             Driver(firstName: "Antonio", lastName: "Giovinazzi", team: getTeamData(for: .alpharomeo), imageUrl: "giovinazzi", rank: 17),
@@ -82,13 +86,13 @@ class DataStore {
             Driver(firstName: "Lance", lastName: "Stroll", team: getTeamData(for: .astonmartin), imageUrl: "stroll", rank: 11),
             
             Driver(firstName: "Pierre", lastName: "Gasly", team: getTeamData(for: .alphatauri), imageUrl: "gasly", rank: 10),
-            Driver(firstName: "Yuki", lastName: "Tsunoda", team: getTeamData(for: .alphatauri), imageUrl: "tsunoda", rank: 0),
+            Driver(firstName: "Yuki", lastName: "Tsunoda", team: getTeamData(for: .alphatauri), imageUrl: "tsunoda", rank: 21),
             
             Driver(firstName: "George", lastName: "Russell", team: getTeamData(for: .williams), imageUrl: "russell", rank: 18),
             Driver(firstName: "Nicholas", lastName: "Latifi", team: getTeamData(for: .williams), imageUrl: "latifi", rank: 21)
         ]
         
-        return drivers
+        return drivers.sorted(by: { $0.rank < $1.rank })
     }
     
     private func getTeamData(for team: Teams) -> Team {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D18DCB1260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18DCB0260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift */; };
 		3D2B897826051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B897626051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift */; };
 		3D2B897926051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2B897726051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib */; };
 		3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30F7E925FD544D0036FFE2 /* DataStore.swift */; };
@@ -37,15 +38,13 @@
 		3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */; };
 		3D512E5925D45D8100B21FF6 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */; };
 		3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EA025D8197700B21FF6 /* SplashScreenCarouselItem.swift */; };
-		3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */; };
-		3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */; };
-		3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */; };
+		3D6343FC260A64B8003EBACE /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D6343FB260A64B8003EBACE /* settings.json */; };
 		3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40CE25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift */; };
 		3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */; };
 		3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */; };
 		3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */; };
 		3D97D2C926062245007D1328 /* community2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D97D2C826062245007D1328 /* community2.json */; };
-		3D97D2CF26068020007D1328 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2CE26068020007D1328 /* UIView+Extensions.swift */; };
+		3D97D2CF26068020007D1328 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2CE26068020007D1328 /* UIExtensions.swift */; };
 		3D97D2F326077811007D1328 /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2ED26077811007D1328 /* CustomTransitionViewController.swift */; };
 		3D97D2F426077811007D1328 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2EE26077811007D1328 /* SpinerLayer.swift */; };
 		3D97D2F526077811007D1328 /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97D2EF26077811007D1328 /* TransitionButton.swift */; };
@@ -54,7 +53,6 @@
 		3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */; };
 		3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */; };
 		3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */; };
-		3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */; };
 		3DE9A56D2603B0A5007D2090 /* diversity.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A5692603B0A5007D2090 /* diversity.json */; };
 		3DE9A56E2603B0A5007D2090 /* f1_car.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A56A2603B0A5007D2090 /* f1_car.json */; };
 		3DE9A56F2603B0A5007D2090 /* sustainability.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DE9A56B2603B0A5007D2090 /* sustainability.json */; };
@@ -96,6 +94,7 @@
 /* Begin PBXFileReference section */
 		00C767CDC63A21B4BB98B462 /* Pods-DriveToSurvive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurvive.debug.xcconfig"; path = "Target Support Files/Pods-DriveToSurvive/Pods-DriveToSurvive.debug.xcconfig"; sourceTree = "<group>"; };
 		02A78585B35526F4CFCCBE1F /* Pods-DriveToSurviveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DriveToSurviveTests.release.xcconfig"; path = "Target Support Files/Pods-DriveToSurviveTests/Pods-DriveToSurviveTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D18DCB0260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		3D2B897626051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SustainabilityIntroPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D2B897726051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SustainabilityIntroPageCollectionViewCell.xib; sourceTree = "<group>"; };
 		3D30F7E925FD544D0036FFE2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -132,15 +131,13 @@
 		3D512E5625D45D8100B21FF6 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		3D512E5725D45D8100B21FF6 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
 		3D512EA025D8197700B21FF6 /* SplashScreenCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCarouselItem.swift; sourceTree = "<group>"; };
-		3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewManager.swift; sourceTree = "<group>"; };
-		3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
-		3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFlowLayout.swift; sourceTree = "<group>"; };
+		3D6343FB260A64B8003EBACE /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		3D6F40CE25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
 		3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewLayout.swift; sourceTree = "<group>"; };
 		3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCardView.swift; sourceTree = "<group>"; };
 		3D97D2C826062245007D1328 /* community2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = community2.json; sourceTree = "<group>"; };
-		3D97D2CE26068020007D1328 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3D97D2CE26068020007D1328 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		3D97D2ED26077811007D1328 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
 		3D97D2EE26077811007D1328 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
 		3D97D2EF26077811007D1328 /* TransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionButton.swift; sourceTree = "<group>"; };
@@ -149,7 +146,6 @@
 		3DAC3C8625FE38E20070F623 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
 		3DAC3C8D25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
 		3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
-		3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewControllerTransition.swift; sourceTree = "<group>"; };
 		3DE9A5692603B0A5007D2090 /* diversity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diversity.json; sourceTree = "<group>"; };
 		3DE9A56A2603B0A5007D2090 /* f1_car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f1_car.json; sourceTree = "<group>"; };
 		3DE9A56B2603B0A5007D2090 /* sustainability.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sustainability.json; sourceTree = "<group>"; };
@@ -305,10 +301,9 @@
 		3D512E2025D4547200B21FF6 /* DriveToSurvive */ = {
 			isa = PBXGroup;
 			children = (
+				3D68C9E92608B3B00080C800 /* App */,
 				3D97D2CD2606800D007D1328 /* Util */,
 				3D30F7F825FD5E5B0036FFE2 /* Resources */,
-				3D512EA625D81CEE00B21FF6 /* CustomUIComponents */,
-				3D512E5525D458EB00B21FF6 /* Views */,
 				3D512E5425D458D900B21FF6 /* Models */,
 				3D512E2125D4547200B21FF6 /* AppDelegate.swift */,
 				3D512E2525D4547200B21FF6 /* ViewController.swift */,
@@ -346,18 +341,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3D512E5525D458EB00B21FF6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3DE9A57E2603B7E7007D2090 /* IntroScreen */,
-				3DAC3C8525FE38E20070F623 /* DriverDetailView */,
-				3DC42CDE25F7D34800E0E22F /* NewsDetail */,
-				3D46F81925F6961D00C2A6A8 /* Home */,
-				3D512EA525D81A2300B21FF6 /* SplashScreen */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		3D512EA525D81A2300B21FF6 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,23 +350,33 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
-		3D512EA625D81CEE00B21FF6 /* CustomUIComponents */ = {
+		3D512EA625D81CEE00B21FF6 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
 				3D6F40CC25F51B0C0090CA45 /* CollectionView */,
-				3D512EA725D81CFB00B21FF6 /* CarouselView */,
 			);
-			path = CustomUIComponents;
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		3D512EA725D81CFB00B21FF6 /* CarouselView */ = {
+		3D68C9E92608B3B00080C800 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3D512EA825D81D0C00B21FF6 /* CarouselViewManager.swift */,
-				3D512EB425D8208B00B21FF6 /* CarouselCollectionViewCell.swift */,
-				3D512EB925D820A100B21FF6 /* CarouselFlowLayout.swift */,
+				3D512EA625D81CEE00B21FF6 /* CustomUI */,
+				3D68C9EA2608B3B60080C800 /* Features */,
 			);
-			path = CarouselView;
+			path = App;
+			sourceTree = "<group>";
+		};
+		3D68C9EA2608B3B60080C800 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3D512EA525D81A2300B21FF6 /* SplashScreen */,
+				3DE9A57E2603B7E7007D2090 /* IntroScreen */,
+				3D46F81925F6961D00C2A6A8 /* Home */,
+				3DAC3C8525FE38E20070F623 /* DriverDetailView */,
+				3DC42CDE25F7D34800E0E22F /* NewsDetailView */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		3D6F40CC25F51B0C0090CA45 /* CollectionView */ = {
@@ -401,7 +394,6 @@
 				3D6F40D325F51C170090CA45 /* ParallaxCollectionViewLayout.swift */,
 				3D6F40D825F523960090CA45 /* ParallaxCollectionViewCell.swift */,
 				3D6F40DD25F52AE10090CA45 /* ParallaxCardView.swift */,
-				3DC42CE725F7D91900E0E22F /* CustomViewControllerTransition.swift */,
 			);
 			path = ParallaxCollectionView;
 			sourceTree = "<group>";
@@ -409,7 +401,7 @@
 		3D97D2CD2606800D007D1328 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3D97D2CE26068020007D1328 /* UIView+Extensions.swift */,
+				3D97D2CE26068020007D1328 /* UIExtensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -443,17 +435,19 @@
 			path = DriverDetailView;
 			sourceTree = "<group>";
 		};
-		3DC42CDE25F7D34800E0E22F /* NewsDetail */ = {
+		3DC42CDE25F7D34800E0E22F /* NewsDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				3D18DCB0260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift */,
 				3DC42CDF25F7D39300E0E22F /* NewsDetailViewController.swift */,
 			);
-			path = NewsDetail;
+			path = NewsDetailView;
 			sourceTree = "<group>";
 		};
 		3DE9A5682603B094007D2090 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3D6343FB260A64B8003EBACE /* settings.json */,
 				3D97D2C826062245007D1328 /* community2.json */,
 				3DE9A56C2603B0A5007D2090 /* community.json */,
 				3DE9A5692603B0A5007D2090 /* diversity.json */,
@@ -632,6 +626,7 @@
 				3DE9A59E2603D018007D2090 /* Formula1-Bold.ttf in Resources */,
 				3D30F81725FD5EE00036FFE2 /* OpenSans-SemiBold.ttf in Resources */,
 				3DE9A59C2603D018007D2090 /* Formula1-Regular.ttf in Resources */,
+				3D6343FC260A64B8003EBACE /* settings.json in Resources */,
 				3DE9A58A2603C08D007D2090 /* DiversityIntroPageCollectionViewCell.xib in Resources */,
 				3D30F81625FD5EE00036FFE2 /* OpenSans-Regular.ttf in Resources */,
 				3DE9A5902603CA1E007D2090 /* LucidaGrande.ttf in Resources */,
@@ -771,24 +766,21 @@
 				3DE9A5822603B9A8007D2090 /* IntroScreenViewController.swift in Sources */,
 				3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */,
 				3D30F7EA25FD544D0036FFE2 /* DataStore.swift in Sources */,
-				3D512EBA25D820A100B21FF6 /* CarouselFlowLayout.swift in Sources */,
 				3D6F40DE25F52AE10090CA45 /* ParallaxCardView.swift in Sources */,
 				3DEB849726052C5E001B1BDE /* CommunityIntroPageCollectionViewCell.swift in Sources */,
-				3D512EA925D81D0C00B21FF6 /* CarouselViewManager.swift in Sources */,
 				3D97D2F626077811007D1328 /* FadeTransition.swift in Sources */,
 				3D512EA125D8197800B21FF6 /* SplashScreenCarouselItem.swift in Sources */,
 				3D6F40CF25F51B320090CA45 /* ParallaxCollectionViewLayoutAttributes.swift in Sources */,
 				3D97D2F526077811007D1328 /* TransitionButton.swift in Sources */,
 				3D97D2F326077811007D1328 /* CustomTransitionViewController.swift in Sources */,
 				3D97D2F426077811007D1328 /* SpinerLayer.swift in Sources */,
-				3DC42CE825F7D91900E0E22F /* CustomViewControllerTransition.swift in Sources */,
 				3D97D2F726077811007D1328 /* CGRectExtension.swift in Sources */,
-				3D97D2CF26068020007D1328 /* UIView+Extensions.swift in Sources */,
+				3D97D2CF26068020007D1328 /* UIExtensions.swift in Sources */,
 				3DAC3C8825FE38E20070F623 /* DriverDetailViewController.swift in Sources */,
+				3D18DCB1260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift in Sources */,
 				3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */,
 				3D6F40D925F523960090CA45 /* ParallaxCollectionViewCell.swift in Sources */,
 				3D2B897826051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift in Sources */,
-				3D512EB525D8208B00B21FF6 /* CarouselCollectionViewCell.swift in Sources */,
 				3DC42CE025F7D39300E0E22F /* NewsDetailViewController.swift in Sources */,
 				3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */,
 				3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */,
