@@ -48,8 +48,8 @@ class DataStore {
     func getNewsItems() -> [NewsItem] {
         let newsItems =  [
             NewsItem(image: UIImage(named: "car-1") ?? UIImage(), title: "FIRST LOOK: Mercedes retain black livery", subtitle: "Mercedes look forward to retain championship in 2021.", description: "Mercedes have unveiled the car they hope will power them to an eighth consecutive World Championship double in 2021"),
-            NewsItem(image: UIImage(named: "car-2") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
-            NewsItem(image: UIImage(named: "car-3") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
+            NewsItem(image: UIImage(named: "car-2") ?? UIImage(), title: "What tyres will the teams have for Bahrain GP?", subtitle: "Pirelli have announced which compounds they will bring to Bahrain.", description: "some text description"),
+            NewsItem(image: UIImage(named: "car-3") ?? UIImage(), title: "SEASON PREVIEW: Hopes and fears in 2021", subtitle: "We're taking a look at how 2021 is shaping up for the ten teams on the grid", description: "some text description"),
             NewsItem(image: UIImage(named: "news-4") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
             NewsItem(image: UIImage(named: "news-5") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description"),
             NewsItem(image: UIImage(named: "news-6") ?? UIImage(), title: "Test", subtitle: "subtitle sample here", description: "some text description")
