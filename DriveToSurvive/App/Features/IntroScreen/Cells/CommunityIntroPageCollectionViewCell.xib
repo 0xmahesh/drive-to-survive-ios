@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-Rh-Db1" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="127.5" y="343" width="120" height="120"/>
+                                <rect key="frame" x="106" y="384.5" width="163" height="163"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FFf-Rh-Db1" secondAttribute="height" multiplier="1:1" id="3VB-uo-hpL"/>
@@ -63,9 +63,9 @@
                             <constraint firstItem="FFf-Rh-Db1" firstAttribute="centerX" secondItem="WJw-aI-wNH" secondAttribute="centerX" id="0AX-tL-iAW"/>
                             <constraint firstItem="6Dd-Qw-yzc" firstAttribute="top" secondItem="V9t-gM-CG3" secondAttribute="bottom" constant="50" id="2rz-7l-GJD"/>
                             <constraint firstItem="V9t-gM-CG3" firstAttribute="top" secondItem="WJw-aI-wNH" secondAttribute="top" constant="100" id="30x-Nn-cEQ"/>
-                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="width" secondItem="WJw-aI-wNH" secondAttribute="width" multiplier="0.32" id="7lD-GY-COu"/>
+                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="width" secondItem="WJw-aI-wNH" secondAttribute="width" multiplier="0.435" id="7lD-GY-COu"/>
                             <constraint firstAttribute="trailing" secondItem="6Dd-Qw-yzc" secondAttribute="trailing" constant="33" id="9Lr-Sa-ddU"/>
-                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="top" secondItem="6Dd-Qw-yzc" secondAttribute="bottom" constant="35" id="JZ6-5k-qLb"/>
+                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="centerY" secondItem="WJw-aI-wNH" secondAttribute="centerY" constant="60" id="Jf8-cj-adU"/>
                             <constraint firstItem="6Dd-Qw-yzc" firstAttribute="leading" secondItem="WJw-aI-wNH" secondAttribute="leading" constant="33" id="f88-A3-8eh"/>
                             <constraint firstAttribute="bottom" secondItem="8xb-Eh-dhe" secondAttribute="bottom" constant="50" id="ggw-jK-p5w"/>
                             <constraint firstItem="V9t-gM-CG3" firstAttribute="centerX" secondItem="WJw-aI-wNH" secondAttribute="centerX" id="rTt-1e-ha0"/>
