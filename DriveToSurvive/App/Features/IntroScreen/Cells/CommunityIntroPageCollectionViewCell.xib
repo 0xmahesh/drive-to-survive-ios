@@ -34,51 +34,42 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dd-Qw-yzc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6Dd-Qw-yzc">
                                 <rect key="frame" x="33" y="178" width="309" height="130"/>
                                 <string key="text">We are committed to connecting and contributing to the communities we visit, providing opportunities for local people and causes to get in on the action.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-Rh-Db1" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="127.5" y="338" width="120" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="9Ui-D0-sPw"/>
-                                    <constraint firstAttribute="height" constant="120" id="vSa-Qt-AgH"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="community2"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro-2" translatesAutoresizingMaskIntoConstraints="NO" id="kdg-ho-vzh">
-                                <rect key="frame" x="-25" y="493" width="334" height="188"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="kdg-ho-vzh" secondAttribute="height" multiplier="332:187" id="3fG-eU-fCG"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#WERACEASONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xb-Eh-dhe">
                                 <rect key="frame" x="111.5" y="747" width="152" height="15"/>
                                 <fontDescription key="fontDescription" name="Formula1-Display-Bold" family="Formula1" pointSize="15"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFf-Rh-Db1" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="127.5" y="343" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FFf-Rh-Db1" secondAttribute="height" multiplier="1:1" id="3VB-uo-hpL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="community2"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FFf-Rh-Db1" firstAttribute="centerX" secondItem="WJw-aI-wNH" secondAttribute="centerX" id="0AX-tL-iAW"/>
                             <constraint firstItem="6Dd-Qw-yzc" firstAttribute="top" secondItem="V9t-gM-CG3" secondAttribute="bottom" constant="50" id="2rz-7l-GJD"/>
                             <constraint firstItem="V9t-gM-CG3" firstAttribute="top" secondItem="WJw-aI-wNH" secondAttribute="top" constant="100" id="30x-Nn-cEQ"/>
+                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="width" secondItem="WJw-aI-wNH" secondAttribute="width" multiplier="0.32" id="7lD-GY-COu"/>
                             <constraint firstAttribute="trailing" secondItem="6Dd-Qw-yzc" secondAttribute="trailing" constant="33" id="9Lr-Sa-ddU"/>
-                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="top" secondItem="6Dd-Qw-yzc" secondAttribute="bottom" constant="30" id="COF-Va-LlC"/>
-                            <constraint firstItem="kdg-ho-vzh" firstAttribute="top" secondItem="FFf-Rh-Db1" secondAttribute="bottom" constant="35" id="MiK-qP-SSI"/>
+                            <constraint firstItem="FFf-Rh-Db1" firstAttribute="top" secondItem="6Dd-Qw-yzc" secondAttribute="bottom" constant="35" id="JZ6-5k-qLb"/>
                             <constraint firstItem="6Dd-Qw-yzc" firstAttribute="leading" secondItem="WJw-aI-wNH" secondAttribute="leading" constant="33" id="f88-A3-8eh"/>
                             <constraint firstAttribute="bottom" secondItem="8xb-Eh-dhe" secondAttribute="bottom" constant="50" id="ggw-jK-p5w"/>
-                            <constraint firstItem="kdg-ho-vzh" firstAttribute="leading" secondItem="WJw-aI-wNH" secondAttribute="leading" constant="-25" id="lI4-Gi-HTU"/>
                             <constraint firstItem="V9t-gM-CG3" firstAttribute="centerX" secondItem="WJw-aI-wNH" secondAttribute="centerX" id="rTt-1e-ha0"/>
                             <constraint firstItem="8xb-Eh-dhe" firstAttribute="centerX" secondItem="WJw-aI-wNH" secondAttribute="centerX" id="vPb-EW-SEv"/>
-                            <constraint firstAttribute="trailing" secondItem="kdg-ho-vzh" secondAttribute="trailing" constant="66" id="vbF-RN-gM4"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -92,9 +83,6 @@
             </constraints>
             <connections>
                 <outlet property="animationView" destination="FFf-Rh-Db1" id="kFa-Xj-s1W"/>
-                <outlet property="communityImageViewLeadingConstraint" destination="lI4-Gi-HTU" id="zqh-uf-0KX"/>
-                <outlet property="communityImageViewTopConstraint" destination="MiK-qP-SSI" id="ySl-pU-DD2"/>
-                <outlet property="communityImageview" destination="kdg-ho-vzh" id="o5e-mg-zMq"/>
                 <outlet property="descriptionLabel" destination="6Dd-Qw-yzc" id="kWX-5X-Qu2"/>
                 <outlet property="descriptionLabelTopConstraint" destination="2rz-7l-GJD" id="HKG-6C-dqd"/>
                 <outlet property="subtitleLabel" destination="8xb-Eh-dhe" id="Mvq-hj-NQN"/>
@@ -108,7 +96,6 @@
         <designable name="FFf-Rh-Db1"/>
     </designables>
     <resources>
-        <image name="intro-2" width="309" height="188"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

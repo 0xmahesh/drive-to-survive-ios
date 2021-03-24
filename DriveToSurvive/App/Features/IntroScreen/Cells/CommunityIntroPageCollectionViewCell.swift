@@ -19,8 +19,8 @@ class CommunityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
     /* constraints outlets */
     @IBOutlet weak var titleLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var descriptionLabelTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var communityImageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var communityImageViewTopConstraint: NSLayoutConstraint!
+   // @IBOutlet weak var communityImageViewLeadingConstraint: NSLayoutConstraint!
+  //  @IBOutlet weak var communityImageViewTopConstraint: NSLayoutConstraint!
     
     private let kTitleLabelTopPadding: CGFloat = 92.0
     private let kDescriptionLabelTopPadding: CGFloat = 50.0
@@ -45,10 +45,10 @@ class CommunityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
         animationView.alpha = 0
         subtitleLabel.alpha = 0
         descriptionLabel.alpha = 0
-        communityImageview.alpha = 0
+      //  communityImageview.alpha = 0
 
-        communityImageview.fadeBorders()
-        communityImageview.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+      //  communityImageview.fadeBorders()
+      //  communityImageview.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
     }
     
     override func animateLabels(withDelay delay: TimeInterval = 0) {
@@ -88,10 +88,10 @@ class CommunityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
         }
         animation.startAnimation(afterDelay: delay)
         
-        UIView.animate(withDuration: 0.4, delay: 1, options: .curveEaseInOut, animations: {
-            self.communityImageview.transform = .identity
-            self.communityImageview.alpha = 1
-        }, completion: nil)
+//        UIView.animate(withDuration: 0.4, delay: 1, options: .curveEaseInOut, animations: {
+//            self.communityImageview.transform = .identity
+//            self.communityImageview.alpha = 1
+//        }, completion: nil)
     }
     
     override func stopAnimations() {
