@@ -63,6 +63,7 @@ class DriverDetailViewController: UIViewController {
     
     private var driver: Driver?
     
+    var scrollView = UIScrollView()
     var closeButton = UIButton(type: .custom)
     var driverImageWrapperView = UIView()
     var driverImageView = UIImageView()
@@ -74,6 +75,8 @@ class DriverDetailViewController: UIViewController {
     var readMoreButton = DriverDetailButton(type: .custom)
     var shareButton = DriverDetailButton(type: .custom)
     var shareActionSheet = UIView()
+    
+    var largeView = UIView()
  
     weak var delegate: DriverDetailViewControllerDelegate?
     
@@ -96,11 +99,23 @@ class DriverDetailViewController: UIViewController {
     
     private func createSubviews() {
         
+        self.scrollView.translatesAutoresizingMaskIntoConstraints = false;
+        view.addSubview(scrollView)
+        //Constrain scroll view
+        self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true;
+        self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true;
+        self.scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true;
+        self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true;
+        self.scrollView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        
+//        scrollView.frame = view.frame
+
+        
         closeButton.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
         closeButton.setImage(UIImage(named:"close"), for: .normal)
         closeButton.setImage(UIImage(named:"close"), for: .highlighted)
         closeButton.addTarget(self, action:#selector(closeButtonTapped(sender:)), for: .touchUpInside)
-        self.view.addSubview(closeButton)
+        self.scrollView.addSubview(closeButton)
         
         if let imageUrl = driver?.imageUrl {
             driverImageView.image = UIImage(named: imageUrl)
@@ -111,7 +126,7 @@ class DriverDetailViewController: UIViewController {
         driverImageWrapperView.frame = driverImageView.frame
         driverImageWrapperView.addSubview(driverImageView)
         driverImageWrapperView.dropShadow(color: UIColor(hex: driver?.team.color ?? "000000"))
-        self.view.addSubview(driverImageWrapperView)
+        self.scrollView.addSubview(driverImageWrapperView)
         
         driverNameLabel.frame = CGRect(origin: .zero, size: .zero)
         driverNameLabel.font = UIFont(name: "SFProText-Bold", size: 18.0)
@@ -121,7 +136,7 @@ class DriverDetailViewController: UIViewController {
             driverNameLabel.text = "\(firstName) \(lastName)"
             driverNameLabel.sizeToFit()
         }
-        self.view.addSubview(driverNameLabel)
+        self.scrollView.addSubview(driverNameLabel)
         
         teamNameLabel.frame = CGRect(origin: .zero, size: .zero)
         teamNameLabel.font = UIFont(name: "SFProText-Semibold", size: 16.0)
@@ -131,7 +146,7 @@ class DriverDetailViewController: UIViewController {
             teamNameLabel.text = teamName
             teamNameLabel.sizeToFit()
         }
-        self.view.addSubview(teamNameLabel)
+        self.scrollView.addSubview(teamNameLabel)
        
         descriptionLabel.frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width - 2*40, height: 300))
         descriptionLabel.font = UIFont(name: "OpenSans-Regular", size: 16.0)
@@ -142,7 +157,7 @@ class DriverDetailViewController: UIViewController {
         if let description = self.driver?.description {
             descriptionLabel.text = description
         }
-        self.view.addSubview(descriptionLabel)
+        self.scrollView.addSubview(descriptionLabel)
         
         driverRankLabel.frame = CGRect(origin: .zero, size: .zero)
         driverRankLabel.font = UIFont(name: "MuktaMahee-Bold", size: 18.0)
@@ -160,20 +175,25 @@ class DriverDetailViewController: UIViewController {
         
         driverRankLabel.frame = driverRankView.frame
         driverRankView.addSubview(driverRankLabel)
-        self.view.addSubview(driverRankView)
+        self.scrollView.addSubview(driverRankView)
         
         readMoreButton = DriverDetailButton(with: CGRect(origin: .zero, size: CGSize(width: self.view.frame.size.width * 0.36, height: 47.0)), driver: self.driver)
         readMoreButton.setTitle("Read More", for: .normal)
         readMoreButton.setTitle("Read More", for: .highlighted)
         readMoreButton.addTarget(self, action:#selector(readMoreButtonTapped(sender:)), for: .touchUpInside)
-        self.view.addSubview(readMoreButton)
+        self.scrollView.addSubview(readMoreButton)
         
         shareButton = DriverDetailButton(with: CGRect(origin: .zero, size: CGSize(width: self.view.frame.size.width * 0.36, height: 47.0)), driver: self.driver)
         shareButton.setTitle("Share", for: .normal)
         shareButton.setTitle("Share", for: .highlighted)
         shareButton.addTarget(self, action:#selector(shareButtonTapped(sender:)), for: .touchUpInside)
-        self.view.addSubview(shareButton)
+        self.scrollView.addSubview(shareButton)
+        
+        
+        largeView.backgroundColor = .green
+       // self.scrollView.addSubview(largeView)
  
+        
         
       //  createShareActionSheet()
     }
@@ -302,7 +322,15 @@ class DriverDetailViewController: UIViewController {
             
         let shareActionSheetHeight: CGFloat = 200.0
         shareActionSheet.frame = CGRect(x: 0, y: self.view.frame.height - shareActionSheetHeight, width: self.view.frame.size.width, height: shareActionSheetHeight)
+        
+        let contentHeight: CGFloat = closeButtonTopPadding + safeAreaInset + closeButton.frame.height + driverImageWrapperViewTopPadding + driverImageWrapperView.frame.height + driverLabelTopPadding + driverNameLabel.frame.height + teamNameTopPadding + teamNameLabel.frame.height +
+            descriptionTopPadding + descriptionLabel.frame.height +
+            actionButtonsVerticalPadding + readMoreButton.frame.height + 20
+        scrollView.contentSize = CGSize(width: view.frame.width, height: contentHeight)
+        scrollView.setContentOffset(.zero, animated: false)
     }
+    
+    
     
     override func viewSafeAreaInsetsDidChange() {
         layoutSubviews()
