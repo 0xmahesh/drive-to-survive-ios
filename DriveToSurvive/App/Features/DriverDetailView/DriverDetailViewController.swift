@@ -260,8 +260,8 @@ class DriverDetailViewController: UIViewController {
         let contentViewFrameSize: CGSize = contentView.frame.size
         
         let closeButtonTrailingPadding: CGFloat = 20.0
-        let safeAreaInset: CGFloat = 47.0
-        let closeButtonTopPadding: CGFloat = 10.0
+        let safeAreaInset: CGFloat =  UIDevice.current.hasNotch ? 47.0 : 0
+        let closeButtonTopPadding: CGFloat = 20.0
         closeButton.frame.origin = CGPoint(
             x: contentViewFrameSize.width - (closeButton.bounds.size.width + closeButtonTrailingPadding),
             y: safeAreaInset + closeButtonTopPadding)

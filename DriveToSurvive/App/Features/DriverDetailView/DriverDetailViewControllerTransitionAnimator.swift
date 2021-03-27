@@ -298,7 +298,7 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
         readMoreButtonSnapshot.frame.origin.y = readMoreButtonSnapshot.frame.origin.y + 300
         shareButtonSnapshot.frame.origin.y = shareButtonSnapshot.frame.origin.y + 300
         
-        print("\(toVC.driverNameLabel.text!) rect: \(driverNameLabelSnapshot.frame)")
+       // print("\(toVC.driverNameLabel.text!) rect: \(driverNameLabelSnapshot.frame)")
         
         containerView.addSubview(closeButtonSnapshot)
         containerView.addSubview(driverNameLabelSnapshot)

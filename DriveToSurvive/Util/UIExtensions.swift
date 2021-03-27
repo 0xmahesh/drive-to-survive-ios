@@ -10,14 +10,14 @@ import Lottie
 
 extension UIView {
     
-    func fadeBorders() {
+    func fadeBorders(shadowColor: UIColor = .white) {
         let maskLayer = CAGradientLayer()
         maskLayer.frame = self.bounds
         maskLayer.shadowRadius = 5
         maskLayer.shadowPath = CGPath(roundedRect: self.bounds.insetBy(dx: 5, dy: 5), cornerWidth: 10, cornerHeight: 10, transform: nil)
         maskLayer.shadowOpacity = 1
         maskLayer.shadowOffset = CGSize.zero
-        maskLayer.shadowColor = UIColor.white.cgColor
+        maskLayer.shadowColor = shadowColor.cgColor
         self.layer.mask = maskLayer
     }
     
@@ -89,3 +89,43 @@ extension UIViewController {
   }
 }
 
+//func scaleUIImageToSize(image: UIImage,  size: CGSize) -> UIImage {
+//    let hasAlpha = false
+//    let scale: CGFloat = 0.0
+//
+//    UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+//    image.draw(in: CGRect(origin: .zero, size: size))
+//
+//    let scaledImage = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+//    UIGraphicsEndImageContext()
+//
+//    return scaledImage
+//}
+
+extension UIDevice {
+    /// Returns `true` if the device has a notch
+    var hasNotch: Bool {
+        guard #available(iOS 11.0, *), let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first else { return false }
+        if UIDevice.current.orientation.isPortrait {
+            return window.safeAreaInsets.top >= 44
+        } else {
+            return window.safeAreaInsets.left > 0 || window.safeAreaInsets.right > 0
+        }
+    }
+}
+
+public extension UIView {
+    func fillSuperview() {
+        guard let superview = self.superview else { return }
+        translatesAutoresizingMaskIntoConstraints = superview.translatesAutoresizingMaskIntoConstraints
+        if translatesAutoresizingMaskIntoConstraints {
+            autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            frame = superview.bounds
+        } else {
+            topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+            leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+            rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+        }
+    }
+}

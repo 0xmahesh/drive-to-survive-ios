@@ -84,6 +84,7 @@
             </constraints>
             <size key="customSize" width="151" height="214"/>
             <connections>
+                <outlet property="containerView" destination="Q6N-4o-STP" id="oe5-KY-WDt"/>
                 <outlet property="firstName" destination="aXG-GL-BSw" id="HFv-gU-8rd"/>
                 <outlet property="lastName" destination="dLn-Mh-Iar" id="IIJ-zo-fPT"/>
                 <outlet property="nameLabelWrapperViewHeight" destination="ztR-gT-5Sn" id="MAN-w8-hM2"/>

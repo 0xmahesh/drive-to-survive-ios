@@ -183,7 +183,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch collectionView {
         case newsCollectionView:
             let newsItem = newsItems[indexPath.row]
-            let newsDetailVC = NewsDetailViewController(with: newsItem)
+           // let newsDetailVC = NewsDetailViewController(with: newsItem)
+            let newsDetailVC = NewsDetailCollectionViewController(with: newsItem, layout: NewsDetailCollectionViewFlowLayout())
             selectedNewsItemCell = collectionView.cellForItem(at: indexPath) as! ParallaxCollectionViewCell?
             
             newsDetailVC.transitioningDelegate = self
@@ -283,7 +284,7 @@ extension HomeViewController: UINavigationControllerDelegate {
             switch toVC {
             case is DriverDetailViewController:
                 return DriverDetailViewControllerTransitionAnimator(isDismissed: false)
-            case is NewsDetailViewController:
+            case is NewsDetailCollectionViewController:
                 return NewsDetailViewControllerTransitionAnimator(isDismissed:  false)
             default:
                 return nil
@@ -294,7 +295,7 @@ extension HomeViewController: UINavigationControllerDelegate {
             switch fromVC {
             case is DriverDetailViewController:
                 return DriverDetailViewControllerTransitionAnimator(isDismissed: true)
-            case is NewsDetailViewController:
+            case is NewsDetailCollectionViewController:
                 return NewsDetailViewControllerTransitionAnimator(isDismissed: true)
             default:
                 return nil

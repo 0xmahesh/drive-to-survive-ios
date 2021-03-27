@@ -37,10 +37,10 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="u21-Y2-h8R">
-                    <rect key="frame" x="145.5" y="729" width="123" height="28"/>
+                    <rect key="frame" x="145.5" y="724" width="123" height="28"/>
                 </pageControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-uT-ddd" customClass="TransitionButton" customModule="DriveToSurvive" customModuleProvider="target">
-                    <rect key="frame" x="132" y="807" width="150" height="50"/>
+                    <rect key="frame" x="132" y="802" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="Rcb-vb-ZlB"/>
                         <constraint firstAttribute="height" constant="50" id="TLj-bE-J6B"/>
@@ -61,7 +61,7 @@
                 <constraint firstItem="dbj-uT-ddd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7IL-WM-JMG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Uh-0i-FEw" secondAttribute="trailing" id="PDi-IL-1el"/>
                 <constraint firstAttribute="bottom" secondItem="1Uh-0i-FEw" secondAttribute="bottom" id="QUw-fr-mpa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dbj-uT-ddd" secondAttribute="bottom" constant="5" id="e5g-Zv-WsS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dbj-uT-ddd" secondAttribute="bottom" constant="10" id="e5g-Zv-WsS"/>
                 <constraint firstItem="1Uh-0i-FEw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fZR-at-xUQ"/>
                 <constraint firstItem="u21-Y2-h8R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gNH-ML-1ai"/>
                 <constraint firstItem="1Uh-0i-FEw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w4p-6F-0Wg"/>
