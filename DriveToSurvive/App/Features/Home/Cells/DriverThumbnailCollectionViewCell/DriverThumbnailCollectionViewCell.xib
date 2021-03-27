@@ -88,6 +88,8 @@
                 <outlet property="firstName" destination="aXG-GL-BSw" id="HFv-gU-8rd"/>
                 <outlet property="lastName" destination="dLn-Mh-Iar" id="IIJ-zo-fPT"/>
                 <outlet property="nameLabelWrapperViewHeight" destination="ztR-gT-5Sn" id="MAN-w8-hM2"/>
+                <outlet property="nameLabelWrapperViewLeading" destination="ZjH-eK-ATw" id="svH-AD-0bB"/>
+                <outlet property="nameLabelWrapperViewTrailing" destination="oyF-4l-pHe" id="moL-S5-yOy"/>
                 <outlet property="nameWrapperView" destination="NkM-4U-Rw1" id="eh6-iK-Z5T"/>
                 <outlet property="thumbnailImageView" destination="drF-Cq-YD6" id="i4S-k7-WIe"/>
             </connections>
