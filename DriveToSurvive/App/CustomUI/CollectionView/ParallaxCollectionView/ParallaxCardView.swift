@@ -140,10 +140,12 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         
-        titleLabel.sizeToFit()
-        subtitleLabel.sizeToFit()
-        
-        layoutSubviews()
+        DispatchQueue.main.async {
+            self.titleLabel.sizeToFit()
+            self.subtitleLabel.sizeToFit()
+            
+            self.layoutSubviews()
+        }
     }
     
     override func layoutSubviews() {
