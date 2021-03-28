@@ -56,11 +56,6 @@ class CommunityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
         let animation = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut)
         animation.addAnimations {
           UIView.animateKeyframes(withDuration: animationDuration, delay: 0, animations: {
-
-//            self.communityImageViewTopConstraint.constant = self.kImageViewTopPadding
-//            self.communityImageViewLeadingConstraint.constant = self.kImageViewLeadingPadding
-//            self.communityImageview.transform = .identity
-//            self.layoutIfNeeded()
             
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
                 self.titleLabelTopConstraint.constant = self.kTitleLabelTopPadding
@@ -73,16 +68,13 @@ class CommunityIntroPageCollectionViewCell: IntroScreenPageCollectionViewCell {
                 self.layoutIfNeeded()
             })
             
-//            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.5, animations: {
-//                self.communityImageview.transform = .identity
-//                self.communityImageview.alpha = 1
-//            })
-            
           }, completion: { completed in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.animationView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                self.animationView.alpha = 1
+                self.animationView.play()
+            })
             
-            self.animationView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.animationView.alpha = 1
-            self.animationView.play()
 
           })
         }

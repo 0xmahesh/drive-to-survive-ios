@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareActionSheetView" customModule="DriveToSurvive" customModuleProvider="target">
+            <connections>
+                <outlet property="bgview" destination="Dqm-40-3pe" id="ISI-fe-fOO"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ASs-7r-XeU"/>
+                <outlet property="shareLabel" destination="QDB-cx-y46" id="DCj-Pg-WbF"/>
+                <outlet property="sheetView" destination="L5n-oN-p7b" id="tKw-eF-WpZ"/>
+                <outlet property="sheetViewHeight" destination="TOf-jW-mWQ" id="C5I-IN-QB3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-oN-p7b">
+                    <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqm-40-3pe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDB-cx-y46">
+                            <rect key="frame" x="181.5" y="25" width="51.5" height="21.5"/>
+                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pqz-bE-L6J">
+                            <rect key="frame" x="42" y="76.5" width="330" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrt-gj-LIt" userLabel="Facebook">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="1Ev-JG-fRA"/>
+                                        <constraint firstAttribute="width" secondItem="nrt-gj-LIt" secondAttribute="height" multiplier="1:1" id="2FV-6l-T1u"/>
+                                    </constraints>
+                                    <state key="normal" image="facebook"/>
+                                    <connections>
+                                        <action selector="facebookButtonTapped:" destination="-1" eventType="touchUpInside" id="sqd-xS-aEQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK5-0G-ppz" userLabel="Instagram">
+                                    <rect key="frame" x="90" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="58b-nf-3Sd"/>
+                                        <constraint firstAttribute="width" secondItem="AK5-0G-ppz" secondAttribute="height" multiplier="1:1" id="aIe-iB-0Ro"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="instagram"/>
+                                    <connections>
+                                        <action selector="instagramButtonTapped:" destination="-1" eventType="touchUpInside" id="hIR-88-TTT"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-o5-5qu" userLabel="Twitter">
+                                    <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="JVh-jr-GTo"/>
+                                        <constraint firstAttribute="width" secondItem="Hfq-o5-5qu" secondAttribute="height" multiplier="1:1" id="aoZ-IO-4Ar"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="twitter"/>
+                                    <connections>
+                                        <action selector="TwitterButtonTapped:" destination="-1" eventType="touchUpInside" id="Tm1-Ut-Pgz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXQ-jh-Zre">
+                                    <rect key="frame" x="270" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="5g2-4S-6EQ"/>
+                                        <constraint firstAttribute="width" secondItem="DXQ-jh-Zre" secondAttribute="height" multiplier="1:1" id="v9B-OE-XgG"/>
+                                    </constraints>
+                                    <state key="normal" image="snapchat"/>
+                                    <connections>
+                                        <action selector="snapChatButtonTapped:" destination="-1" eventType="touchUpInside" id="qXo-s9-iZa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lux-Wp-2ru">
+                            <rect key="frame" x="349" y="10" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="hrJ-hs-JtO"/>
+                                <constraint firstAttribute="height" constant="50" id="syL-vN-sfl"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                            <state key="normal" image="close-white"/>
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="MdI-6K-GaS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QDB-cx-y46" firstAttribute="top" secondItem="L5n-oN-p7b" secondAttribute="top" constant="25" id="6KI-qR-YUH"/>
+                        <constraint firstAttribute="trailing" secondItem="Dqm-40-3pe" secondAttribute="trailing" id="DaZ-La-oIN"/>
+                        <constraint firstItem="Lux-Wp-2ru" firstAttribute="top" secondItem="L5n-oN-p7b" secondAttribute="top" constant="10" id="Qih-nD-4jj"/>
+                        <constraint firstItem="QDB-cx-y46" firstAttribute="centerX" secondItem="L5n-oN-p7b" secondAttribute="centerX" id="RpK-z4-PYf"/>
+                        <constraint firstAttribute="height" constant="200" id="TOf-jW-mWQ"/>
+                        <constraint firstAttribute="trailing" secondItem="Lux-Wp-2ru" secondAttribute="trailing" constant="15" id="W65-64-QBg"/>
+                        <constraint firstItem="pqz-bE-L6J" firstAttribute="centerX" secondItem="L5n-oN-p7b" secondAttribute="centerX" id="cCK-94-Ag7"/>
+                        <constraint firstItem="Dqm-40-3pe" firstAttribute="leading" secondItem="L5n-oN-p7b" secondAttribute="leading" id="cJb-1y-RBE"/>
+                        <constraint firstItem="Dqm-40-3pe" firstAttribute="top" secondItem="L5n-oN-p7b" secondAttribute="top" id="gw2-RE-Dsc"/>
+                        <constraint firstItem="pqz-bE-L6J" firstAttribute="top" secondItem="QDB-cx-y46" secondAttribute="bottom" constant="30" id="iM5-z4-gG5"/>
+                        <constraint firstAttribute="bottom" secondItem="Dqm-40-3pe" secondAttribute="bottom" id="yg0-Px-CyJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L5n-oN-p7b" secondAttribute="trailing" id="K9S-5W-edX"/>
+                <constraint firstItem="L5n-oN-p7b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qeb-rJ-bKg"/>
+                <constraint firstAttribute="bottom" secondItem="L5n-oN-p7b" secondAttribute="bottom" id="uBT-el-75r"/>
+            </constraints>
+            <point key="canvasLocation" x="-71" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-white" width="50" height="50"/>
+        <image name="facebook" width="111" height="111"/>
+        <image name="instagram" width="111" height="111"/>
+        <image name="snapchat" width="111" height="111"/>
+        <image name="twitter" width="111" height="111"/>
+    </resources>
+</document>

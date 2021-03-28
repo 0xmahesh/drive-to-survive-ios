@@ -129,3 +129,22 @@ public extension UIView {
         }
     }
 }
+
+extension UIView {
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+}
+
+extension UIView{
+    func mask(_ rect: CGRect){
+        let mask = CAShapeLayer()
+        let path = CGPath(rect: rect, transform: nil)
+        mask.path = path
+        // Set the mask of the view.
+        layer.mask = mask
+    }
+}

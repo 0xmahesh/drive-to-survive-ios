@@ -60,7 +60,8 @@ class IntroScreenViewController: UIViewController {
         launchButton.titleLabel?.font = UIFont(name: "Formula1-Display-Bold", size: 18.0)
         launchButton.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
         launchButton.transform = CGAffineTransform(translationX: 0, y: 25.0)
-        launchButton.alpha = 0
+        launchButton.alpha = 0 //TODO: hide
+        
     }
     
     private func setupCollectionView() {

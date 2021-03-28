@@ -20,7 +20,9 @@
             <connections>
                 <outlet property="contentView" destination="4QT-Zr-PPu" id="umf-V6-EM8"/>
                 <outlet property="driverLineupCollectionView" destination="UVe-z2-7CD" id="Jpj-37-hVc"/>
+                <outlet property="navHeader" destination="fQR-aG-zBt" id="MxD-HQ-VLC"/>
                 <outlet property="newsCollectionView" destination="pGV-3F-GuA" id="vGc-jt-Xw7"/>
+                <outlet property="safeAreaHandlingHeader" destination="cSr-Xy-1OI" id="IkN-90-hun"/>
                 <outlet property="settingsNavBarAnimationView" destination="mZB-zO-zxb" id="xmT-vR-cPb"/>
                 <outlet property="settingsNavBarButton" destination="3n5-BL-3pr" id="EsE-Y3-GAv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,12 +37,12 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-zO-zxb" customClass="AnimationView" customModule="Lottie">
-                            <rect key="frame" x="374" y="10" width="30" height="30"/>
+                            <rect key="frame" x="379" y="12.5" width="25" height="25"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="2kT-Zw-spC"/>
+                                <constraint firstAttribute="height" constant="25" id="2kT-Zw-spC"/>
                                 <constraint firstAttribute="width" secondItem="mZB-zO-zxb" secondAttribute="height" multiplier="1:1" id="CkV-Gu-Hnr"/>
-                                <constraint firstAttribute="width" constant="30" id="EYd-3J-5Fd"/>
+                                <constraint firstAttribute="width" constant="25" id="EYd-3J-5Fd"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="settings"/>
@@ -51,6 +53,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="CyL-2U-8NK"/>
                             </constraints>
+                            <connections>
+                                <action selector="changeThemeButtonTapped:" destination="-1" eventType="touchUpInside" id="SLh-Tm-nTH"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drive To Survive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSh-2e-yhs">
                             <rect key="frame" x="127" y="16.5" width="160.5" height="17"/>
@@ -162,16 +167,24 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="p3e-EA-O5D"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="IZf-ja-jOB"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-Xy-1OI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fQR-aG-zBt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9hM-p1-nNK"/>
                 <constraint firstItem="4QT-Zr-PPu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="B9z-1k-uiu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cSr-Xy-1OI" secondAttribute="trailing" id="BJ1-6k-AoE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GDQ-Px-OmX" secondAttribute="trailing" id="KN1-91-Pc1"/>
+                <constraint firstItem="cSr-Xy-1OI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mib-RG-gHF"/>
                 <constraint firstItem="fQR-aG-zBt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SEu-Ai-G0m"/>
                 <constraint firstAttribute="bottom" secondItem="GDQ-Px-OmX" secondAttribute="bottom" id="Scg-Lx-Y8Q"/>
+                <constraint firstItem="cSr-Xy-1OI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bNE-cS-uG3"/>
                 <constraint firstItem="fQR-aG-zBt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sJn-jD-ipD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="cSr-Xy-1OI" secondAttribute="bottom" id="sTR-CB-2YK"/>
                 <constraint firstItem="GDQ-Px-OmX" firstAttribute="top" secondItem="fQR-aG-zBt" secondAttribute="bottom" id="uTN-SA-9jc"/>
                 <constraint firstItem="GDQ-Px-OmX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vQS-I2-oOS"/>
             </constraints>

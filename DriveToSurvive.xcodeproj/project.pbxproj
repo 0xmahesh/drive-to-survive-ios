@@ -31,6 +31,10 @@
 		3D46F81D25F6964B00C2A6A8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */; };
 		3D47328F260F6E5300CB32D4 /* NewsDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47328D260F6E5300CB32D4 /* NewsDetailCollectionViewCell.swift */; };
 		3D473290260F6E5300CB32D4 /* NewsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D47328E260F6E5300CB32D4 /* NewsDetailCollectionViewCell.xib */; };
+		3D4732A22610ED0900CB32D4 /* ConfettiGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4732A12610ED0800CB32D4 /* ConfettiGenerator.swift */; };
+		3D4732AB2610F13400CB32D4 /* ShareActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4732AA2610F13400CB32D4 /* ShareActionSheetView.swift */; };
+		3D4732B32610F14500CB32D4 /* ShareActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4732B22610F14500CB32D4 /* ShareActionSheetView.xib */; };
+		3D4732B9261105B900CB32D4 /* ThemeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4732B8261105B900CB32D4 /* ThemeOverlayView.swift */; };
 		3D49269B260CDFF50050EE2F /* AvenirNext-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D49269A260CDFF50050EE2F /* AvenirNext-Medium.otf */; };
 		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
 		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
@@ -123,6 +127,10 @@
 		3D46F81B25F6964B00C2A6A8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		3D47328D260F6E5300CB32D4 /* NewsDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D47328E260F6E5300CB32D4 /* NewsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		3D4732A12610ED0800CB32D4 /* ConfettiGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiGenerator.swift; sourceTree = "<group>"; };
+		3D4732AA2610F13400CB32D4 /* ShareActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActionSheetView.swift; sourceTree = "<group>"; };
+		3D4732B22610F14500CB32D4 /* ShareActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareActionSheetView.xib; sourceTree = "<group>"; };
+		3D4732B8261105B900CB32D4 /* ThemeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOverlayView.swift; sourceTree = "<group>"; };
 		3D49269A260CDFF50050EE2F /* AvenirNext-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Medium.otf"; sourceTree = "<group>"; };
 		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +295,31 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		3D4732A02610ECEC00CB32D4 /* ConfettiView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4732A12610ED0800CB32D4 /* ConfettiGenerator.swift */,
+			);
+			path = ConfettiView;
+			sourceTree = "<group>";
+		};
+		3D4732A92610F11800CB32D4 /* ShareActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				3D4732AA2610F13400CB32D4 /* ShareActionSheetView.swift */,
+				3D4732B22610F14500CB32D4 /* ShareActionSheetView.xib */,
+			);
+			path = ShareActionSheet;
+			sourceTree = "<group>";
+		};
+		3D4732B72611058B00CB32D4 /* ThemeOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4732B8261105B900CB32D4 /* ThemeOverlayView.swift */,
+			);
+			path = ThemeOverlayView;
+			sourceTree = "<group>";
+		};
 		3D512E1525D4547200B21FF6 = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +397,9 @@
 		3D512EA625D81CEE00B21FF6 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				3D4732A92610F11800CB32D4 /* ShareActionSheet */,
+				3D4732B72611058B00CB32D4 /* ThemeOverlayView */,
+				3D4732A02610ECEC00CB32D4 /* ConfettiView */,
 				3D6F40CC25F51B0C0090CA45 /* CollectionView */,
 			);
 			path = CustomUI;
@@ -418,13 +454,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		3D78211B260E6C6E000B626F /* StretchyHeaderView */ = {
+		3D78211B260E6C6E000B626F /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
 				3D782113260E6527000B626F /* NewsDetailHeaderView.swift */,
 				3D78211C260E6C9C000B626F /* NewsDetailCollectionViewFlowLayout.swift */,
 			);
-			path = StretchyHeaderView;
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		3D97D2CD2606800D007D1328 /* Util */ = {
@@ -467,7 +503,7 @@
 		3DC42CDE25F7D34800E0E22F /* NewsDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				3D78211B260E6C6E000B626F /* StretchyHeaderView */,
+				3D78211B260E6C6E000B626F /* HeaderView */,
 				3D782109260E5CE1000B626F /* Cells */,
 				3D18DCB0260B538E00865673 /* NewsDetailViewControllerTransitionAnimator.swift */,
 				3D782104260E5C80000B626F /* NewsDetailCollectionViewController.swift */,
@@ -645,6 +681,7 @@
 				3D30F80D25FD5EE00036FFE2 /* OpenSans-BoldItalic.ttf in Resources */,
 				3D30F81425FD5EE00036FFE2 /* SFProText-Semibold.otf in Resources */,
 				3D30F80F25FD5EE00036FFE2 /* SFProText-Regular.otf in Resources */,
+				3D4732B32610F14500CB32D4 /* ShareActionSheetView.xib in Resources */,
 				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
 				3D473290260F6E5300CB32D4 /* NewsDetailCollectionViewCell.xib in Resources */,
 				3DE9A59D2603D018007D2090 /* Formula1-Black.ttf in Resources */,
@@ -795,6 +832,8 @@
 			files = (
 				3DE9A5892603C08D007D2090 /* DiversityIntroPageCollectionViewCell.swift in Sources */,
 				3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */,
+				3D4732AB2610F13400CB32D4 /* ShareActionSheetView.swift in Sources */,
+				3D4732A22610ED0900CB32D4 /* ConfettiGenerator.swift in Sources */,
 				3D30F7F325FD5CD80036FFE2 /* DriverThumbnailCollectionViewCell.swift in Sources */,
 				3DE9A5822603B9A8007D2090 /* IntroScreenViewController.swift in Sources */,
 				3DAC3C8E25FE452B0070F623 /* DriverDetailViewControllerTransitionAnimator.swift in Sources */,
@@ -818,6 +857,7 @@
 				3D782105260E5C80000B626F /* NewsDetailCollectionViewController.swift in Sources */,
 				3D2B897826051F3B006A0201 /* SustainabilityIntroPageCollectionViewCell.swift in Sources */,
 				3D512E5825D45D8100B21FF6 /* SplashScreenViewController.swift in Sources */,
+				3D4732B9261105B900CB32D4 /* ThemeOverlayView.swift in Sources */,
 				3D782114260E6527000B626F /* NewsDetailHeaderView.swift in Sources */,
 				3D46F81C25F6964B00C2A6A8 /* HomeViewController.swift in Sources */,
 				3D6F40D425F51C170090CA45 /* ParallaxCollectionViewLayout.swift in Sources */,

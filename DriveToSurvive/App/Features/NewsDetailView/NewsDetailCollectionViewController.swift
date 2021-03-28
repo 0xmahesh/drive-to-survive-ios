@@ -7,12 +7,59 @@
 
 import UIKit
 
+protocol SwipeToDismissable {
+    var swipeVelocityThreshold: CGFloat { get }
+    func onSwipe(in vc: UIViewController, sender: UIPanGestureRecognizer)
+}
 
-class NewsDetailCollectionViewController: UICollectionViewController {
+extension SwipeToDismissable {
+    
+    var swipeVelocityThreshold: CGFloat {
+        return 300
+    }
+    
+    func onSwipe(in vc: UIViewController, sender: UIPanGestureRecognizer) {
+        guard let view = vc.view else { return }
+        let velocity = sender.velocity(in: view)
+        if velocity.y < 0 {
+             return
+        }
+        let touchPoint = sender.location(in: view.window)
+        var initialTouchPoint = CGPoint.zero
+
+        switch sender.state {
+        case .began:
+            initialTouchPoint = touchPoint
+        case .changed:
+            if touchPoint.y > initialTouchPoint.y {
+                view.frame.origin.y = touchPoint.y - initialTouchPoint.y
+            }
+        case .ended, .cancelled:
+            if touchPoint.y - initialTouchPoint.y > swipeVelocityThreshold {
+                vc.dismiss(animated: true, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: {
+                    view.frame = CGRect(x: 0,
+                                             y: 0,
+                                             width: view.frame.size.width,
+                                             height: view.frame.size.height)
+                }, completion: nil)
+            }
+        case .failed, .possible:
+            break
+        @unknown default:
+            break
+        }
+    }
+}
+
+class NewsDetailCollectionViewController: UICollectionViewController, SwipeToDismissable {
     
     private let cellReuseIdentifier = "NewsDetailCell"
     private let padding: CGFloat = 20
+    
     private var stickyHeaderView = NewsDetailHeaderView()
+    private var shareActionSheet: ShareActionSheetView?
     var navBarHeight: CGFloat = 44
     var newsItem: NewsItem?
     let buttonStackView = UIStackView()
@@ -44,9 +91,8 @@ class NewsDetailCollectionViewController: UICollectionViewController {
             addReadMoreGradient()
         }
         
-        
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         vMaskLayer.removeFromSuperlayer()
@@ -80,38 +126,13 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         self.view.layer.addSublayer(vMaskLayer)
     }
     
+    private func createShareActionSheet() {
+        shareActionSheet = ShareActionSheetView(frame: CGRect(origin: .zero, size: self.view.frame.size))
+        self.view.addSubview(shareActionSheet!)
+    }
+    
     @IBAction func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
-        let velocity = sender.velocity(in: self.view)
-        if velocity.y < 0 {
-             return
-        }
-        let touchPoint = sender.location(in: view?.window)
-        var initialTouchPoint = CGPoint.zero
-
-        switch sender.state {
-        case .began:
-            initialTouchPoint = touchPoint
-        case .changed:
-            if touchPoint.y > initialTouchPoint.y {
-                view.frame.origin.y = touchPoint.y - initialTouchPoint.y
-            }
-        case .ended, .cancelled:
-            if touchPoint.y - initialTouchPoint.y > 500 {
-                
-                dismiss(animated: true, completion: nil)
-            } else {
-                UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: {
-                    self.view.frame = CGRect(x: 0,
-                                             y: 0,
-                                             width: self.view.frame.size.width,
-                                             height: self.view.frame.size.height)
-                }, completion: nil)
-            }
-        case .failed, .possible:
-            break
-        @unknown default:
-            break
-        }
+        onSwipe(in: self, sender: sender)
     }
     
     override func viewSafeAreaInsetsDidChange() {
@@ -181,7 +202,7 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         shareButton.setImage(UIImage(named:"share"), for: .normal)
         shareButton.setImage(UIImage(named:"share-black"), for: .highlighted)
         shareButton.contentMode = .center
-        shareButton.addTarget(self, action:#selector(closeButtonTapped(sender:)), for: .touchUpInside)
+        shareButton.addTarget(self, action:#selector(shareButtonTapped(sender:)), for: .touchUpInside)
         
         let bookmarkButton = UIButton(type: .custom)
         bookmarkButton.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
@@ -194,7 +215,7 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         buttonStackView.distribution = .fillEqually
         buttonStackView.alignment = .center
         
-        buttonStackView.frame = CGRect(x: view.frame.width-50, y: navBarHeight/2 - 15, width: 30, height: 110)
+        buttonStackView.frame = CGRect(x: view.frame.width-40, y: navBarHeight/2 - 15, width: 30, height: 110)
         self.view.addSubview(buttonStackView)
         buttonStackView.addArrangedSubview(closeButton)
         buttonStackView.addArrangedSubview(shareButton)
@@ -209,6 +230,13 @@ class NewsDetailCollectionViewController: UICollectionViewController {
     
     @objc private func closeButtonTapped(sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func shareButtonTapped(sender: UIButton) {
+        createShareActionSheet()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            self.shareActionSheet?.show()
+        })
     }
     
     @objc private func animateStackView(isHorizontal: Bool) {
@@ -242,7 +270,7 @@ class NewsDetailCollectionViewController: UICollectionViewController {
                 self.buttonStackView.addArrangedSubview(self.buttonStackView.subviews[1])
                 self.buttonStackView.addArrangedSubview(self.buttonStackView.subviews[2])
                 
-                self.buttonStackView.frame = CGRect(x: self.view.frame.width-50, y: currentButtonStackViewY, width: currentButtonStackViewHeight, height: currentButtonStackViewWidth)
+                self.buttonStackView.frame = CGRect(x: self.view.frame.width-40, y: currentButtonStackViewY, width: currentButtonStackViewHeight, height: currentButtonStackViewWidth)
                 self.buttonStackView.layoutIfNeeded()
             }, completion:  { completed in
                 self.isHorizontalButtonStackView = false

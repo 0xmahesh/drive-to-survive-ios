@@ -71,9 +71,16 @@ class NewsDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAnim
             selectedCellOriginalFrame = selectedCell.frame
         }
         
-        fromVC.view.isHidden = true
+       // fromVC.view.isHidden = true
         
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0.0, options: [.curveEaseOut, .layoutSubviews], animations: {
+            
+            //hide cells in fromVC
+            let visibleCells = fromVC.visibleCards
+            visibleCells.forEach {
+                ($0 as? UICollectionViewCell)?.isHidden = true
+            }
+            
             // set template to full screen.
             if let selectedCell =  clonedCells.selectedCell {
                 selectedCell.isFullScreen = true
@@ -152,6 +159,7 @@ class NewsDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAnim
         clonedCells.selectedCell?.layoutSubviews()
         
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: duration, delay: 0.0, options: [.curveEaseOut, .layoutSubviews], animations: {
+            
             if let selectedCell = clonedCells.selectedCell {
                 selectedCell.isFullScreen = false
                 selectedCell.frame = selectedCellOriginalFrame
@@ -166,6 +174,13 @@ class NewsDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAnim
             clonedCells.cells.forEach { cell in
                 cell.removeFromSuperview()
             }
+            
+            //show cells in fromVC
+            let visibleCells = toVC.visibleCards
+            visibleCells.forEach {
+                ($0 as? UICollectionViewCell)?.isHidden = false
+            }
+            
             toVC.view.isHidden = false
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })

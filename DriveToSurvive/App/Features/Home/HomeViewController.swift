@@ -20,7 +20,9 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     @IBOutlet weak var settingsNavBarButton: UIButton!
     @IBOutlet weak var settingsNavBarAnimationView: AnimationView!
     @IBOutlet weak var contentView: UIView!
-
+    @IBOutlet weak var navHeader: UIView!
+    @IBOutlet weak var safeAreaHandlingHeader: UIView!
+    
     
     private let margin: CGFloat = 30.0
     
@@ -66,7 +68,7 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
         newsCollectionView.reloadData()
         settingsNavBarAnimationView.animationSpeed = 2
         setButtonAnimation(button: settingsNavBarButton)
-        
+        adaptUIToInterfaceStyleChange()
        
     }
     
@@ -86,10 +88,15 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
     }
     
     private func adaptUIToInterfaceStyleChange() {
+        let metallicGray = UIColor(patternImage: UIImage(named: "metallic_gray")!)
         if traitCollection.userInterfaceStyle == .dark {
             view.backgroundColor = .black
+            navHeader.backgroundColor = metallicGray
+            safeAreaHandlingHeader.backgroundColor = metallicGray
         } else {
-            view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
+            view.backgroundColor = metallicGray
+            navHeader.backgroundColor = .black
+            safeAreaHandlingHeader.backgroundColor = .black
         }
     }
     
@@ -272,7 +279,28 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     
-    
+    @IBAction func changeThemeButtonTapped(_ sender: Any){
+        print("change theme")
+        if let beforeSnapshot = view.snapshotView(afterScreenUpdates: true) {
+            beforeSnapshot.frame = view.frame
+            beforeSnapshot.alpha = 0
+            view.addSubview(beforeSnapshot)
+            
+            if traitCollection.userInterfaceStyle == .dark {
+                view.window?.overrideUserInterfaceStyle = .light
+            } else {
+                view.window?.overrideUserInterfaceStyle = .dark
+            }
+            
+            if let afterSnapshot = view.snapshotView(afterScreenUpdates: true) {
+                beforeSnapshot.alpha = 1
+                let overlayView = ThemeOverlayView( snapshotViews: [beforeSnapshot, afterSnapshot], frame: view.frame, xOffset: view.frame.width-35, yOffset: UIDevice.current.hasNotch ? view.safeAreaInsets.top + 25 : 25, startDiameter: 0, endDiameter: 0, duration: 0.4)
+                view.addSubview(overlayView)
+                overlayView.animateTo(xOffset: 0, yOffset: view.frame.height/2, endDiameter: view.frame.height * 2, duration: 0.4)
+            }
+        }
+     
+    }
 }
 
 // MARK: UICollectionViewDelegateFlowLayout functions

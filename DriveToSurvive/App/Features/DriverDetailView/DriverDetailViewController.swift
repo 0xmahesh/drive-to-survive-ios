@@ -85,7 +85,7 @@ class DriverDetailViewController: UIViewController {
     var descriptionLabel = UILabel()
     var readMoreButton = DriverDetailButton(type: .custom)
     var shareButton = DriverDetailButton(type: .custom)
-    var shareActionSheet = UIView()
+    var shareActionSheet:ShareActionSheetView?
     
     var largeView = UIView()
  
@@ -106,8 +106,23 @@ class DriverDetailViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showConfettiForTop(driver: self.driver)
+    }
+    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         adaptUIToInterfaceStyle()
+    }
+    
+    private func showConfettiForTop(driver: Driver?) {
+        if let driver = self.driver {
+           let rank = driver.rank
+            if rank == 1 {
+                startConfetti(mainView: self.view)
+            }
+            
+        }
     }
     
     private func createSubviews() {
@@ -206,7 +221,6 @@ class DriverDetailViewController: UIViewController {
         self.scrollView.addSubview(shareButton)
         
         adaptUIToInterfaceStyle()
-      //  createShareActionSheet()
     }
     
     private func adaptUIToInterfaceStyle() {
@@ -251,73 +265,10 @@ class DriverDetailViewController: UIViewController {
         }
     }
 
-    
-    //TODO: - polish share action sheet UI.
+
     private func createShareActionSheet() {
-        shareActionSheet.backgroundColor = UIColor(hex: "333333")
-        shareActionSheet.alpha = 0.95
-        shareActionSheet.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        shareActionSheet.layer.cornerRadius = 20
-        shareActionSheet.clipsToBounds = true
-        
-        if !UIAccessibility.isReduceTransparencyEnabled {
-            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = self.shareActionSheet.bounds
-            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            
-            self.shareActionSheet.addSubview(blurEffectView)
-            self.view.addSubview(shareActionSheet)
-        }
-        
-        let verticalStackView = UIStackView()
-        verticalStackView.axis = .vertical
-        verticalStackView.alignment = .fill
-        verticalStackView.distribution = .fill
-        verticalStackView.spacing = 10
-        
-        let shareLabel = UILabel()
-        shareLabel.text = "Share"
-        shareLabel.font = UIFont(name: "SFProText-Regular", size: 18)
-        shareLabel.textColor = .white
-        shareLabel.textAlignment = .center
-        shareLabel.sizeToFit()
-        
-        verticalStackView.addArrangedSubview(shareLabel)
-        
-        let horizontalStackView = UIStackView()
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .top
-        horizontalStackView.distribution = .fillEqually
-        horizontalStackView.spacing = 10
-        
-        let facebookButton = createSocialButton(for: "facebook")
-        let instagramButton = createSocialButton(for: "instagram")
-        let twitterButton = createSocialButton(for: "twitter")
-        let snapchatButton = createSocialButton(for: "snapchat")
-        horizontalStackView.addArrangedSubview(facebookButton)
-        horizontalStackView.addArrangedSubview(instagramButton)
-        horizontalStackView.addArrangedSubview(twitterButton)
-        horizontalStackView.addArrangedSubview(snapchatButton)
-        
-        let closeButtonStackView = UIStackView()
-        closeButtonStackView.axis = .horizontal
-        closeButtonStackView.alignment = .center
-        closeButtonStackView.distribution = .fill
-        
-        let closeButton = UIButton(type: .custom)
-        closeButton.backgroundColor = .blue
-        closeButton.setTitle("close", for: .normal)
-        closeButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        
-        verticalStackView.frame = shareActionSheet.frame
-        verticalStackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        shareActionSheet.addSubview(verticalStackView)
-        
-        horizontalStackView.frame = CGRect(x: 0, y: 0, width: verticalStackView.frame.width - 50, height: 50)
-        verticalStackView.addArrangedSubview(horizontalStackView)
-        verticalStackView.addArrangedSubview(closeButton)
-        
+        shareActionSheet = ShareActionSheetView(frame: CGRect(origin: .zero, size: self.view.frame.size))
+        self.view.addSubview(shareActionSheet!)  
     }
     
     private func createSocialButton(for name: String) -> UIButton {
@@ -373,8 +324,8 @@ class DriverDetailViewController: UIViewController {
             y: descriptionLabel.frame.maxY + actionButtonsVerticalPadding)
         
             
-        let shareActionSheetHeight: CGFloat = 200.0
-        shareActionSheet.frame = CGRect(x: 0, y: self.view.frame.height - shareActionSheetHeight, width: self.view.frame.size.width, height: shareActionSheetHeight)
+//        let shareActionSheetHeight: CGFloat = 200.0
+//        shareActionSheet.frame = CGRect(x: 0, y: self.view.frame.height - shareActionSheetHeight, width: self.view.frame.size.width, height: shareActionSheetHeight)
         
         let contentHeight: CGFloat = closeButtonTopPadding + safeAreaInset + closeButton.frame.height + driverImageWrapperViewTopPadding + driverImageWrapperView.frame.height + driverLabelTopPadding + driverNameLabel.frame.height + teamNameTopPadding + teamNameLabel.frame.height +
             descriptionTopPadding + descriptionLabel.frame.height +
@@ -403,7 +354,13 @@ class DriverDetailViewController: UIViewController {
     }
     
     @objc private func shareButtonTapped(sender: Any) {
+        createShareActionSheet()
         delegate?.didTapShareButton()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            self.shareActionSheet?.show()
+        })
+        
+        
     }
     
     private func setupUI() {
