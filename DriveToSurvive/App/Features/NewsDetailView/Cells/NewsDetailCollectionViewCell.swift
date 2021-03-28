@@ -14,7 +14,7 @@ enum NewsDetailCollectionViewCellType {
 }
 
 class NewsDetailDescriptionLabel: UILabel {
-    let inset = UIEdgeInsets(top: -15, left: 0, bottom: 0, right: 0)
+    let inset = UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0)
     
     override func drawText(in rect: CGRect) {
         super.drawText(in: rect.inset(by: inset))
