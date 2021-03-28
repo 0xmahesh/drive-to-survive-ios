@@ -285,7 +285,7 @@ class NewsDetailCollectionViewController: UICollectionViewController, SwipeToDis
         vMaskLayer.removeFromSuperlayer()
         
         let scrollViewOffset = scrollView.contentOffset.y
-        print("Y offset: \(scrollViewOffset)")
+       // print("Y offset: \(scrollViewOffset)")
         let totalOffset = scrollViewOffset + stickyHeaderView.bounds.height
         var headerTransform = CATransform3DIdentity // Both Scale and Translate.
         

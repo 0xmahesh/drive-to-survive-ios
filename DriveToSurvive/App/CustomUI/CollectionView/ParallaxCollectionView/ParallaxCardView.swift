@@ -38,8 +38,7 @@ struct ParallaxCardViewFullScreenTemplate: ParallaxCardViewDrawable {
     func drawRect(rect: CGRect, imageView: UIView, bottomContainerView: UIView, parallaxVal: CGFloat = 0) {
         imageView.frame = CGRect(x: 0, y: 0, width: rect.width * imageSizeRatio.width, height: rect.height * imageSizeRatio.height)
         
-//        var
-        print("rect: \(rect)")
+        //print("rect: \(rect)")
         let yOffset: CGFloat = (UIScreen.main.bounds.height/2) - (UIDevice.current.hasNotch ? 47.0 : 0) + (UIDevice.current.hasNotch ? 78.0 : 44.0)
         
         bottomContainerView.frame = CGRect(origin: CGPoint(x: 0, y: yOffset), size: CGSize(width: rect.width, height: rect.height * (1-imageSizeRatio.height)))
