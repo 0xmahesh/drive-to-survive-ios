@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -38,7 +37,7 @@
                                 <rect key="frame" x="33" y="178" width="309" height="130"/>
                                 <string key="text">We continue to lead the way in creating a sustainable sport for fans around the world to enjoy, using innovative technology &amp; changing the way we work.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TVf-HN-6go" customClass="AnimationView" customModule="Lottie">
@@ -55,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TVf-HN-6go" firstAttribute="centerY" secondItem="mqi-fW-v9m" secondAttribute="centerY" constant="100" id="1hE-uz-hQ1"/>
                             <constraint firstItem="ZNR-gV-IZt" firstAttribute="centerX" secondItem="mqi-fW-v9m" secondAttribute="centerX" id="28x-gK-6Mt"/>
@@ -93,9 +92,4 @@
     <designables>
         <designable name="TVf-HN-6go"/>
     </designables>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -13,12 +13,13 @@ class NewsDetailCollectionViewController: UICollectionViewController {
     private let cellReuseIdentifier = "NewsDetailCell"
     private let padding: CGFloat = 20
     private var stickyHeaderView = NewsDetailHeaderView()
-    var navBarHeight: CGFloat = 0
+    var navBarHeight: CGFloat = 44
     var newsItem: NewsItem?
     let buttonStackView = UIStackView()
     var isHorizontalButtonStackView: Bool = false
     var isVerticalButtonStackView: Bool = true
     var isAnimating: Bool = false
+    var vMaskLayer : CAGradientLayer = CAGradientLayer()
     
     convenience init(with news: NewsItem, layout: UICollectionViewFlowLayout) {
         self.init(collectionViewLayout: layout)
@@ -35,9 +36,92 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         
         collectionView.contentInset = UIEdgeInsets(top: stickyHeaderView.bounds.height, left: 0, bottom: 0, right: 0)
         
+        setupSwipeToDismiss()
+        
+        
+        let descriptionHeight = getLabelHeight(for: newsItem?.description ?? "", font: UIFont(name: "Avenir-Roman", size: 18)!, padding: 2*20)
+        if(descriptionHeight > view.frame.height/2) {
+            addReadMoreGradient()
+        }
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        vMaskLayer.removeFromSuperlayer()
+    }
+    
+    fileprivate func setupSwipeToDismiss() {
+        let gestureRecognizer = UIPanGestureRecognizer(target: self,
+                                                       action: #selector(panGestureRecognizerHandler(_:)))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    fileprivate func addReadMoreGradient() {
+        var innerColor: CGColor
+        if traitCollection.userInterfaceStyle == .dark {
+            innerColor = UIColor(white: 1.0, alpha: 0.8).cgColor
+        } else {
+            innerColor = UIColor.black.withAlphaComponent(0.8).cgColor
+        }
+        
+        let outerColor = UIColor(white: 1.0, alpha: 0.0).cgColor;
+
+        let colors = [outerColor, innerColor]
+        let locations: [NSNumber] = [0.92, 1.0]
+        
+        vMaskLayer.opacity = 0.6
+        vMaskLayer.colors = colors;
+        vMaskLayer.locations = locations;
+        vMaskLayer.bounds = self.collectionView.bounds;
+        vMaskLayer.anchorPoint = .zero;
+
+        self.view.layer.addSublayer(vMaskLayer)
+    }
+    
+    @IBAction func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
+        let velocity = sender.velocity(in: self.view)
+        if velocity.y < 0 {
+             return
+        }
+        let touchPoint = sender.location(in: view?.window)
+        var initialTouchPoint = CGPoint.zero
+
+        switch sender.state {
+        case .began:
+            initialTouchPoint = touchPoint
+        case .changed:
+            if touchPoint.y > initialTouchPoint.y {
+                view.frame.origin.y = touchPoint.y - initialTouchPoint.y
+            }
+        case .ended, .cancelled:
+            if touchPoint.y - initialTouchPoint.y > 500 {
+                
+                dismiss(animated: true, completion: nil)
+            } else {
+                UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: {
+                    self.view.frame = CGRect(x: 0,
+                                             y: 0,
+                                             width: self.view.frame.size.width,
+                                             height: self.view.frame.size.height)
+                }, completion: nil)
+            }
+        case .failed, .possible:
+            break
+        @unknown default:
+            break
+        }
     }
     
     override func viewSafeAreaInsetsDidChange() {
+        
+        var buttonStackTopPadding: CGFloat = 0
+        if UIDevice.current.hasNotch {
+            buttonStackTopPadding = view.safeAreaInsets.top
+        }
+        
+        buttonStackView.frame.origin.y = buttonStackTopPadding
         navBarHeight = view.safeAreaInsets.top + 44
     }
 
@@ -62,7 +146,13 @@ class NewsDetailCollectionViewController: UICollectionViewController {
     }
     
     fileprivate func setupCollectionView() {
-        collectionView.backgroundColor = .white
+        
+        if traitCollection.userInterfaceStyle == .dark {
+            collectionView.backgroundColor = .black
+        } else {
+            collectionView.backgroundColor = .white
+        }
+        
         self.collectionView.register(UINib(nibName: "NewsDetailCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: NewsDetailCollectionViewCell.reuseIdentifier)
         self.collectionView.register(NewsDetailHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NewsDetailHeaderView.reuseIdentifier)
         collectionView.contentInsetAdjustmentBehavior = .never
@@ -82,7 +172,7 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         let closeButton = UIButton(type: .custom)
         closeButton.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
         closeButton.setImage(UIImage(named:"close-white"), for: .normal)
-        closeButton.setImage(UIImage(named:"close-black"), for: .highlighted)
+        closeButton.setImage(UIImage(named:"close-gray"), for: .highlighted)
         closeButton.contentMode = .center
         closeButton.addTarget(self, action:#selector(closeButtonTapped(sender:)), for: .touchUpInside)
         
@@ -103,7 +193,8 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         buttonStackView.spacing = 10
         buttonStackView.distribution = .fillEqually
         buttonStackView.alignment = .center
-        buttonStackView.frame = CGRect(x: view.frame.width-50, y: 44, width: 30, height: 110)
+        
+        buttonStackView.frame = CGRect(x: view.frame.width-50, y: navBarHeight/2 - 15, width: 30, height: 110)
         self.view.addSubview(buttonStackView)
         buttonStackView.addArrangedSubview(closeButton)
         buttonStackView.addArrangedSubview(shareButton)
@@ -127,7 +218,7 @@ class NewsDetailCollectionViewController: UICollectionViewController {
             let currentButtonStackViewHeight = buttonStackView.frame.height
             let currentButtonStackViewMaxX = buttonStackView.frame.maxX
             let currentButtonStackViewY = buttonStackView.frame.origin.y
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.buttonStackView.axis = .horizontal
                 self.buttonStackView.addArrangedSubview(self.buttonStackView.subviews[2])
                 self.buttonStackView.addArrangedSubview(self.buttonStackView.subviews[1])
@@ -163,6 +254,8 @@ class NewsDetailCollectionViewController: UICollectionViewController {
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        vMaskLayer.removeFromSuperlayer()
+        
         let scrollViewOffset = scrollView.contentOffset.y
         print("Y offset: \(scrollViewOffset)")
         let totalOffset = scrollViewOffset + stickyHeaderView.bounds.height
@@ -194,6 +287,9 @@ class NewsDetailCollectionViewController: UICollectionViewController {
         if !isVerticalButtonStackView && scrollViewOffset <= -(stickyHeaderView.bounds.height/2 + 1) && !isAnimating {
             animateStackView(isHorizontal: false)
         }
+        
+        
+        
         
     }
     
