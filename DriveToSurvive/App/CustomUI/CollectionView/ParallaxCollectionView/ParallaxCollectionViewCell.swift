@@ -32,6 +32,7 @@ class ParallaxCollectionViewCell: UICollectionViewCell, ParallaxCardViewPresenta
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        parallaxCardView.adaptToSystemInterfaceStyle()
         contentView.addSubview(parallaxCardView)
     }
     
@@ -52,6 +53,11 @@ class ParallaxCollectionViewCell: UICollectionViewCell, ParallaxCardViewPresenta
         parallaxCardView.layoutSubviews()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        parallaxCardView.adaptToSystemInterfaceStyle()
+    }
+    
     func copy(with zone: NSZone? = nil) -> Any {
         let parallaxCardView = self.parallaxCardView.copy() as! ParallaxCardView
         let instance = ParallaxCollectionViewCell(frame: self.frame)
@@ -60,4 +66,5 @@ class ParallaxCollectionViewCell: UICollectionViewCell, ParallaxCardViewPresenta
         instance.contentView.addSubview(parallaxCardView)
         return instance
     }
+    
 }

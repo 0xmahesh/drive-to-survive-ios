@@ -66,6 +66,8 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
         newsCollectionView.reloadData()
         settingsNavBarAnimationView.animationSpeed = 2
         setButtonAnimation(button: settingsNavBarButton)
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,11 +75,31 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        newsCollectionView.reloadData()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?){
+        super.traitCollectionDidChange(previousTraitCollection)
+        adaptUIToInterfaceStyleChange()
+    }
+    
+    private func adaptUIToInterfaceStyleChange() {
+        if traitCollection.userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+        } else {
+            view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
+        }
+    }
+    
     private func setupNewsCollectionView() {
         newsCollectionView.dataSource = self
         newsCollectionView.delegate = self
         newsCollectionView.register(ParallaxCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: ParallaxCollectionViewCell.reuseIdentifier)
         newsCollectionView.collectionViewLayout = self.collectionViewLayout
+        newsCollectionView.showsHorizontalScrollIndicator = false
+        newsCollectionView.showsVerticalScrollIndicator = false
     }
     
     private func setupDriverLineupCollectionView() {
@@ -86,16 +108,49 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
         driverLineupCollectionView.register(UINib(nibName: DriverThumbnailCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: DriverThumbnailCollectionViewCell.reuseIdentifier)
         
         driverLineupCollectionView.showsHorizontalScrollIndicator = false
+        driverLineupCollectionView.showsVerticalScrollIndicator = false
+        
+       // Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.autoScrollDriverLineUp), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func autoScrollDriverLineUp(_ timer: Timer) {
+        if let coll  = self.driverLineupCollectionView {
+            for cell in coll.visibleCells {
+                let indexPath: IndexPath? = coll.indexPath(for: cell)
+                if ((indexPath?.row)!  < drivers.count - 1){
+                    let indexPath1: IndexPath?
+                    indexPath1 = IndexPath.init(row: (indexPath?.row)! + 1, section: (indexPath?.section)!)
+                    DispatchQueue.main.async {
+                        coll.scrollToItem(at: indexPath1!, at: .right, animated: true)
+                    }
+                    
+                }
+                else{
+                    let indexPath1: IndexPath?
+                    indexPath1 = IndexPath.init(row: 0, section: (indexPath?.section)!)
+                    DispatchQueue.main.async {
+                        coll.scrollToItem(at: indexPath1!, at: .left, animated: false)
+                    }
+                    
+                }
+                
+            }
+        }
     }
     
     private func setupUI() {
-        //view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
+        
+        if traitCollection.userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+        } else {
+            view.backgroundColor = UIColor(patternImage: UIImage(named: "metallic_gray")!)
+        }
         
         if let layout = self.collectionViewLayout as? ParallaxCollectionViewLayout {
             layout.minLineSpacing = 20.0
             layout.contentInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin - layout.minLineSpacing)
             layout.itemSize = CGSize(width: view.frame.width - (4*margin), height: 350)
-            newsCollectionView.backgroundColor = .white
+            //newsCollectionView.backgroundColor = .white
             newsCollectionView.layer.masksToBounds = false
             newsCollectionView.showsHorizontalScrollIndicator = false
         }
@@ -183,7 +238,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         switch collectionView {
         case newsCollectionView:
             let newsItem = newsItems[indexPath.row]
-           // let newsDetailVC = NewsDetailViewController(with: newsItem)
             let newsDetailVC = NewsDetailCollectionViewController(with: newsItem, layout: NewsDetailCollectionViewFlowLayout())
             selectedNewsItemCell = collectionView.cellForItem(at: indexPath) as! ParallaxCollectionViewCell?
             
@@ -195,10 +249,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             driverDetailVC.transitioningDelegate = self
             selectedDriverCell = collectionView.cellForItem(at: indexPath) as! DriverThumbnailCollectionViewCell?
             self.presentInFullScreen(driverDetailVC, animated: true, completion: nil)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-//                self.selectedDriverCell?.alpha = 0
-//                self.selectedDriverCell?.hideName()
-//            })
         default:
             break
         }
@@ -325,7 +375,7 @@ extension HomeViewController: UIScrollViewDelegate {
         defer { lastOffsetX = scrollView.contentOffset.x }
         guard let lastOffsetX = lastOffsetX else { return }
         let maxVelocity: CGFloat = 30
-        let maxStretch: CGFloat = 20
+        let maxStretch: CGFloat = 25
         let velocity = min(scrollView.contentOffset.x - lastOffsetX, maxVelocity)
         let stretch = velocity / maxVelocity * maxStretch
         var cumulativeStretch: CGFloat = 0
@@ -334,9 +384,33 @@ extension HomeViewController: UIScrollViewDelegate {
           for (index, cell) in driverLineupCollectionView.visibleCells.enumerated() {
               cumulativeStretch += stretch
               delay += 0.05 * Double(index)
+            
+//            if index == 0 {
+//                UIView.animateKeyframes(withDuration: 0.1, delay: 0, options: .layoutSubviews, animations: {
+//                    cell.transform = CGAffineTransform(scaleX: 0.9, y: 1)
+//                }, completion: { completed in
+//                    UIView.animateKeyframes(withDuration: 0.1, delay: 0, options: .layoutSubviews, animations: {
+//                        cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+//                    }, completion: { completed in
+//
+//                    })
+//                })
+//            }
+            
               UIView.animate(withDuration: 0.2, delay: delay, options: [.curveEaseInOut, .layoutSubviews], animations: {
                   cell.transform = CGAffineTransform(translationX: -cumulativeStretch, y: 0)
+                
               }, completion: nil)
+            
+            
+//            var perspectiveTransform = CATransform3DIdentity
+//            perspectiveTransform.m34 = 1.0 / -500
+//            perspectiveTransform = CATransform3DRotate(perspectiveTransform, -(40 * .pi)/180, 0, 1, 0)
+//            UIView.animate(withDuration: 0.3, animations: {
+//                cell.layer.transform = perspectiveTransform
+//                cell.transform = CGAffineTransform(translationX: -cumulativeStretch, y: 0)
+//            })
+            
           }
 
         //TODO: - Find a away to introduce incremental translation along x.

@@ -88,7 +88,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="0YT-ne-vDV"/>
                                         <constraint firstItem="IzS-A8-r3d" firstAttribute="centerY" secondItem="kz1-lD-CU1" secondAttribute="centerY" id="QWi-ht-PlD"/>
@@ -113,7 +113,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="YjX-FY-qtF" firstAttribute="leading" secondItem="YpF-fM-elO" secondAttribute="leading" constant="20" id="CvQ-5y-nD5"/>
                                         <constraint firstItem="YjX-FY-qtF" firstAttribute="centerY" secondItem="YpF-fM-elO" secondAttribute="centerY" id="d2a-6u-Bno"/>
@@ -134,7 +134,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="pGV-3F-GuA" firstAttribute="leading" secondItem="4QT-Zr-PPu" secondAttribute="leading" id="6gP-aw-x8p"/>
                                 <constraint firstAttribute="bottom" secondItem="UVe-z2-7CD" secondAttribute="bottom" constant="160" id="HBU-yC-zDX"/>

@@ -26,9 +26,16 @@ class DriverDetailButton : UIButton {
         backgroundColor = .clear
         layer.cornerRadius = 24.0
         layer.borderWidth = 2.0
-        setBorderColor(color: UIColor(hex: "333333"))
-        self.setTitleColor(.black, for: .normal)
-        self.setTitleColor(.gray, for: .highlighted)
+        if traitCollection.userInterfaceStyle == .dark {
+            setBorderColor(color: .white)
+            self.setTitleColor(.white, for: .normal)
+            self.setTitleColor(.gray, for: .highlighted)
+        } else {
+            setBorderColor(color: UIColor(hex: "333333"))
+            self.setTitleColor(.black, for: .normal)
+            self.setTitleColor(.gray, for: .highlighted)
+        }
+        
     }
     
     required init?(coder: NSCoder) {
@@ -37,19 +44,23 @@ class DriverDetailButton : UIButton {
     
     override open var isHighlighted: Bool {
         didSet {
-           // backgroundColor = isHighlighted ?  UIColor(hex: "002366"): UIColor(hex: "4169E1")
             if isHighlighted {
                 backgroundColor = UIColor(hex: driver?.team.color ?? "333333")
                 setTitleColors(normal: .white, highlighted: .white)
             } else {
                 let metallicGray = UIColor(hex: "333333")
                 backgroundColor = .clear
-                setTitleColors(normal: metallicGray, highlighted: metallicGray)
+                if traitCollection.userInterfaceStyle == .dark {
+                    setTitleColors(normal: .white, highlighted: .white)
+                } else {
+                    setTitleColors(normal: metallicGray, highlighted: metallicGray)
+                }
+                
             }
         }
     }
     
-    private func setBorderColor(color: UIColor) {
+    func setBorderColor(color: UIColor) {
         layer.borderColor = color.cgColor
     }
     
@@ -93,27 +104,32 @@ class DriverDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(hex: "fbfbfb")
-        
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        adaptUIToInterfaceStyle()
     }
     
     private func createSubviews() {
         
         self.scrollView.translatesAutoresizingMaskIntoConstraints = false;
         view.addSubview(scrollView)
-        //Constrain scroll view
+        
         self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true;
         self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true;
         self.scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true;
         self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true;
         self.scrollView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         
-//        scrollView.frame = view.frame
-
-        
         closeButton.frame = CGRect(origin: .zero, size: CGSize(width: 30, height: 30))
-        closeButton.setImage(UIImage(named:"close"), for: .normal)
-        closeButton.setImage(UIImage(named:"close"), for: .highlighted)
+        if traitCollection.userInterfaceStyle == .dark {
+            closeButton.setImage(UIImage(named:"close-white"), for: .normal)
+            closeButton.setImage(UIImage(named:"close-white"), for: .highlighted)
+        } else {
+            closeButton.setImage(UIImage(named:"close-black"), for: .normal)
+            closeButton.setImage(UIImage(named:"close-black"), for: .highlighted)
+        }
+        
         closeButton.addTarget(self, action:#selector(closeButtonTapped(sender:)), for: .touchUpInside)
         self.scrollView.addSubview(closeButton)
         
@@ -129,8 +145,8 @@ class DriverDetailViewController: UIViewController {
         self.scrollView.addSubview(driverImageWrapperView)
         
         driverNameLabel.frame = CGRect(origin: .zero, size: .zero)
-        driverNameLabel.font = UIFont(name: "SFProText-Bold", size: 18.0)
-        driverNameLabel.textColor = .black
+        driverNameLabel.font = UIFont(name: "Formula1-Display-Bold", size: 20.0)
+
         driverNameLabel.textAlignment = .center
         if let firstName = self.driver?.firstName, let lastName = self.driver?.lastName {
             driverNameLabel.text = "\(firstName) \(lastName)"
@@ -139,8 +155,8 @@ class DriverDetailViewController: UIViewController {
         self.scrollView.addSubview(driverNameLabel)
         
         teamNameLabel.frame = CGRect(origin: .zero, size: .zero)
-        teamNameLabel.font = UIFont(name: "SFProText-Semibold", size: 16.0)
-        teamNameLabel.textColor = .black
+        teamNameLabel.font = UIFont(name: "Formula1-Display-Regular", size: 16.0)
+
         teamNameLabel.textAlignment = .center
         if let teamName = self.driver?.team.name {
             teamNameLabel.text = teamName
@@ -149,8 +165,8 @@ class DriverDetailViewController: UIViewController {
         self.scrollView.addSubview(teamNameLabel)
        
         descriptionLabel.frame = CGRect(origin: .zero, size: CGSize(width: self.view.frame.width - 2*40, height: 300))
-        descriptionLabel.font = UIFont(name: "OpenSans-Regular", size: 16.0)
-        descriptionLabel.textColor = UIColor(hex: "333333")
+        descriptionLabel.font = UIFont(name: "Avenir-Roman", size: 16.0)
+
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
@@ -161,7 +177,7 @@ class DriverDetailViewController: UIViewController {
         
         driverRankLabel.frame = CGRect(origin: .zero, size: .zero)
         driverRankLabel.font = UIFont(name: "MuktaMahee-Bold", size: 18.0)
-        driverRankLabel.textColor = .red
+
         driverRankLabel.textAlignment = .center
         if let rank = self.driver?.rank {
             driverRankLabel.text = "\(rank)"
@@ -189,13 +205,50 @@ class DriverDetailViewController: UIViewController {
         shareButton.addTarget(self, action:#selector(shareButtonTapped(sender:)), for: .touchUpInside)
         self.scrollView.addSubview(shareButton)
         
-        
-        largeView.backgroundColor = .green
-       // self.scrollView.addSubview(largeView)
- 
-        
-        
+        adaptUIToInterfaceStyle()
       //  createShareActionSheet()
+    }
+    
+    private func adaptUIToInterfaceStyle() {
+        if traitCollection.userInterfaceStyle == .dark {
+            driverNameLabel.textColor = .white
+            teamNameLabel.textColor = .white
+            descriptionLabel.textColor = UIColor(white: 0.7, alpha: 1)
+            driverRankLabel.textColor = .black
+            self.view.backgroundColor = .black
+            
+            shareButton.setTitleColor(.white, for: .normal)
+            shareButton.setTitleColor(.white, for: .highlighted)
+            
+            readMoreButton.setTitleColor(.white, for: .normal)
+            readMoreButton.setTitleColor(.white, for: .highlighted)
+            
+            shareButton.setBorderColor(color:.white)
+            readMoreButton.setBorderColor(color:.white)
+            
+            closeButton.setImage(UIImage(named:"close-white"), for: .normal)
+            closeButton.setImage(UIImage(named:"close-gray"), for: .highlighted)
+        } else {
+            let metallicGrayColor = UIColor(hex: "333333")
+            
+            driverNameLabel.textColor = .black
+            teamNameLabel.textColor = .black
+            descriptionLabel.textColor = metallicGrayColor
+            driverRankLabel.textColor = .red
+            self.view.backgroundColor = UIColor(hex: "fbfbfb")
+            
+            shareButton.setTitleColor(metallicGrayColor, for: .normal)
+            shareButton.setTitleColor(metallicGrayColor, for: .highlighted)
+            
+            readMoreButton.setTitleColor(metallicGrayColor, for: .normal)
+            readMoreButton.setTitleColor(metallicGrayColor, for: .highlighted)
+            
+            shareButton.setBorderColor(color: metallicGrayColor)
+            readMoreButton.setBorderColor(color: metallicGrayColor)
+            
+            closeButton.setImage(UIImage(named:"close-black"), for: .normal)
+            closeButton.setImage(UIImage(named:"close-gray"), for: .highlighted)
+        }
     }
 
     
@@ -286,7 +339,7 @@ class DriverDetailViewController: UIViewController {
             x: contentViewFrameSize.width - (closeButton.bounds.size.width + closeButtonTrailingPadding),
             y: safeAreaInset + closeButtonTopPadding)
         
-        let driverImageWrapperViewTopPadding: CGFloat = 30.0
+        let driverImageWrapperViewTopPadding: CGFloat = 20.0
         driverImageWrapperView.center = contentView.center
         driverImageWrapperView.frame.origin.y = closeButton.frame.maxY + driverImageWrapperViewTopPadding
         

@@ -38,7 +38,7 @@ struct ParallaxCardViewFullScreenTemplate: ParallaxCardViewDrawable {
     func drawRect(rect: CGRect, imageView: UIView, bottomContainerView: UIView, parallaxVal: CGFloat = 0) {
         imageView.frame = CGRect(x: 0, y: 0, width: rect.width * imageSizeRatio.width, height: rect.height * imageSizeRatio.height)
         
-        bottomContainerView.frame = CGRect(origin: CGPoint(x: 0, y: imageView.frame.height), size: CGSize(width: rect.width, height: rect.height * (1-imageSizeRatio.height)))
+//        bottomContainerView.frame = CGRect(origin: CGPoint(x: 0, y: imageView.frame.height), size: CGSize(width: rect.width, height: rect.height * (1-imageSizeRatio.height)))
         
         bottomContainerView.alpha = 0
     }
@@ -73,11 +73,11 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        
         
         layer.shouldRasterize = false
         layer.cornerRadius = cornerRadius
-        layer.shadowColor = UIColor.black.cgColor
+        
         layer.shadowRadius = 10.0
         layer.shadowOffset = CGSize(width: 0, height: 10)
         layer.shadowOpacity = 0.1
@@ -92,10 +92,11 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
         imageView.layer.masksToBounds = true
         
         bottomContainerView.layer.masksToBounds = true
-        titleLabel.textColor = .black
+
+        
         titleLabel.font = UIFont(name: "Formula1-Display-Bold", size: 18)
         titleLabel.numberOfLines = 0
-        subtitleLabel.textColor = .gray
+        
         subtitleLabel.font = UIFont(name: "Helvetica", size: 14)
         subtitleLabel.numberOfLines = 0
         contentView.addSubview(imageView)
@@ -105,10 +106,26 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
         
         addSubview(contentView)
         
-        titleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 - (titleLabel.frame.height + verticalPadding))
-        titleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
-        subtitleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 + 10.0)
-        subtitleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
+//        titleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 - (titleLabel.frame.height + verticalPadding))
+//        titleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
+//        subtitleLabel.frame.origin = CGPoint(x: leftPadding, y: bottomContainerView.frame.height/2 + 10.0)
+//        subtitleLabel.frame.width = UIScreen.main.bounds.width - 2*leftPadding
+        
+        adaptToSystemInterfaceStyle()
+    }
+    
+    public func adaptToSystemInterfaceStyle() {
+        if traitCollection.userInterfaceStyle == .dark {
+            layer.shadowColor = UIColor.white.cgColor
+            backgroundColor = .black
+            titleLabel.textColor = .white
+            subtitleLabel.textColor = UIColor(white: 0.8, alpha: 1)
+        } else {
+            layer.shadowColor = UIColor.black.cgColor
+            backgroundColor = .white
+            titleLabel.textColor = .black
+            subtitleLabel.textColor = .gray
+        }
     }
     
     required init?(coder: NSCoder) {

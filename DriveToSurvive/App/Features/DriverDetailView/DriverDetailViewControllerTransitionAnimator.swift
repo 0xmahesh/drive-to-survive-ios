@@ -60,11 +60,19 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
             return
         }
         
+       
+        
         self.cellImageViewRect = getRektWithTranslatedCoordinates(for: selectedCell.thumbnailImageView)
         
         let cellImageWrapperViewRect = CGRect(x: 0, y: 0, width: fromView.frame.width, height: fromView.frame.height)
         self.cellImageWrapperView = UIView(frame: cellImageWrapperViewRect)
-        cellImageWrapperView!.backgroundColor = .white
+        
+        if fromVC.traitCollection.userInterfaceStyle == .dark {
+            cellImageWrapperView!.backgroundColor = .black
+        } else {
+            cellImageWrapperView!.backgroundColor = .white
+        }
+        
         containerView.addSubview(cellImageWrapperView!)
         
         fromView.alpha = 0
@@ -205,7 +213,12 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
         
         let backgroundView: UIView
         let fadeView = UIView(frame: containerView.bounds)
-        fadeView.backgroundColor = .white
+        if fromVC.traitCollection.userInterfaceStyle == .dark {
+            fadeView.backgroundColor = .black
+        } else {
+            fadeView.backgroundColor = .white
+        }
+        
         
         guard let selectedDriverCellImageSnapshot = fromVC.selectedDriverCell?.thumbnailImageView.snapshotView(afterScreenUpdates: true),
               let detailViewImageSnapshot = toVC.driverImageWrapperView.snapshotView(afterScreenUpdates: true),
@@ -230,7 +243,13 @@ class DriverDetailViewControllerTransitionAnimator: NSObject, UIViewControllerAn
         let cellImageWrapperViewRect = CGRect(x: 0, y: toView.frame.height, width: toView.frame.width, height: 0)
         
         self.cellImageWrapperView = UIView(frame: cellImageWrapperViewRect)
-        cellImageWrapperView!.backgroundColor = .white
+        if fromVC.traitCollection.userInterfaceStyle == .dark {
+            cellImageWrapperView!.backgroundColor = .black
+            
+        } else {
+            cellImageWrapperView!.backgroundColor = .white
+        }
+        
         containerView.addSubview(cellImageWrapperView!)
         
         /* end of animate white background behind cell image snapshot */
