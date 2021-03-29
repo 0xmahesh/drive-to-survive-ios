@@ -15,7 +15,7 @@ protocol SwipeToDismissable {
 extension SwipeToDismissable {
     
     var swipeVelocityThreshold: CGFloat {
-        return 300
+        return 400
     }
     
     func onSwipe(in vc: UIViewController, sender: UIPanGestureRecognizer) {
@@ -38,7 +38,7 @@ extension SwipeToDismissable {
             if touchPoint.y - initialTouchPoint.y > swipeVelocityThreshold {
                 vc.dismiss(animated: true, completion: nil)
             } else {
-                UIView.animate(withDuration: 0.3, delay: 0.2, options: .curveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
                     view.frame = CGRect(x: 0,
                                              y: 0,
                                              width: view.frame.size.width,
