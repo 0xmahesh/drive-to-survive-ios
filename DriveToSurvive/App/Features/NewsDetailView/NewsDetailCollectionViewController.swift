@@ -86,7 +86,7 @@ class NewsDetailCollectionViewController: UICollectionViewController, SwipeToDis
         setupSwipeToDismiss()
         
         
-        let descriptionHeight = getLabelHeight(for: newsItem?.description ?? "", font: UIFont(name: "Avenir-Roman", size: 18)!, padding: 2*20)
+        let descriptionHeight = getLabelHeight(for: newsItem?.description ?? "", in: self.view, font: UIFont(name: "Avenir-Roman", size: 18)!, padding: 2*20)
         if(descriptionHeight > view.frame.height/2) {
             addReadMoreGradient()
         }
@@ -335,20 +335,21 @@ extension NewsDetailCollectionViewController: UICollectionViewDelegateFlowLayout
         var totalEstimatedHeight: CGFloat = 0
         
         if let newsItem = newsItem {
-            let titleLabelHeight = getLabelHeight(for: newsItem.title, font: UIFont(name: "Formula1-Display-Bold", size: 20)!, padding: 2*20)
-            let timestampLabelHeight = getLabelHeight(for: "26th March 2021, 18:57 GMT", font: UIFont(name: "Avenir-Roman", size: 12)!, padding: 2*20)
-            let descriptionLabelHeight = getLabelHeight(for: newsItem.description, font: UIFont(name: "Avenir-Roman", size: 18)!, padding: 2*20)
+            let titleLabelHeight = getLabelHeight(for: newsItem.title, in: self.view, font: UIFont(name: "Formula1-Display-Bold", size: 20)!, padding: 2*20)
+            let timestampLabelHeight = getLabelHeight(for: "26th March 2021, 18:57 GMT", in: self.view, font: UIFont(name: "Avenir-Roman", size: 12)!, padding: 2*20)
+            let descriptionLabelHeight = getLabelHeight(for: newsItem.description, in: self.view, font: UIFont(name: "Avenir-Roman", size: 18)!, padding: 2*20)
             let verticalPadding = NewsDetailCollectionViewCell.getCumulativeCellPadding()
             totalEstimatedHeight = titleLabelHeight + timestampLabelHeight + descriptionLabelHeight + verticalPadding
         }
         return .init(width: view.frame.width, height: totalEstimatedHeight)
     }
     
-    private func getLabelHeight(for text: String, font: UIFont, padding: CGFloat) -> CGFloat {
-        let approxWidthOfTitleLabel = view.frame.width - padding
-        let approxSizeOfTitleLabel = CGSize(width: approxWidthOfTitleLabel, height: 1000)
-        let titleLabelAttributes = [NSAttributedString.Key.font: font]
-        let estimatedTitleLabelFrame = NSString(string: text).boundingRect(with: approxSizeOfTitleLabel, options: .usesLineFragmentOrigin, attributes: titleLabelAttributes as [NSAttributedString.Key : Any], context: nil)
-        return estimatedTitleLabelFrame.height
-    }
+}
+
+public func getLabelHeight(for text: String, in view: UIView, font: UIFont, padding: CGFloat) -> CGFloat {
+    let approxWidthOfTitleLabel = view.frame.width - padding
+    let approxSizeOfTitleLabel = CGSize(width: approxWidthOfTitleLabel, height: 1000)
+    let titleLabelAttributes = [NSAttributedString.Key.font: font]
+    let estimatedTitleLabelFrame = NSString(string: text).boundingRect(with: approxSizeOfTitleLabel, options: .usesLineFragmentOrigin, attributes: titleLabelAttributes as [NSAttributedString.Key : Any], context: nil)
+    return estimatedTitleLabelFrame.height
 }

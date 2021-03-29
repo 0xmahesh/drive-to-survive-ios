@@ -86,6 +86,8 @@ class DriverDetailViewController: UIViewController {
     var readMoreButton = DriverDetailButton(type: .custom)
     var shareButton = DriverDetailButton(type: .custom)
     var shareActionSheet:ShareActionSheetView?
+    var vMaskLayer : CAGradientLayer = CAGradientLayer()
+    var hasScrolledOnce: Bool = false
     
     var largeView = UIView()
  
@@ -104,6 +106,7 @@ class DriverDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -123,6 +126,28 @@ class DriverDetailViewController: UIViewController {
             }
             
         }
+    }
+    
+    private func addReadMoreGradient() {
+        var innerColor: CGColor
+        if traitCollection.userInterfaceStyle == .dark {
+            innerColor = UIColor(white: 1.0, alpha: 0.8).cgColor
+        } else {
+            innerColor = UIColor.black.withAlphaComponent(0.8).cgColor
+        }
+        
+        let outerColor = UIColor(white: 1.0, alpha: 0.0).cgColor;
+
+        let colors = [outerColor, innerColor]
+        let locations: [NSNumber] = [0.92, 1.0]
+        
+        vMaskLayer.opacity = 0.6
+        vMaskLayer.colors = colors;
+        vMaskLayer.locations = locations;
+        vMaskLayer.bounds = self.view.bounds;
+        vMaskLayer.anchorPoint = .zero;
+
+        self.view.layer.addSublayer(vMaskLayer)
     }
     
     private func createSubviews() {
@@ -312,6 +337,13 @@ class DriverDetailViewController: UIViewController {
         descriptionLabel.frame.size = CGSize(width: contentViewFrameSize.width - 2*descriptionHorizontalPadding , height: descriptionLabel.heightForView())
         descriptionLabel.frame.origin = CGPoint(x: descriptionHorizontalPadding, y: teamNameLabel.frame.maxY + descriptionTopPadding)
         
+        if(!hasScrolledOnce) {
+            let descriptionHeight = getLabelHeight(for: descriptionLabel.text ?? "", in: self.view, font: UIFont(name: "Avenir-Roman", size: 16)!, padding: 2*20)
+            if(descriptionHeight > 0.25 * view.frame.height) {
+                addReadMoreGradient()
+            }
+        }
+        
         let actionButtonsHorizontalPadding: CGFloat = 5.0
         let actionButtonsVerticalPadding: CGFloat = 30.0
         
@@ -382,6 +414,13 @@ class DriverDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
+}
 
+extension DriverDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if !hasScrolledOnce {
+            hasScrolledOnce = true
+        }
+        vMaskLayer.removeFromSuperlayer()
+    }
 }
