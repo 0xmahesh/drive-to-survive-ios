@@ -19,8 +19,8 @@ enum Colors {
 }
 
 enum Images {
-    static let box = UIImage(named: "box")!
-    static let circle = UIImage(named: "circle")!
+    static let box = UIImage(named: "Box")!
+    static let circle = UIImage(named: "Circle")!
 }
 
 var colors:[UIColor] = [
