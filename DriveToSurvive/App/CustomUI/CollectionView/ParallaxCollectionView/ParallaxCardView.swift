@@ -98,10 +98,10 @@ class ParallaxCardView: UIView, ParallaxCardViewPresentable, NSCopying {
 
         
         titleLabel.font = UIFont(name: "Formula1-Display-Bold", size: 18)
-        titleLabel.numberOfLines = 0
+        titleLabel.numberOfLines = 2
         
         subtitleLabel.font = UIFont(name: "Helvetica", size: 14)
-        subtitleLabel.numberOfLines = 0
+        subtitleLabel.numberOfLines = 2
         contentView.addSubview(imageView)
         contentView.addSubview(bottomContainerView)
         bottomContainerView.addSubview(titleLabel)

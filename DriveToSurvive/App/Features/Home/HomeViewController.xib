@@ -37,15 +37,15 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZB-zO-zxb" customClass="AnimationView" customModule="Lottie">
-                            <rect key="frame" x="379" y="12.5" width="25" height="25"/>
+                            <rect key="frame" x="354" y="0.0" width="50" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="2kT-Zw-spC"/>
+                                <constraint firstAttribute="height" constant="50" id="2kT-Zw-spC"/>
                                 <constraint firstAttribute="width" secondItem="mZB-zO-zxb" secondAttribute="height" multiplier="1:1" id="CkV-Gu-Hnr"/>
-                                <constraint firstAttribute="width" constant="25" id="EYd-3J-5Fd"/>
+                                <constraint firstAttribute="width" constant="50" id="EYd-3J-5Fd"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="settings"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="darkmode"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n5-BL-3pr">
@@ -192,9 +192,6 @@
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </view>
     </objects>
-    <designables>
-        <designable name="mZB-zO-zxb"/>
-    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

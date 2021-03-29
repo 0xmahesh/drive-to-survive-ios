@@ -35,6 +35,7 @@
 		3D4732AB2610F13400CB32D4 /* ShareActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4732AA2610F13400CB32D4 /* ShareActionSheetView.swift */; };
 		3D4732B32610F14500CB32D4 /* ShareActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4732B22610F14500CB32D4 /* ShareActionSheetView.xib */; };
 		3D4732B9261105B900CB32D4 /* ThemeOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4732B8261105B900CB32D4 /* ThemeOverlayView.swift */; };
+		3D4732D92611801300CB32D4 /* darkmode.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D4732D82611801300CB32D4 /* darkmode.json */; };
 		3D49269B260CDFF50050EE2F /* AvenirNext-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D49269A260CDFF50050EE2F /* AvenirNext-Medium.otf */; };
 		3D512E2225D4547200B21FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2125D4547200B21FF6 /* AppDelegate.swift */; };
 		3D512E2625D4547200B21FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D512E2525D4547200B21FF6 /* ViewController.swift */; };
@@ -131,6 +132,7 @@
 		3D4732AA2610F13400CB32D4 /* ShareActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActionSheetView.swift; sourceTree = "<group>"; };
 		3D4732B22610F14500CB32D4 /* ShareActionSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareActionSheetView.xib; sourceTree = "<group>"; };
 		3D4732B8261105B900CB32D4 /* ThemeOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOverlayView.swift; sourceTree = "<group>"; };
+		3D4732D82611801300CB32D4 /* darkmode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darkmode.json; sourceTree = "<group>"; };
 		3D49269A260CDFF50050EE2F /* AvenirNext-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Medium.otf"; sourceTree = "<group>"; };
 		3D512E1E25D4547200B21FF6 /* DriveToSurvive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveToSurvive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D512E2125D4547200B21FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 		3DE9A5682603B094007D2090 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3D4732D82611801300CB32D4 /* darkmode.json */,
 				3D6343FB260A64B8003EBACE /* settings.json */,
 				3D97D2C826062245007D1328 /* community2.json */,
 				3DE9A56C2603B0A5007D2090 /* community.json */,
@@ -685,6 +688,7 @@
 				3D30F81025FD5EE00036FFE2 /* OpenSans-Italic.ttf in Resources */,
 				3D473290260F6E5300CB32D4 /* NewsDetailCollectionViewCell.xib in Resources */,
 				3DE9A59D2603D018007D2090 /* Formula1-Black.ttf in Resources */,
+				3D4732D92611801300CB32D4 /* darkmode.json in Resources */,
 				3DE9A56E2603B0A5007D2090 /* f1_car.json in Resources */,
 				3D512E2B25D4547400B21FF6 /* Assets.xcassets in Resources */,
 				3D30F81125FD5EE00036FFE2 /* OpenSans-LightItalic.ttf in Resources */,

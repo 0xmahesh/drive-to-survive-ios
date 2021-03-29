@@ -66,10 +66,20 @@ class HomeViewController: UIViewController, ParallaxCardViewManagerProtocol {
         self.navigationController?.delegate = self
         setupUI()
         newsCollectionView.reloadData()
-        settingsNavBarAnimationView.animationSpeed = 2
-        setButtonAnimation(button: settingsNavBarButton)
+        setupNavBarButton()
         adaptUIToInterfaceStyleChange()
        
+    }
+    
+    private func setupNavBarButton() {
+        settingsNavBarAnimationView.animationSpeed = 4
+        settingsNavBarAnimationView.loopMode = .playOnce
+ 
+        if traitCollection.userInterfaceStyle == .dark {
+            settingsNavBarAnimationView.currentProgress = 1
+        } else {
+            settingsNavBarAnimationView.currentProgress = 0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -262,25 +272,23 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
     }
     
-    /* Animate Settings Button */
-    // TODO: - Move this to a Custom UI Button
-    private func setButtonAnimation(button: UIButton) {
-        button.addTarget(self, action: #selector(animateDown), for: [.touchDown, .touchDragEnter])
-        button.addTarget(self, action: #selector(animateUp), for: [.touchDragExit, .touchCancel, .touchUpInside, .touchUpOutside])
-    }
-    
-    @objc private func animateDown(sender: UIButton) {
-        settingsNavBarAnimationView.loopMode = .playOnce
-        settingsNavBarAnimationView.play()
-    }
-    
-    @objc private func animateUp(sender: UIButton) {
-        settingsNavBarAnimationView.play(toProgress: 0)
-    }
-    
     
     @IBAction func changeThemeButtonTapped(_ sender: Any){
         print("change theme")
+        if traitCollection.userInterfaceStyle == .dark {
+            settingsNavBarAnimationView.currentProgress = 1
+            settingsNavBarAnimationView.play(toProgress: 0)
+        } else {
+            settingsNavBarAnimationView.currentProgress = 0
+            settingsNavBarAnimationView.play(toProgress: 1)
+        }
+     
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+            self.switchAppTheme()
+        })
+    }
+    
+    private func switchAppTheme() {
         if let beforeSnapshot = view.snapshotView(afterScreenUpdates: true) {
             beforeSnapshot.frame = view.frame
             beforeSnapshot.alpha = 0
@@ -299,7 +307,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                 overlayView.animateTo(xOffset: 0, yOffset: view.frame.height/2, endDiameter: view.frame.height * 2, duration: 0.4)
             }
         }
-     
     }
 }
 
